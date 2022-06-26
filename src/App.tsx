@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { Button } from "@mui/material";
+import { Button } from "react-bootstrap";
 
 function App() {
   return (
