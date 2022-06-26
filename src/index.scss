@@ -1,9 +1,19 @@
 @import "~bootstrap/scss/bootstrap";
 
+//* =================== SCSS variables ===================
+$navbar-height: 80px;
+
+//* =================== class styles ===================
+
 html {
     background-color: #464646;
 }
 
 .App {
     background-color: #464646;
+}
+
+.navbarStyle {
+    background-color: #255184;
+    height: $navbar-height;
 }
