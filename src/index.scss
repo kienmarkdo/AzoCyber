@@ -1,4 +1,7 @@
-@import "~bootstrap/scss/bootstrap";
+// using node-style package resolution in a CSS file: 
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 //* =================== SCSS variables ===================
 $navbar-height: 80px;
@@ -6,15 +9,16 @@ $navbar-height: 80px;
 //* =================== class styles ===================
 
 html {
-    background-color: #464646;
+    // background-color: #464646;
+    background-color: #2f343c;
 }
 
 .App {
-    background-color: #464646;
-    color: white;
+    // background-color: #464646;
+    // color: white;
 }
 
 .navbarStyle {
-    background-color: #255184;
+    // background-color: #255184;
     // height: $navbar-height;
 }
