@@ -38,7 +38,7 @@ function App() {
               <Image
                 src="https://media.discordapp.net/attachments/983190148206428190/990470017814523935/Azocyber_grad2.png"
                 alt=""
-                height="30"
+                height="50"
               />{" "}
               AzoCyber
             </Navbar.Brand>
