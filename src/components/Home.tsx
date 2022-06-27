@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();
 
-  const routeToSolutions = () => {
-    navigate("/solutions");
+  const routeToAbout = () => {
+    navigate("/about");
   };
 
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <br />
         <h2 className="bp4-heading thinnerText">Don't be another statistic</h2>
         <br />
-        <Button large={true} intent="success" onClick={routeToSolutions}>
+        <Button large={true} intent="success" onClick={routeToAbout}>
           Learn more
         </Button>
       </section>

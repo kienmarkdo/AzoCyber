@@ -1,7 +1,14 @@
-import { Menu, MenuItem, MenuDivider, Card } from "@blueprintjs/core";
+import { Menu, MenuItem, MenuDivider, Card, Button } from "@blueprintjs/core";
+import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
 
 export default function About() {
+  const navigate = useNavigate();
+
+  const routeToSolutions = () => {
+    navigate("/solutions");
+  };
+
   return (
     <>
       <section className="topSectionContainer">
@@ -32,6 +39,12 @@ export default function About() {
               <MenuItem icon="selection" text="Team" />
             </HashLink>
           </Menu>
+          <br />
+          <br />
+          <br />
+          <Button large={true} intent="success" onClick={routeToSolutions}>
+            Secure Your Business
+          </Button>
         </div>
       </section>
       <section id="vision" className="sectionStyle">
@@ -125,7 +138,6 @@ export default function About() {
             />
           </div>
         </div>
-        <MenuDivider />
       </section>
     </>
   );
