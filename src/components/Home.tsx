@@ -1,5 +1,4 @@
-import { Button, Card, Elevation, H4 } from "@blueprintjs/core";
-import React from "react";
+import { Button, Card, Elevation } from "@blueprintjs/core";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -79,6 +78,7 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
+              {/* // TODO: Replace with React Router */}
               <a href="#">Prevention and Protection</a>
             </h3>
             <p>
