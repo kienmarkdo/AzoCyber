@@ -76,7 +76,7 @@ export default function Home() {
           <Card
             className="galleryItem"
             interactive={true}
-            elevation={Elevation.TWO}
+            elevation={Elevation.FOUR}
           >
             <h3>
               <a href="#">Prevention and Protection</a>
@@ -91,7 +91,7 @@ export default function Home() {
           <Card
             className="galleryItem"
             interactive={true}
-            elevation={Elevation.TWO}
+            elevation={Elevation.FOUR}
           >
             <h3>
               <a href="#">Emergency Response</a>
@@ -106,7 +106,7 @@ export default function Home() {
           <Card
             className="galleryItem"
             interactive={true}
-            elevation={Elevation.TWO}
+            elevation={Elevation.FOUR}
           >
             <h3>
               <a href="#">Simulated Environments</a>
@@ -121,7 +121,7 @@ export default function Home() {
           <Card
             className="galleryItem"
             interactive={true}
-            elevation={Elevation.TWO}
+            elevation={Elevation.FOUR}
           >
             <h3>
               <a href="#">Consultation</a>
