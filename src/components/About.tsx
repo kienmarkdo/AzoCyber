@@ -86,9 +86,11 @@ export default function About() {
             />
           </div>
         </section>
-        <MenuDivider />
       </section>
       <section id="team" className="sectionStyle">
+        <MenuDivider />
+        <br />
+        <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Our Team
         </h2>
