@@ -1,7 +1,9 @@
-// using node-style package resolution in a CSS file: 
+// blueprintJS imports
 @import "~normalize.css";
 @import "~@blueprintjs/core/lib/css/blueprint.css";
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import "~@blueprintjs/core/lib/scss/variables";
+@import "~@blueprintjs/icons/lib/scss/variables";
 
 //* =================== SCSS variables ===================
 $navbar-height: 80px;
@@ -10,7 +12,7 @@ $navbar-height: 80px;
 
 html {
     // background-color: #464646;
-    background-color: #2f343c;
+    background-color: $pt-dark-app-background-color;
 }
 
 .App {
@@ -21,4 +23,40 @@ html {
 .navbarStyle {
     // background-color: #255184;
     // height: $navbar-height;
+}
+
+.topSectionStyle {
+    padding: 200px;
+}
+
+.sectionStyle {
+    padding: 50px 50px 0px 50px;
+}
+
+//* Home page
+.galleryContainer {
+    padding: 50px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // display: grid;
+    // gap: 50px 50px;
+    // grid-template-columns: auto auto auto;
+    // padding: 10px;
+}
+
+.galleryImageItem {
+    margin: 50px;
+    height: 115px;
+    width: auto;
+    // border: 1px solid rgba(0, 0, 0, 0.8);
+    // padding: 20px;
+    // height: 150px;
+    // width: auto;
+}
+
+.galleryItem {
+    margin: 20px;
+    width: 300px;
+    height: auto;
 }
