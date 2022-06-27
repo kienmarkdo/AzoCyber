@@ -28,14 +28,13 @@ function App() {
         >
           <Navbar.Group align={Alignment.LEFT}>
             <Navbar.Heading>
-              <img
-                src="https://media.discordapp.net/attachments/983190148206428190/990470017814523935/Azocyber_grad2.png"
-                alt=""
-                height="30"
-              />
-            </Navbar.Heading>
-            <Navbar.Heading>
-              <strong>AzoCyber</strong>
+              <NavLink to="home">
+                <img
+                  src="https://media.discordapp.net/attachments/983190148206428190/990770824090882148/Azocyber_upper.png"
+                  alt=""
+                  height="40"
+                />
+              </NavLink>
             </Navbar.Heading>
 
             <Navbar.Divider />
