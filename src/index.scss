@@ -26,14 +26,23 @@ html {
 }
 
 .topSectionStyle {
-    padding: 200px;
+    padding: 100px 200px;
 }
 
 .sectionStyle {
     padding: 50px 50px 0px 50px;
 }
 
-//* Home page
+.thinnerText {
+    font-weight: 300;
+}
+
+//* ======================  Home page  ======================
+
+.homeTopSection {
+    padding: 200px;
+}
+
 .galleryContainer {
     padding: 50px 50px;
     display: flex;

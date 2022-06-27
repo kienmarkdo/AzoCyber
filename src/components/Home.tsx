@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="topSectionStyle"
+        className="homeTopSection"
         style={{
           backgroundImage:
             "url('https://cdn.wallpapersafari.com/1/43/u3Q8OK.jpg')",
@@ -21,7 +21,7 @@ export default function Home() {
           One in five Canadian businesses experience a cyber attack annually
         </h1>
         <br />
-        <h3 className="bp4-heading">Don't be another statistic</h3>
+        <h2 className="bp4-heading thinnerText">Don't be another statistic</h2>
         <br />
         <Button large={true} intent="success" onClick={routeToSolutions}>
           Learn more
@@ -34,7 +34,7 @@ export default function Home() {
         <br />
         <div className="galleryContainer">
           <img
-            src="https://letsteachtheworld.org/wp-content/uploads/2016/07/myce-microsoft-Logo-2-300x85.png"
+            src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png"
             alt="Look up HOW TO CREATE A RESPONSIVE IMG GALLERY WITH FLEXBOX"
             className="galleryImageItem"
           />
