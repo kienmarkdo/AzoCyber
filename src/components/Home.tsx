@@ -35,32 +35,36 @@ export default function Home() {
         <div className="galleryContainer">
           <img
             src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png"
-            alt="Look up HOW TO CREATE A RESPONSIVE IMG GALLERY WITH FLEXBOX"
+            // Look up HOW TO CREATE A RESPONSIVE IMAGE GALLERY WITH FLEXBOX
+            alt="Microsoft logo"
             className="galleryImageItem"
           />
           <img
             src="https://www.international.gc.ca/world-monde/assets/images/funding-financement/canada-aid-aide/partners-partenaires-white-en.png"
-            alt=""
+            alt="Government of Canada partnership logo"
             className="galleryImageItem"
           />
           <img
             src="https://1000logos.net/wp-content/uploads/2018/10/RBC-Logo.png"
-            alt=""
+            alt="RBC logo"
             className="galleryImageItem"
           />
           <img
             src="https://www.vmcdn.ca/f/files/shared/corporate-logos/_logo_theottawahospital_1500x600.jpg"
-            alt=""
+            // Alternate https://secure.ohri.ca/OHRIEvents/images/ohri-logowhite-2020.png
+            alt="The Ottawa Hospital logo"
             className="galleryImageItem"
           />
           <img
             src="https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2017/04/LogoBlack.jpg"
-            alt=""
+            // Large white https://d24wuq6o951i2g.cloudfront.net/img/events/id/458/458146959/assets/2834ec4648153222fc8f73e4cf6c672b.Palantir_Logo_Light.png
+            // Large black https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Palantir_Technologies_logo.svg/2560px-Palantir_Technologies_logo.svg.png
+            alt="Palantir logo"
             className="galleryImageItem"
           />
           <img
             src="https://www.uottawa.ca/brand/sites/www.uottawa.ca.brand/files/uottawa_ver_white.png"
-            alt=""
+            alt="uOttawa University of Ottawa logo"
             className="galleryImageItem"
           />
         </div>
