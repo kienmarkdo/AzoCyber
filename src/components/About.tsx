@@ -95,7 +95,7 @@ export default function About() {
         <br />
         <div className="galleryContainer">
           <div className="galleryImageTeamItem">
-            <h3 className="bp4-heading">David Trudeau</h3>
+            <h3 className="bp4-heading">Sergio Ramos</h3>
             <h3 className="bp4-heading thinnerText">
               Prevention and Protection Lead
             </h3>
@@ -124,16 +124,78 @@ export default function About() {
             </h3>
             <br />
             <img
-              src="https://jaysoriano.com/wp-content/uploads/2018/04/P8110606-Edit.jpg"
+              src="https://www.epicscotland.com/wp-content/uploads/2019/09/Business-Headshot-Women-004.jpg"
               alt=""
             />
           </div>
           <div className="galleryImageTeamItem">
-            <h3 className="bp4-heading">John Smith</h3>
+            <h3 className="bp4-heading">Jide Olatunji</h3>
             <h3 className="bp4-heading thinnerText">Penetration Tester</h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-smiling-biracial-man-posing-picture-id1292475584?b=1&k=20&m=1292475584&s=170667a&w=0&h=jZ6etD3dfOV_NIgwR9hIQ5B9TBC5kpYxShIsaqjWbzc="
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Alexandre DuBois</h3>
+            <h3 className="bp4-heading thinnerText">Senior Network Analyst</h3>
+            <br />
+            <img
+              src="https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Tyron Woodley</h3>
+            <h3 className="bp4-heading thinnerText">
+              Vulnerability Researcher (VR)
+            </h3>
+            <br />
+            <img
+              src="https://images.pexels.com/photos/1722198/pexels-photo-1722198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Elizabeth Vandervoort</h3>
+            <h3 className="bp4-heading thinnerText">
+              Software Reverse Engineer (SRE)
+            </h3>
+            <br />
+            <img
+              src="https://images.pexels.com/photos/3767392/pexels-photo-3767392.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Ruby McAlpine</h3>
+            <h3 className="bp4-heading thinnerText">Data Security Engineer</h3>
+            <br />
+            <img
+              src="https://images.pexels.com/photos/3776932/pexels-photo-3776932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Nathan McGregor</h3>
+            <h3 className="bp4-heading thinnerText">
+              Entreprise Security Architect
+            </h3>
+            <br />
+            <img
+              src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+            />
+          </div>
+          <div className="galleryImageTeamItem">
+            <h3 className="bp4-heading">Tuan Nguyen</h3>
+            <h3 className="bp4-heading thinnerText">
+              Digital Forensics Examiner
+            </h3>
+            <br />
+            <img
+              src="https://t4.ftcdn.net/jpg/03/07/36/97/360_F_307369771_Mm1wbpgaNeaW36hLqivp86gnsx20LSWY.jpg"
               alt=""
             />
           </div>
