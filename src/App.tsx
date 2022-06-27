@@ -1,18 +1,12 @@
 //* import components
-import {
-  Navbar,
-  Container,
-  Nav,
-  NavDropdown,
-  Image,
-  Button,
-} from "react-bootstrap"; // react bootstrap library components
+
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Link,
   BrowserRouter,
+  NavLink,
 } from "react-router-dom"; // browser router v6 package
 
 //* Import main pages (sections of website)
@@ -22,63 +16,69 @@ import Solutions from "./components/Solutions";
 import Resources from "./components/Resources";
 import Contact from "./components/Contact";
 import Careers from "./components/Careers";
+import { Alignment, Button, Classes, Navbar } from "@blueprintjs/core";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Navbar
-          className="navbarStyle"
-          collapseOnSelect
-          expand="lg"
-          variant="dark"
+          style={{ padding: "0px 100px 0px 100px" }}
+          className="bp4-navbar bp4-dark"
         >
-          <Container>
-            <Navbar.Brand as={Link} to="/">
-              <Image
-                src="https://media.discordapp.net/attachments/983190148206428190/990470017814523935/Azocyber_grad2.png"
-                alt=""
-                height="50"
-              />{" "}
-              AzoCyber
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link as={Link} to="/about">
-                  About
-                </Nav.Link>
-                <Nav.Link as={Link} to="/solutions">
-                  Solutions
-                </Nav.Link>
-                <Nav.Link as={Link} to="/resources">
-                  Resources
-                </Nav.Link>
-                <Nav.Link as={Link} to="/careers">
-                  Careers
-                </Nav.Link>
-              </Nav>
-              <Nav>
-                <Nav.Link as={Link} to="/contact">
-                  <Button variant="success">Contact Us</Button>
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
+          <Navbar.Group align={Alignment.LEFT}>
+            <Navbar.Heading>
+              <NavLink to="home">
+                <img
+                  src="https://media.discordapp.net/attachments/983190148206428190/990770824090882148/Azocyber_upper.png"
+                  alt="Logo cyber with text"
+                  height="40"
+                />
+              </NavLink>
+            </Navbar.Heading>
+
+            <Navbar.Divider />
+
+            <NavLink to="home">
+              <Button className="bp4-minimal" text="Home" />
+            </NavLink>
+            <NavLink to="about">
+              <Button className="bp4-minimal" text="About" />
+            </NavLink>
+            <NavLink to="solutions">
+              <Button className="bp4-minimal" text="Solutions" />
+            </NavLink>
+            <NavLink to="resources">
+              <Button className="bp4-minimal" text="Resources" />
+            </NavLink>
+            <NavLink to="careers">
+              <Button className="bp4-minimal" text="Careers" />
+            </NavLink>
+          </Navbar.Group>
+          <Navbar.Group align={Alignment.RIGHT}>
+            <NavLink to="contact">
+              <Button
+                className="bp4-button"
+                intent="success"
+                text="Contact Us"
+              />
+            </NavLink>
+          </Navbar.Group>
         </Navbar>
-        {/* =================================================== */}
-        <div>
-          <Routes>
-            {/* <Route exact path="/AzoCyber/" element={<Home />} /> */}
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        {/* ========================================================================= */}
       </div>
+      <main className="bp4-dark">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/AzoCyber/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }

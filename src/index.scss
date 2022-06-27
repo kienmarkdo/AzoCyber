@@ -1,4 +1,9 @@
-@import "~bootstrap/scss/bootstrap";
+// blueprintJS imports
+@import "~normalize.css";
+@import "~@blueprintjs/core/lib/css/blueprint.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+@import "~@blueprintjs/core/lib/scss/variables";
+@import "~@blueprintjs/icons/lib/scss/variables";
 
 //* =================== SCSS variables ===================
 $navbar-height: 80px;
@@ -6,15 +11,106 @@ $navbar-height: 80px;
 //* =================== class styles ===================
 
 html {
-    background-color: #464646;
+    // background-color: #464646;
+    background-color: $pt-dark-app-background-color;
 }
 
 .App {
-    background-color: #464646;
-    color: white;
+    // background-color: #464646;
+    // color: white;
 }
 
 .navbarStyle {
-    background-color: #255184;
+    // background-color: #255184;
     // height: $navbar-height;
+}
+
+.topSectionContainer {
+    padding: 100px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.topSectionItemOne {
+    margin: 50px;
+    height: auto;
+    width: 40vw;
+}
+
+.topSectionItemTwo {
+    margin: 50px;
+    height: auto;
+    width: 20vw;
+}
+
+.sectionStyle {
+    padding: 50px 50px 0px 50px;
+}
+
+.thinnerText {
+    font-weight: 300;
+}
+
+//* ======================  Home page  ======================
+
+.homeTopSection {
+    padding: 200px;
+}
+
+.galleryContainer {
+    padding: 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // display: grid;
+    // gap: 50px 50px;
+    // grid-template-columns: auto auto auto;
+    // padding: 10px;
+}
+
+.galleryImagePartnersItem {
+    margin: 50px;
+    height: 115px;
+    width: auto;
+    // border: 1px solid rgba(0, 0, 0, 0.8);
+    // padding: 20px;
+    // height: 150px;
+    // width: auto;
+}
+
+.galleryItem {
+    margin: 10px 10px;
+    width: 300px;
+    height: auto;
+}
+
+//* ======================  About page  ======================
+.splitScreenContainer {
+    padding: 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.splitScreenItemOne {
+    margin: 50px;
+    height: auto;
+    width: 30vw;
+}
+
+.splitScreenItemTwo {
+    margin: 50px;
+    height: auto;
+    width: 20vw;
+}
+
+.galleryImageTeamItem {
+    height: 400px;
+    width: 300px;
+}
+
+.galleryImageTeamItem > img {
+    height: 200px;
+    width: auto;
 }
