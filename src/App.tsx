@@ -31,7 +31,7 @@ function App() {
               <NavLink to="home">
                 <img
                   src="https://media.discordapp.net/attachments/983190148206428190/990770824090882148/Azocyber_upper.png"
-                  alt=""
+                  alt="Logo cyber with text"
                   height="40"
                 />
               </NavLink>
