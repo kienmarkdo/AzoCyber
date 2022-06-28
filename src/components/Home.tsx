@@ -8,6 +8,10 @@ export default function Home() {
     navigate("/about");
   };
 
+  const routeToSolutions = () => {
+    navigate("/solutions");
+  };
+
   return (
     <>
       <section
@@ -91,7 +95,7 @@ export default function Home() {
               with our Prevention and Protection package.
             </p>
             <br />
-            <Button>Learn More</Button>
+            <Button onClick={routeToSolutions}>Learn More</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -106,7 +110,7 @@ export default function Home() {
               Emergency Response package.
             </p>
             <br />
-            <Button>Learn More</Button>
+            <Button onClick={routeToSolutions}>Learn More</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -121,7 +125,7 @@ export default function Home() {
               extensive penetration tests and an IT simulation training package.
             </p>
             <br />
-            <Button>Learn More</Button>
+            <Button onClick={routeToSolutions}>Learn More</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -136,7 +140,7 @@ export default function Home() {
               consultation from our cyber security professionals.
             </p>
             <br />
-            <Button>Learn More</Button>
+            <Button onClick={routeToSolutions}>Learn More</Button>
           </Card>
         </div>
       </section>
