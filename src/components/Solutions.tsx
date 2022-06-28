@@ -45,7 +45,7 @@ export default function Solutions() {
               <MenuItem icon="selection" text="Our Packages" />
             </HashLink>
             <MenuDivider />
-            <HashLink smooth to="/solutions/#discoverplans">
+            <HashLink smooth to="/solutions/#plans">
               <MenuItem icon="selection" text="Discover Plans" />
             </HashLink>
           </Menu>
@@ -134,7 +134,7 @@ export default function Solutions() {
           </div>
         </section>
       </section>
-      <section id="discoverplans" className="sectionStyle">
+      <section id="plans" className="sectionStyle">
         <MenuDivider />
         <br />
         <br />
