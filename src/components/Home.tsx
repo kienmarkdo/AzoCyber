@@ -88,11 +88,11 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Prevention and Protection</Link>
+              <Link to={"/solutions"}>Prevention & Protection</Link>
             </h3>
             <p>
               Strengthen your defences and never run into a cyber incident again
-              with our Prevention and Protection package.
+              with our Prevention & Protection package.
             </p>
             <br />
             <Button onClick={routeToSolutions}>Learn More</Button>

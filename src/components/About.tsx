@@ -99,7 +99,7 @@ export default function About() {
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sergio Ramos</h3>
             <h3 className="bp4-heading thinnerText">
-              Prevention and Protection Lead
+              Prevention & Protection Lead
             </h3>
             <br />
             <img

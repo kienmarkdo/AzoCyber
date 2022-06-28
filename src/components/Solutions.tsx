@@ -5,8 +5,11 @@ import {
   Card,
   Button,
   Elevation,
+  IconSize,
+  Icon,
 } from "@blueprintjs/core";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export default function Solutions() {
@@ -74,39 +77,77 @@ export default function Solutions() {
               interactive={true}
               elevation={Elevation.FOUR}
             >
-              <h3>
-                {/* // TODO: Replace with React Router */}
-                <a href="#">Prevention and Protection</a>
+              <h3
+                className="bp4-heading headerMarginBottom"
+                style={{ color: "#72CA9B" }}
+              >
+                Prevention & Protection
               </h3>
               <p>
                 Strengthen your defences and never run into a cyber incident
-                again with our Prevention and Protection package.
+                again with our Prevention & Protection package.
               </p>
               <br />
-              <Button>Learn More</Button>
+              <p>
+                <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <br />
+              <Button intent="success">Get a Quote</Button>
             </Card>
             <Card
               className="galleryItem"
               interactive={true}
               elevation={Elevation.FOUR}
             >
-              <h3>
-                <a href="#">Emergency Response</a>
+              <h3
+                className="bp4-heading headerMarginBottom"
+                style={{ color: "#E76A6E" }}
+              >
+                Emergency Response
               </h3>
               <p>
                 Ensure that threats are dealt with as they happen with the 24/7
                 Emergency Response package.
               </p>
               <br />
-              <Button>Learn More</Button>
+              <p>
+                <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+              </p>
+              <br />
+              <Button intent="danger">Get a Quote</Button>
             </Card>
             <Card
               className="galleryItem"
               interactive={true}
               elevation={Elevation.FOUR}
             >
-              <h3>
-                <a href="#">Simulated Environments</a>
+              <h3
+                className="bp4-heading headerMarginBottom"
+                style={{ color: "#EC9A3C" }}
+              >
+                Simulated Environments
               </h3>
               <p>
                 Discover vulnerabilities with this program, which includes
@@ -114,22 +155,59 @@ export default function Solutions() {
                 package.
               </p>
               <br />
-              <Button>Learn More</Button>
+              <p>
+                <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <br />
+              <Button intent="warning">Get a Quote</Button>
             </Card>
             <Card
               className="galleryItem"
               interactive={true}
               elevation={Elevation.FOUR}
             >
-              <h3>
-                <a href="#">Consultation</a>
+              <h3
+                className="bp4-heading headerMarginBottom"
+                style={{ color: "#8ABBFF" }}
+              >
+                Consultation
               </h3>
               <p>
                 Learn protect your online presence and receive invaluable
                 consultation from our cybersecurity professionals.
               </p>
               <br />
-              <Button>Learn More</Button>
+              <p>
+                <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <p>
+                <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                Hello
+              </p>
+              <br />
+              <Button intent="primary">Get a Quote</Button>
             </Card>
           </div>
         </section>
