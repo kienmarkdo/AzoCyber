@@ -31,7 +31,7 @@ export default function Resources() {
   };
 
   const ORGANIZATION_TYPE_OPTIONS = [
-    "All Organizations",
+    "All Organization Types",
     "Small Businesses",
     "Large Organizations",
     "Government",
