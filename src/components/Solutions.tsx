@@ -58,8 +58,8 @@ export default function Solutions() {
           <br />
           <br />
           <br />
-          <Button large={true} intent="success" onClick={routeToContact}>
-            Contact Us
+          <Button large={true} intent="success" onClick={routeToQuote}>
+            Get a Quote
           </Button>
         </div>
       </section>
