@@ -137,7 +137,7 @@ export default function Home() {
             </h3>
             <p>
               Learn protect your online presence and receive invaluable
-              consultation from our cyber security professionals.
+              consultation from our cybersecurity professionals.
             </p>
             <br />
             <Button onClick={routeToSolutions}>Learn More</Button>

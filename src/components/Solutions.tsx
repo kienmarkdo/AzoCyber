@@ -65,7 +65,7 @@ export default function Solutions() {
           Our Packages
         </h2>
         <h3 className="bp4-heading thinnerText" style={{ textAlign: "center" }}>
-          Cyber security does not have to be complicated when we have your back.
+          Cybersecurity does not have to be complicated when we have your back.
         </h3>
         <section className="sectionStyle">
           <div className="galleryContainer">
@@ -126,7 +126,7 @@ export default function Solutions() {
               </h3>
               <p>
                 Learn protect your online presence and receive invaluable
-                consultation from our cyber security professionals.
+                consultation from our cybersecurity professionals.
               </p>
               <br />
               <Button>Learn More</Button>
