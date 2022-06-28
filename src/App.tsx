@@ -9,6 +9,7 @@ import Solutions from "./components/Solutions";
 import Resources from "./components/Resources";
 import Contact from "./components/Contact";
 import Careers from "./components/Careers";
+import GetQuote from "./components/GetQuote";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
@@ -50,6 +51,16 @@ function App() {
             </NavLink>
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
+            <NavLink to="get_a_quote">
+              <Button
+                className="bp4-button"
+                intent="primary"
+                text="Get a Quote"
+              />
+            </NavLink>
+
+            <Navbar.Divider />
+
             <NavLink to="contact">
               <Button
                 className="bp4-button"
@@ -71,6 +82,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/get_a_quote" element={<GetQuote />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
