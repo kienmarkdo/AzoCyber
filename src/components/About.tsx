@@ -1,4 +1,4 @@
-import { Menu, MenuItem, MenuDivider, Card, Button } from "@blueprintjs/core";
+import { Menu, MenuItem, MenuDivider, Button } from "@blueprintjs/core";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
 

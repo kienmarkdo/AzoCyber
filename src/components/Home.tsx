@@ -1,5 +1,5 @@
 import { Button, Card, Elevation, MenuDivider } from "@blueprintjs/core";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -17,12 +17,12 @@ export default function Home() {
             "url('https://cdn.wallpapersafari.com/1/43/u3Q8OK.jpg')",
         }}
       >
-        <h1 className="bp4-heading" style={{ width: "50%" }}>
+        <h1 className="bp4-heading headerMarginBottom" style={{ width: "50%" }}>
           One in five Canadian businesses experience a cyber attack annually
         </h1>
-        <br />
-        <h2 className="bp4-heading thinnerText">Don't be another statistic</h2>
-        <br />
+        <h2 className="bp4-heading headerMarginBottom thinnerText">
+          Don't be another statistic
+        </h2>
         <Button large={true} intent="success" onClick={routeToAbout}>
           Learn more
         </Button>
@@ -80,12 +80,11 @@ export default function Home() {
         <div className="galleryContainer">
           <Card
             className="galleryItem"
-            interactive={true}
+            interactive={false}
             elevation={Elevation.FOUR}
           >
             <h3>
-              {/* // TODO: Replace with React Router */}
-              <a href="#">Prevention and Protection</a>
+              <Link to={"/solutions"}>Prevention and Protection</Link>
             </h3>
             <p>
               Strengthen your defences and never run into a cyber incident again
@@ -96,11 +95,11 @@ export default function Home() {
           </Card>
           <Card
             className="galleryItem"
-            interactive={true}
+            interactive={false}
             elevation={Elevation.FOUR}
           >
             <h3>
-              <a href="#">Emergency Response</a>
+              <Link to={"/solutions"}>Emergency Response</Link>
             </h3>
             <p>
               Ensure that threats are dealt with as they happen with the 24/7
@@ -111,11 +110,11 @@ export default function Home() {
           </Card>
           <Card
             className="galleryItem"
-            interactive={true}
+            interactive={false}
             elevation={Elevation.FOUR}
           >
             <h3>
-              <a href="#">Simulated Environments</a>
+              <Link to={"/solutions"}>Simulated Environments</Link>
             </h3>
             <p>
               Discover vulnerabilities with this program, which includes
@@ -126,11 +125,11 @@ export default function Home() {
           </Card>
           <Card
             className="galleryItem"
-            interactive={true}
+            interactive={false}
             elevation={Elevation.FOUR}
           >
             <h3>
-              <a href="#">Consultation</a>
+              <Link to={"/solutions"}>Consultation</Link>
             </h3>
             <p>
               Learn protect your online presence and receive invaluable

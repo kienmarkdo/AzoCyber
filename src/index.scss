@@ -15,15 +15,11 @@ html {
     background-color: $pt-dark-app-background-color;
 }
 
-.App {
-    // background-color: #464646;
-    // color: white;
-}
+// .App {
+//     // background-color: #464646;
+//     // color: white;
+// }
 
-.navbarStyle {
-    // background-color: #255184;
-    // height: $navbar-height;
-}
 
 .topSectionContainer {
     padding: 100px 50px;
@@ -55,6 +51,10 @@ html {
 .centerContainer {
     display: flex;
     justify-content: center;
+}
+
+.headerMarginBottom {
+    margin-bottom: 29px;
 }
 
 //* ======================  Home page  ======================

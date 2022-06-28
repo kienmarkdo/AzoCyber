@@ -1,26 +1,20 @@
-//* import components
+//* import from packages
+import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; // browser router v6 package
+import { Alignment, Button, Navbar } from "@blueprintjs/core";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Link,
-  BrowserRouter,
-  NavLink,
-} from "react-router-dom"; // browser router v6 package
-
-//* Import main pages (sections of website)
+//* Import components and pages
 import Home from "./components/Home";
 import About from "./components/About";
 import Solutions from "./components/Solutions";
 import Resources from "./components/Resources";
 import Contact from "./components/Contact";
 import Careers from "./components/Careers";
-import { Alignment, Button, Classes, Navbar } from "@blueprintjs/core";
+import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
         <Navbar
           style={{ padding: "0px 100px 0px 100px" }}
@@ -77,6 +71,7 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
     </BrowserRouter>
