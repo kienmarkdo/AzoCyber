@@ -3,13 +3,13 @@ import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; // bro
 import { Alignment, Button, Navbar } from "@blueprintjs/core";
 
 //* Import components and pages
-import Home from "./components/Home";
-import About from "./components/About";
-import Solutions from "./components/Solutions";
-import Resources from "./components/Resources";
-import Contact from "./components/Contact";
-import Careers from "./components/Careers";
-import GetQuote from "./components/GetQuote";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Solutions from "./pages/Solutions";
+import Resources from "./pages/Resources";
+import Contact from "./pages/Contact";
+import Careers from "./pages/Careers";
+import GetQuote from "./pages/GetQuote";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
