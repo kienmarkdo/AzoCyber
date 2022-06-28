@@ -35,7 +35,7 @@ export default function Home() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Our Partners
         </h2>
-        <br />
+        <hr className="shortHr" />
         <div className="galleryContainer">
           <img
             src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png"
@@ -80,7 +80,7 @@ export default function Home() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Our Solutions
         </h2>
-        <br />
+        <hr className="shortHr" />
         <div className="galleryContainer">
           <Card
             className="galleryItem"

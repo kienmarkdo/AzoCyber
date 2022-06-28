@@ -9,7 +9,6 @@ import {
   Icon,
 } from "@blueprintjs/core";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export default function Solutions() {
@@ -17,6 +16,10 @@ export default function Solutions() {
 
   const routeToContact = () => {
     navigate("/contact");
+  };
+
+  const routeToQuote = () => {
+    navigate("/get_a_quote");
   };
 
   return (
@@ -67,6 +70,7 @@ export default function Solutions() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Our Packages
         </h2>
+        <br />
         <h3 className="bp4-heading thinnerText" style={{ textAlign: "center" }}>
           Cybersecurity does not have to be complicated when we have your back.
         </h3>
@@ -74,7 +78,7 @@ export default function Solutions() {
           <div className="galleryContainer">
             <Card
               className="galleryItem"
-              interactive={true}
+              interactive={false}
               elevation={Elevation.FOUR}
             >
               <h3
@@ -105,11 +109,13 @@ export default function Solutions() {
                 Hello
               </p>
               <br />
-              <Button intent="success">Get a Quote</Button>
+              <Button intent="success" onClick={routeToQuote}>
+                Get a Quote
+              </Button>
             </Card>
             <Card
               className="galleryItem"
-              interactive={true}
+              interactive={false}
               elevation={Elevation.FOUR}
             >
               <h3
@@ -136,11 +142,13 @@ export default function Solutions() {
                 <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
               </p>
               <br />
-              <Button intent="danger">Get a Quote</Button>
+              <Button intent="danger" onClick={routeToQuote}>
+                Get a Quote
+              </Button>
             </Card>
             <Card
               className="galleryItem"
-              interactive={true}
+              interactive={false}
               elevation={Elevation.FOUR}
             >
               <h3
@@ -172,11 +180,13 @@ export default function Solutions() {
                 Hello
               </p>
               <br />
-              <Button intent="warning">Get a Quote</Button>
+              <Button intent="warning" onClick={routeToQuote}>
+                Get a Quote
+              </Button>
             </Card>
             <Card
               className="galleryItem"
-              interactive={true}
+              interactive={false}
               elevation={Elevation.FOUR}
             >
               <h3
@@ -207,7 +217,9 @@ export default function Solutions() {
                 Hello
               </p>
               <br />
-              <Button intent="primary">Get a Quote</Button>
+              <Button intent="primary" onClick={routeToQuote}>
+                Get a Quote
+              </Button>
             </Card>
           </div>
         </section>
@@ -219,16 +231,16 @@ export default function Solutions() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Find the Right Plan for You
         </h2>
-        <hr style={{ width: "200px", margin: "25px auto" }} />
+        <hr className="shortHr" />
         <h3 className="bp4-heading thinnerText" style={{ textAlign: "center" }}>
-          Not sure what you need? Curious about our pricing? Contact us to get
-          the answers to your questions.
+          Not sure which plan is for you? Curious about our pricing? Contact us
+          to get the answers to your questions.
         </h3>
         <div
           className="centerContainer"
           style={{ margin: "20px 0px 200px 0px" }}
         >
-          <Button intent="success" large={true}>
+          <Button intent="success" large={true} onClick={routeToContact}>
             Contact us
           </Button>
         </div>

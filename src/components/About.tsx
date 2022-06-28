@@ -54,7 +54,7 @@ export default function About() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Vision
         </h2>
-        <br />
+        <hr className="shortHr" />
         <section className="splitScreenContainer">
           <div className="splitScreenItemOne">
             <h3 className="bp4-heading">Our core values and beliefs</h3>
@@ -94,7 +94,7 @@ export default function About() {
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
           Our Team
         </h2>
-        <br />
+        <hr className="shortHr" />
         <div className="galleryContainer">
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sergio Ramos</h3>
