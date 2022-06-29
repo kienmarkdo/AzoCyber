@@ -8,6 +8,7 @@ import {
   Icon,
   Position,
   Tooltip,
+  Tag,
 } from "@blueprintjs/core";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -148,10 +149,26 @@ export default function Resources() {
                     {res.title}
                   </h2>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong> {res.organization_type}
+                    <strong>Organization Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="primary"
+                    >
+                      {res.organization_type}
+                    </Tag>
                   </h3>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong> {res.resource_type}
+                    <strong>Resource Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="success"
+                    >
+                      {res.resource_type}
+                    </Tag>
                   </h3>
                 </Card>
               );
@@ -165,10 +182,26 @@ export default function Resources() {
                     {res.title}
                   </h2>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong> {res.organization_type}
+                    <strong>Organization Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="primary"
+                    >
+                      {res.organization_type}
+                    </Tag>
                   </h3>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong> {res.resource_type}
+                    <strong>Resource Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="success"
+                    >
+                      {res.resource_type}
+                    </Tag>
                   </h3>
                 </Card>
               );
@@ -182,10 +215,26 @@ export default function Resources() {
                     {res.title}
                   </h2>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong> {res.organization_type}
+                    <strong>Organization Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="primary"
+                    >
+                      {res.organization_type}
+                    </Tag>
                   </h3>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong> {res.resource_type}
+                    <strong>Resource Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="success"
+                    >
+                      {res.resource_type}
+                    </Tag>
                   </h3>
                 </Card>
               );
@@ -199,10 +248,26 @@ export default function Resources() {
                     {res.title}
                   </h2>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong> {res.organization_type}
+                    <strong>Organization Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="primary"
+                    >
+                      {res.organization_type}
+                    </Tag>
                   </h3>
                   <h3 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong> {res.resource_type}
+                    <strong>Resource Type:</strong>{" "}
+                    <Tag
+                      minimal={true}
+                      large={true}
+                      round={true}
+                      intent="success"
+                    >
+                      {res.resource_type}
+                    </Tag>
                   </h3>
                 </Card>
               );
