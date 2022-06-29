@@ -5,6 +5,9 @@ import {
   Button,
   ButtonGroup,
   Card,
+  Icon,
+  Position,
+  Tooltip,
 } from "@blueprintjs/core";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -88,7 +91,16 @@ export default function Resources() {
         <div className="headerMarginBottom" />
         <Card className="filterResults">
           <h3 className="bp4-heading headerMarginBottom">Filter Results</h3>
-          <h4 className="bp4-heading thinnerText">Select Organization Type </h4>
+          <h4 className="bp4-heading thinnerText">
+            Select Organization Type{" "}
+            <Tooltip
+              content="Select Audience Type"
+              position={Position.RIGHT}
+              openOnTargetFocus={true}
+            >
+              <Icon icon="help" style={{ marginBottom: "3px" }} />
+            </Tooltip>
+          </h4>
           <ButtonGroup large={true}>
             {ORGANIZATION_TYPE_OPTIONS.map((org) => {
               return (
@@ -124,7 +136,7 @@ export default function Resources() {
             gap: "10px 10px",
           }}
         >
-          {" "}
+          <h2 className="bp4-heading">Search Result:</h2>
           {resourceData.map((res) => {
             if (
               organizationType === "All Organization Types" &&
@@ -194,6 +206,8 @@ export default function Resources() {
                   </h3>
                 </Card>
               );
+            } else {
+              return <></>;
             }
           })}
         </article>
