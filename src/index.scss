@@ -141,4 +141,39 @@ html {
     width: 300px;
 }
 
-//* ======================  Resources page  ======================
+//* ======================  Progress bar components  ======================
+
+.formContainer {
+    margin: 0px 25vw;
+}
+
+.progressBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.iconGroup {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.iconGroup > .iconStyle {
+    margin: 0px auto 20px auto;
+}
+
+.iconGroup > .iconStyle.incomplete {
+    color: #C5CBD3;
+}
+
+//* ======================  Contact components  ======================
+
+.formHeader {
+    text-align: center;
+    margin: 75px 0px;
+}
+
+.formInputContainer {
+    margin: 10vh 20vw;
+}
