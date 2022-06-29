@@ -1,15 +1,23 @@
 import {
   Button,
   ButtonGroup,
+  Card,
+  ControlGroup,
+  Drawer,
+  Elevation,
   FormGroup,
   HTMLSelect,
   Icon,
-  InputGroup,
+  IconSize,
   TextArea,
+  Classes,
+  DrawerSize,
+  Position,
 } from "@blueprintjs/core";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 
-export default function FormSecurityInformation() {
+export default function FormSecurityInformation(this: any) {
   const navigate = useNavigate();
 
   const routeToBusinessInfo = () => {
@@ -31,6 +39,8 @@ export default function FormSecurityInformation() {
     "[NEW] Post-incident - Repair & Recovery",
     "Other",
   ];
+
+  const [drawerState, setDrawerState] = useState(false);
 
   return (
     <>
@@ -84,20 +94,28 @@ export default function FormSecurityInformation() {
             style={{ minHeight: "10vh", resize: "none" }}
           />
         </FormGroup>
-        <FormGroup
-          className=""
-          label="Solutions package"
-          labelFor="solutions-package-input"
-          labelInfo="(optional)"
-          helperText="Select an option if you are interested in one of our Solutions packages"
-        >
-          <HTMLSelect
-            id="solutions-package-input"
-            fill={true}
-            options={SOLUTIONS_PACKAGES}
-          />
-        </FormGroup>
-
+        <ControlGroup style={{ display: "flex", gap: "20px" }}>
+          <FormGroup
+            className=""
+            label="Solutions package"
+            labelFor="solutions-package-input"
+            labelInfo="(optional)"
+            helperText="Select an option if you are interested in one of our Solutions packages"
+          >
+            <HTMLSelect
+              id="solutions-package-input"
+              fill={true}
+              options={SOLUTIONS_PACKAGES}
+            />
+          </FormGroup>
+          <Button
+            style={{ margin: "auto 0px 35px 0px" }}
+            onClick={() => setDrawerState(true)}
+          >
+            <Icon icon="help" style={{ margin: "0px 5px 0px 0px" }} /> Learn
+            more
+          </Button>
+        </ControlGroup>
         <ButtonGroup
           style={{ display: "flex", gap: "10px", marginTop: "25px" }}
         >
@@ -108,6 +126,166 @@ export default function FormSecurityInformation() {
             Submit
           </Button>
         </ButtonGroup>
+
+        {/* ==================================================== */}
+        <Drawer
+          isOpen={drawerState}
+          onClose={() => {
+            setDrawerState(false);
+          }}
+          icon="info-sign"
+          title="Solutions Packages Information"
+          size={DrawerSize.SMALL}
+          // usePortal={true}
+          position={Position.RIGHT}
+          hasBackdrop={true}
+          canEscapeKeyClose={true}
+          canOutsideClickClose={true}
+          usePortal={false}
+        >
+          <div className={Classes.DRAWER_BODY}>
+            <div className={Classes.DIALOG_BODY}>
+              <Card
+                className="galleryItem"
+                interactive={false}
+                elevation={Elevation.FOUR}
+              >
+                <h3
+                  className="bp4-heading headerMarginBottom"
+                  style={{ color: "#72CA9B" }}
+                >
+                  Prevention & Protection
+                </h3>
+                <p>
+                  Strengthen your defences and never run into a cyber incident
+                  again with our Prevention & Protection package.
+                </p>
+                <br />
+                <p>
+                  <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <br />
+              </Card>
+              <Card
+                className="galleryItem"
+                interactive={false}
+                elevation={Elevation.FOUR}
+              >
+                <h3
+                  className="bp4-heading headerMarginBottom"
+                  style={{ color: "#E76A6E" }}
+                >
+                  Emergency Response
+                </h3>
+                <p>
+                  Ensure that threats are dealt with as they happen with the
+                  24/7 Emergency Response package.
+                </p>
+                <br />
+                <p>
+                  <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <br />
+              </Card>
+              <Card
+                className="galleryItem"
+                interactive={false}
+                elevation={Elevation.FOUR}
+              >
+                <h3
+                  className="bp4-heading headerMarginBottom"
+                  style={{ color: "#EC9A3C" }}
+                >
+                  Simulated Environments
+                </h3>
+                <p>
+                  Discover vulnerabilities with this program, which includes
+                  extensive penetration tests and an IT simulation training
+                  package.
+                </p>
+                <br />
+                <p>
+                  <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <br />
+              </Card>
+              <Card
+                className="galleryItem"
+                interactive={false}
+                elevation={Elevation.FOUR}
+              >
+                <h3
+                  className="bp4-heading headerMarginBottom"
+                  style={{ color: "#8ABBFF" }}
+                >
+                  Consultation
+                </h3>
+                <p>
+                  Learn protect your online presence and receive invaluable
+                  consultation from our cybersecurity professionals.
+                </p>
+                <br />
+                <p>
+                  <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <p>
+                  <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+                  Hello
+                </p>
+                <br />
+              </Card>
+            </div>
+          </div>
+        </Drawer>
+        {/* ==================================================== */}
       </section>
     </>
   );
