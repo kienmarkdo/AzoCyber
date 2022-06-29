@@ -61,6 +61,12 @@ export default function Home() {
             className="galleryImagePartnersItem"
           />
           <img
+            src="https://www.nicepng.com/png/full/358-3589718_shopify-logo-white-transparent.png"
+            alt="Shopify logo"
+            className="galleryImagePartnersItem"
+          />
+
+          <img
             src="https://media.discordapp.net/attachments/983190148206428190/990824126010769418/Palantir_addmarg.png?width=1440&height=592"
             // Black background https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2017/04/LogoBlack.jpg
             // Large white https://d24wuq6o951i2g.cloudfront.net/img/events/id/458/458146959/assets/2834ec4648153222fc8f73e4cf6c672b.Palantir_Logo_Light.png
