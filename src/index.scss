@@ -9,13 +9,26 @@
 //* =================== SCSS variables ===================
 $navbar-height: 80px;
 
-//* =================== class styles ===================
+//* =================== HTML tag changes ===================
 
 html {
     // background-color: #464646;
     background-color: $pt-dark-app-background-color;
     min-width: 950px;
 }
+
+// change scrollbar design START
+// https://codepen.io/subfauna/pen/jOGgrr
+::-webkit-scrollbar { width: 10px; height: 3px;}
+// ::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+// change scrollbar design END
+
+//* =================== class styles ===================
 
 // .App {
 //     // background-color: #464646;
