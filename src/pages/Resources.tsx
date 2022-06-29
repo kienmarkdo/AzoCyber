@@ -18,14 +18,6 @@ export default function Resources() {
     navigate("/solutions");
   };
 
-  const routeToContact = () => {
-    navigate("/contact");
-  };
-
-  const routeToQuote = () => {
-    navigate("/get_a_quote");
-  };
-
   const ORGANIZATION_TYPE_OPTIONS = [
     "All Organization Types",
     "Small Businesses",

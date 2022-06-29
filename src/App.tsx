@@ -8,7 +8,7 @@ import About from "./pages/About";
 import Solutions from "./pages/Solutions";
 import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
-import Careers from "./pages/Careers";
+// import Careers from "./pages/Careers";
 import GetQuote from "./pages/GetQuote";
 import ScrollToTop from "./helpers/ScrollToTop";
 
@@ -46,9 +46,9 @@ function App() {
             <NavLink to="resources">
               <Button className="bp4-minimal" text="Resources" />
             </NavLink>
-            <NavLink to="careers">
+            {/* <NavLink to="careers">
               <Button className="bp4-minimal" text="Careers" />
-            </NavLink>
+            </NavLink> */}
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
             <NavLink to="get_a_quote">
@@ -80,7 +80,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/careers" element={<Careers />} />
+          {/* <Route path="/careers" element={<Careers />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/get_a_quote" element={<GetQuote />} />
           <Route path="*" element={<Home />} />
