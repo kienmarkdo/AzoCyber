@@ -17,8 +17,8 @@ export default function FormBusinessInformation() {
     navigate("/contact/personal_information");
   };
 
-  const routeToBusinessInfo = () => {
-    navigate("/contact/business_information");
+  const routeToSecurityInfo = () => {
+    navigate("/contact/security_information");
   };
 
   const ORGANIZATION_TYPES = [
@@ -118,11 +118,13 @@ export default function FormBusinessInformation() {
         >
           <Button text={organizationType} rightIcon="caret-down" />
         </Select2> */}
-        <ButtonGroup style={{ display: "flex", gap: "10px" }}>
+        <ButtonGroup
+          style={{ display: "flex", gap: "10px", marginTop: "25px" }}
+        >
           <Button intent="danger" large={true} onClick={routeToPersonalInfo}>
             Back
           </Button>
-          <Button intent="success" large={true} onClick={routeToBusinessInfo}>
+          <Button intent="success" large={true} onClick={routeToSecurityInfo}>
             Next
           </Button>
         </ButtonGroup>

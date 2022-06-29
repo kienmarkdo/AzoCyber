@@ -76,7 +76,12 @@ export default function FormPersonalInformation() {
             placeholder="Enter Your Position (e.g.: Security Analyst, Manager, etc.)"
           />
         </FormGroup>
-        <Button intent="success" large={true} onClick={routeToBusinessInfo}>
+        <Button
+          style={{ display: "flex", gap: "10px", marginTop: "25px" }}
+          intent="success"
+          large={true}
+          onClick={routeToBusinessInfo}
+        >
           Next
         </Button>
       </section>
