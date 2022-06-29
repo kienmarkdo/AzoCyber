@@ -81,7 +81,7 @@ function App() {
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/resources" element={<Resources />} />
           {/* <Route path="/careers" element={<Careers />} /> */}
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/*" element={<Contact />} />
           <Route path="/get_a_quote" element={<GetQuote />} />
           <Route path="*" element={<Home />} />
         </Routes>
