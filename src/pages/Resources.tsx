@@ -3,17 +3,13 @@ import {
   MenuItem,
   MenuDivider,
   Button,
-  FormGroup,
-  InputGroup,
-  ControlGroup,
-  HTMLSelect,
+  ButtonGroup,
+  Card,
 } from "@blueprintjs/core";
-import { IItemRendererProps, MultiSelect2 } from "@blueprintjs/select";
-import { ReactNode, SyntheticEvent, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
-import { SelectExample } from "../mockData/SelectExample";
-// import MultiSelect from "../components/MultiSelect";
+import resourceData from "../mockData/resourceData.json";
 
 export default function Resources() {
   const navigate = useNavigate();
@@ -48,6 +44,7 @@ export default function Resources() {
   const [organizationType, setOrganizationType] = useState(
     ORGANIZATION_TYPE_OPTIONS[0]
   );
+
   const [resourceType, setResourceType] = useState(RESOURCE_TYPE[0]);
 
   return (
@@ -76,20 +73,8 @@ export default function Resources() {
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/resources/#">
-              <MenuItem icon="selection" text="Small Businesses" />
-            </HashLink>
-            <MenuDivider />
-            <HashLink smooth to="/resources/#">
-              <MenuItem icon="selection" text="Large Organizations" />
-            </HashLink>
-            <MenuDivider />
-            <HashLink smooth to="/resources/#">
-              <MenuItem icon="selection" text="Government" />
-            </HashLink>
-            <MenuDivider />
-            <HashLink smooth to="/resources/#">
-              <MenuItem icon="selection" text="Academia" />
+            <HashLink smooth to="/resources/#azocyber_resources">
+              <MenuItem icon="selection" text="AzoCyber Resources" />
             </HashLink>
           </Menu>
           <br />
@@ -100,53 +85,126 @@ export default function Resources() {
           </Button>
         </div>
       </section>
-      <section id="find_resource" className="sectionStyle">
+      <section id="azocyber_resources" className="sectionStyle">
         <MenuDivider />
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Resources
+          AzoCyber Resources
         </h2>
         <hr className="shortHr" />
-        <section className="splitScreenContainer">
-          <div className="splitScreenItemOne">
-            <h3 className="bp4-heading headerMarginBottom">
-              AzoCyber Resources
-            </h3>
-            <ControlGroup vertical={false}>
-              <h4
-                className="bp4-heading thinnerText"
-                style={{ marginRight: "20px", width: "150px" }}
-              >
-                Organization Type
-              </h4>{" "}
-              <HTMLSelect
-                style={{ width: "300px" }}
-                options={ORGANIZATION_TYPE_OPTIONS}
-                onChange={(e) => setOrganizationType(e.currentTarget.value)}
-              />
-            </ControlGroup>
-            <br />
-            <ControlGroup vertical={false}>
-              <h4
-                className="bp4-heading thinnerText"
-                style={{ marginRight: "20px", width: "150px" }}
-              >
-                Resource Type
-              </h4>{" "}
-              <HTMLSelect
-                style={{ width: "300px" }}
-                options={RESOURCE_TYPE}
-                onChange={(e) => setResourceType(e.currentTarget.value)}
-              />
-            </ControlGroup>
-            <br />
-          </div>
-          <div className="splitScreenItemTwo">
-            <h1>{organizationType}</h1>
-            <h1>{resourceType}</h1>
-          </div>
-        </section>
+        <div className="headerMarginBottom" />
+        <Card className="filterResults">
+          <h3 className="bp4-heading headerMarginBottom">Filter Results</h3>
+          <h4 className="bp4-heading thinnerText">Select Organization Type </h4>
+          <ButtonGroup large={true}>
+            {ORGANIZATION_TYPE_OPTIONS.map((org) => {
+              return (
+                <Button
+                  onClick={() => setOrganizationType(org)}
+                  active={organizationType === org ? true : false}
+                >
+                  {org}
+                </Button>
+              );
+            })}
+          </ButtonGroup>
+          <div className="headerMarginBottom" />
+          <h4 className="bp4-heading thinnerText">Select Resource Type </h4>
+          <ButtonGroup large={true}>
+            {RESOURCE_TYPE.map((resource) => {
+              return (
+                <Button
+                  onClick={() => setResourceType(resource)}
+                  active={resourceType === resource ? true : false}
+                >
+                  {resource}
+                </Button>
+              );
+            })}
+          </ButtonGroup>
+        </Card>
+        <div className="headerMarginBottom" />
+        <article
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "10px 10px",
+          }}
+        >
+          {" "}
+          {resourceData.map((res) => {
+            if (
+              organizationType === "All Organization Types" &&
+              resourceType === "All Resource Types"
+            ) {
+              return (
+                <Card style={{ height: "200px", flexBasis: "100%" }}>
+                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                    {res.title}
+                  </h2>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Organization Type:</strong> {res.organization_type}
+                  </h3>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Resource Type:</strong> {res.resource_type}
+                  </h3>
+                </Card>
+              );
+            } else if (
+              organizationType === res.organization_type &&
+              resourceType === "All Resource Types"
+            ) {
+              return (
+                <Card style={{ height: "200px", flexBasis: "100%" }}>
+                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                    {res.title}
+                  </h2>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Organization Type:</strong> {res.organization_type}
+                  </h3>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Resource Type:</strong> {res.resource_type}
+                  </h3>
+                </Card>
+              );
+            } else if (
+              organizationType === "All Organization Types" &&
+              resourceType === res.resource_type
+            ) {
+              return (
+                <Card style={{ height: "200px", flexBasis: "100%" }}>
+                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                    {res.title}
+                  </h2>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Organization Type:</strong> {res.organization_type}
+                  </h3>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Resource Type:</strong> {res.resource_type}
+                  </h3>
+                </Card>
+              );
+            } else if (
+              organizationType === res.organization_type &&
+              resourceType === res.resource_type
+            ) {
+              return (
+                <Card style={{ height: "200px", flexBasis: "100%" }}>
+                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                    {res.title}
+                  </h2>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Organization Type:</strong> {res.organization_type}
+                  </h3>
+                  <h3 className="bp4-heading thinnerText">
+                    <strong>Resource Type:</strong> {res.resource_type}
+                  </h3>
+                </Card>
+              );
+            }
+          })}
+        </article>
       </section>
       <div style={{ marginBottom: "300px" }} />
     </>

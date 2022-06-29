@@ -1,0 +1,68 @@
+[{
+    "id": 1,
+    "title": "Phishing Explained",
+    "organization_type": "All Types",
+    "resource_type": "Tutorial"
+  }, {
+    "id": 2,
+    "title": "Government Big Data Security",
+    "organization_type": "Government",
+    "resource_type": "Article"
+  }, {
+    "id": 3,
+    "title": "Protecting Your Research Publications",
+    "organization_type": "Academia",
+    "resource_type": "Article"
+  }, {
+    "id": 4,
+    "title": "Cyber attack statistics in Canada (2022)",
+    "organization_type": "All Types",
+    "resource_type": "Journal"
+  }, {
+    "id": 5,
+    "title": "Protecting Your Small Business",
+    "organization_type": "Small Businesses",
+    "resource_type": "Article"
+  }, {
+    "id": 6,
+    "title": "E-commerce and Consumer Data Protection",
+    "organization_type": "Large Organizations",
+    "resource_type": "Article"
+  }, {
+    "id": 7,
+    "title": "Employee Cyber Awareness Training",
+    "organization_type": "All Types",
+    "resource_type": "Tutorial"
+  }, {
+    "id": 8,
+    "title": "Introduction to Cybersecurity for Computer Scientists",
+    "organization_type": "Academia",
+    "resource_type": "Tutorial"
+  }, {
+    "id": 9,
+    "title": "Penetration Test Results for Large Organizations (2021)",
+    "organization_type": "Large Organizations",
+    "resource_type": "Journal"
+  }, {
+    "id": 10,
+    "title": "Penetration Test Results for Government (2022)",
+    "organization_type": "Government",
+    "resource_type": "Journal"
+  }, {
+    "id": 11,
+    "title": "How Cyber Criminals Are Exploiting Small Businesses",
+    "organization_type": "Small Businesses",
+    "resource_type": "Article"
+  }, {
+    "id": 12,
+    "title": "Government Cyber Safety Training (2022)",
+    "organization_type": "Government",
+    "resource_type": "Tutorial"
+  }
+  , {
+    "id": 13,
+    "title": "Small Business owner's Guide to Cyber Awareness",
+    "organization_type": "Small Businesses",
+    "resource_type": "Tutorial"
+  }
+]
