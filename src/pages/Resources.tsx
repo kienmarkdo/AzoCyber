@@ -145,10 +145,10 @@ export default function Resources() {
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
-                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                  <h3 className="bp4-heading" style={{ color: "#EC9A3C" }}>
                     {res.title}
-                  </h2>
-                  <h3 className="bp4-heading thinnerText">
+                  </h3>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Organization Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -158,8 +158,8 @@ export default function Resources() {
                     >
                       {res.organization_type}
                     </Tag>
-                  </h3>
-                  <h3 className="bp4-heading thinnerText">
+                  </h4>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Resource Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -169,7 +169,7 @@ export default function Resources() {
                     >
                       {res.resource_type}
                     </Tag>
-                  </h3>
+                  </h4>
                 </Card>
               );
             } else if (
@@ -178,10 +178,10 @@ export default function Resources() {
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
-                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                  <h3 className="bp4-heading" style={{ color: "#EC9A3C" }}>
                     {res.title}
-                  </h2>
-                  <h3 className="bp4-heading thinnerText">
+                  </h3>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Organization Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -191,8 +191,8 @@ export default function Resources() {
                     >
                       {res.organization_type}
                     </Tag>
-                  </h3>
-                  <h3 className="bp4-heading thinnerText">
+                  </h4>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Resource Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -202,7 +202,7 @@ export default function Resources() {
                     >
                       {res.resource_type}
                     </Tag>
-                  </h3>
+                  </h4>
                 </Card>
               );
             } else if (
@@ -211,10 +211,10 @@ export default function Resources() {
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
-                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                  <h3 className="bp4-heading" style={{ color: "#EC9A3C" }}>
                     {res.title}
-                  </h2>
-                  <h3 className="bp4-heading thinnerText">
+                  </h3>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Organization Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -224,8 +224,8 @@ export default function Resources() {
                     >
                       {res.organization_type}
                     </Tag>
-                  </h3>
-                  <h3 className="bp4-heading thinnerText">
+                  </h4>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Resource Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -235,7 +235,7 @@ export default function Resources() {
                     >
                       {res.resource_type}
                     </Tag>
-                  </h3>
+                  </h4>
                 </Card>
               );
             } else if (
@@ -244,10 +244,10 @@ export default function Resources() {
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
-                  <h2 className="bp4-heading" style={{ color: "#EC9A3C" }}>
+                  <h3 className="bp4-heading" style={{ color: "#EC9A3C" }}>
                     {res.title}
-                  </h2>
-                  <h3 className="bp4-heading thinnerText">
+                  </h3>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Organization Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -257,8 +257,8 @@ export default function Resources() {
                     >
                       {res.organization_type}
                     </Tag>
-                  </h3>
-                  <h3 className="bp4-heading thinnerText">
+                  </h4>
+                  <h4 className="bp4-heading thinnerText">
                     <strong>Resource Type:</strong>{" "}
                     <Tag
                       minimal={true}
@@ -268,7 +268,7 @@ export default function Resources() {
                     >
                       {res.resource_type}
                     </Tag>
-                  </h3>
+                  </h4>
                 </Card>
               );
             } else {
