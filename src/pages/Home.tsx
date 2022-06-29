@@ -65,7 +65,11 @@ export default function Home() {
             alt="Shopify logo"
             className="galleryImagePartnersItem"
           />
-
+          <img
+            src="https://seeklogo.com/images/R/reddit-logo-23F13F6A6A-seeklogo.com.png"
+            alt="Reddit logo"
+            className="galleryImagePartnersItem"
+          />
           <img
             src="https://media.discordapp.net/attachments/983190148206428190/990824126010769418/Palantir_addmarg.png?width=1440&height=592"
             // Black background https://digital.hbs.edu/platform-digit/wp-content/uploads/sites/2/2017/04/LogoBlack.jpg
