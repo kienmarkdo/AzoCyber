@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AzoCyber/static/css/main.9bfdd130.css",
-    "main.js": "/AzoCyber/static/js/main.be209116.js",
+    "main.css": "/AzoCyber/static/css/main.59b64397.css",
+    "main.js": "/AzoCyber/static/js/main.9780db11.js",
     "static/media/blueprint-icons-20.eot?": "/AzoCyber/static/media/blueprint-icons-20.12b358c6d8dbe8756615.eot",
     "static/media/blueprint-icons-20.ttf?": "/AzoCyber/static/media/blueprint-icons-20.3fd95ab7e829aa1d9ba0.ttf",
     "static/media/blueprint-icons-16.eot?": "/AzoCyber/static/media/blueprint-icons-16.c98f9776ee5bbd2aa668.eot",
@@ -11,11 +11,11 @@
     "static/media/blueprint-icons-20.woff2?": "/AzoCyber/static/media/blueprint-icons-20.14aa945151de662f422e.woff2",
     "static/media/blueprint-icons-16.woff2?": "/AzoCyber/static/media/blueprint-icons-16.a12444a68ba6fe9089da.woff2",
     "index.html": "/AzoCyber/index.html",
-    "main.9bfdd130.css.map": "/AzoCyber/static/css/main.9bfdd130.css.map",
-    "main.be209116.js.map": "/AzoCyber/static/js/main.be209116.js.map"
+    "main.59b64397.css.map": "/AzoCyber/static/css/main.59b64397.css.map",
+    "main.9780db11.js.map": "/AzoCyber/static/js/main.9780db11.js.map"
   },
   "entrypoints": [
-    "static/css/main.9bfdd130.css",
-    "static/js/main.be209116.js"
+    "static/css/main.59b64397.css",
+    "static/js/main.9780db11.js"
   ]
 }
