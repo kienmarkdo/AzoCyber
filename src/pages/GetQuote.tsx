@@ -6,7 +6,6 @@ import {
   Dialog,
   FormGroup,
   HTMLSelect,
-  Icon,
   InputGroup,
 } from "@blueprintjs/core";
 import { useState } from "react";
