@@ -13,6 +13,7 @@ import {
   Classes,
   DrawerSize,
   Position,
+  Dialog,
 } from "@blueprintjs/core";
 import { useState } from "react";
 import { useNavigate } from "react-router";
@@ -41,6 +42,13 @@ export default function FormSecurityInformation(this: any) {
   ];
 
   const [drawerState, setDrawerState] = useState(false);
+  const [submittedState, setSubmittedState] = useState(false);
+  const [formCompletedState, setFormCompletedState] = useState(false);
+
+  const submitForm = () => {
+    setSubmittedState(true);
+    setFormCompletedState(true);
+  };
 
   return (
     <>
@@ -69,12 +77,22 @@ export default function FormSecurityInformation(this: any) {
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
           <div className="iconGroup">
-            <Icon
-              icon="tick-circle"
-              iconSize={100}
-              intent="success"
-              className="iconStyle"
-            />
+            {formCompletedState === true ? (
+              <Icon
+                icon="tick-circle"
+                iconSize={100}
+                intent="success"
+                className="iconStyle"
+              />
+            ) : (
+              <Icon
+                icon="ban-circle"
+                iconSize={100}
+                className="iconStyle"
+                intent="primary"
+              />
+            )}
+
             <p>Security Information</p>
           </div>
         </div>
@@ -122,7 +140,7 @@ export default function FormSecurityInformation(this: any) {
           <Button intent="danger" large={true} onClick={routeToBusinessInfo}>
             Back
           </Button>
-          <Button intent="success" large={true} onClick={routeToHome}>
+          <Button intent="success" large={true} onClick={submitForm}>
             Submit
           </Button>
         </ButtonGroup>
@@ -285,6 +303,21 @@ export default function FormSecurityInformation(this: any) {
             </div>
           </div>
         </Drawer>
+        {/* ==================================================== */}
+        <Dialog
+          title="Submission Successful!"
+          icon="endorsed"
+          isOpen={submittedState}
+          usePortal={false}
+          onClose={() => {
+            setSubmittedState(false);
+          }}
+        >
+          <div className={Classes.DIALOG_BODY}>
+            <p>Your Contact form has been sent to our team!</p>
+            <p>You will receive a response in 3-5 business days.</p>
+          </div>
+        </Dialog>
         {/* ==================================================== */}
       </section>
     </>

@@ -13,11 +13,17 @@ export default function FormPersonalInformation() {
       <section className="formContainer">
         <div className="progressBar">
           <div className="iconGroup">
-            <Icon
+            {/* <Icon
               icon="tick-circle"
               iconSize={100}
               intent="success"
               className="iconStyle"
+            /> */}
+            <Icon
+              icon="ban-circle"
+              iconSize={100}
+              className="iconStyle"
+              intent="primary"
             />
             <p>Personal Information</p>
           </div>
