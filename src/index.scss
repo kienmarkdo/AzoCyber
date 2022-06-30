@@ -5,6 +5,7 @@
 @import "~@blueprintjs/core/lib/scss/variables";
 @import "~@blueprintjs/icons/lib/scss/variables";
 @import "~@blueprintjs/select/lib/css/blueprint-select.css"; // https://blueprintjs.com/docs/#select
+@import "~@blueprintjs/datetime/lib/css/blueprint-datetime.css"; // https://blueprintjs.com/docs/#datetime
 
 //* =================== SCSS variables ===================
 $navbar-height: 80px;
@@ -183,7 +184,7 @@ html {
 $formRequestQuoteContainerGap: 1%;
 
 .formRequestQuoteContainer {
-    margin: 50px 20vw 10vh 20vw;
+    margin: 50px 20vw 5vh 20vw;
     display: flex;
     gap: $formRequestQuoteContainerGap;
     flex-wrap: wrap;
@@ -195,4 +196,17 @@ $formRequestQuoteContainerGap: 1%;
 
 .formRequestItemSplitThird {
     width: calc((100% - 2 * $formRequestQuoteContainerGap) / 3);
+}
+
+.datepicker {
+    width: 243px;
+    margin: 0px 20vw 50px 20vw;
+    display: flex;
+    gap: 10px;
+}
+
+.getQuoteMargins {
+    margin: 0px 20vw 10px 20vw;
+    display: flex;
+    gap: 10px;
 }

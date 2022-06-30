@@ -9,11 +9,10 @@ import {
   InputGroup,
 } from "@blueprintjs/core";
 import { useState } from "react";
-// import { Select2 } from "@blueprintjs/select";
-// import { useState } from "react";
 import { useNavigate } from "react-router";
+import { CalendarDateTime } from "../components/CalendarDateTime";
 
-export default function GetQuote() {
+export default function GetQuote(this: any) {
   const navigate = useNavigate();
 
   const routeToHome = () => {
@@ -53,6 +52,8 @@ export default function GetQuote() {
     "[NEW] Post-incident - Repair & Recovery",
     "Other",
   ];
+
+  const [onsiteState, setOnsiteState] = useState("no");
 
   return (
     <>
@@ -152,14 +153,45 @@ export default function GetQuote() {
           </FormGroup>
         </ControlGroup>
 
-        <ButtonGroup
-          style={{ display: "flex", gap: "10px", marginTop: "25px" }}
-        >
-          <Button intent="success" large={true} onClick={submitForm}>
-            Submit Request
-          </Button>
-        </ButtonGroup>
+        <div className="getQuoteRadioButtonContainer">
+          <label className="bp4-label">
+            Would you like a AzoCyber to send a technician to your on-site
+            location?
+          </label>
+          <label className="bp4-control bp4-radio bp4-align-left">
+            <input
+              name="group"
+              type="radio"
+              value={onsiteState}
+              onChange={() => setOnsiteState("no")}
+            />
+            <span className="bp4-control-indicator"></span>No
+          </label>
+          <label className="bp4-control bp4-radio bp4-align-left">
+            <input
+              name="group"
+              type="radio"
+              value={onsiteState}
+              onChange={() => setOnsiteState("yes")}
+            />
+            <span className="bp4-control-indicator"></span>Yes
+          </label>
+        </div>
       </section>
+
+      {onsiteState === "yes" ? <CalendarDateTime /> : <></>}
+
+      <ButtonGroup
+        style={{
+          margin: "0px 20vw 10vh 20vw",
+          display: "flex",
+          gap: "10px",
+        }}
+      >
+        <Button intent="success" large={true} onClick={submitForm}>
+          Submit Request
+        </Button>
+      </ButtonGroup>
       {/* ==================================================== */}
       <Dialog
         title="Submission Successful!"
