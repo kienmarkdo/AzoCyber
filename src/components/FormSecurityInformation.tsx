@@ -317,6 +317,11 @@ export default function FormSecurityInformation(this: any) {
             <p>Your Contact form has been sent to our team!</p>
             <p>You will receive a response in 3-5 business days.</p>
           </div>
+          <div className={Classes.DIALOG_FOOTER}>
+            <Button intent="success" onClick={routeToHome}>
+              Return To Home Page
+            </Button>
+          </div>
         </Dialog>
         {/* ==================================================== */}
       </section>
