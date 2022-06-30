@@ -53,11 +53,17 @@ export default function FormBusinessInformation() {
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
           <div className="iconGroup">
-            <Icon
+            {/* <Icon
               icon="tick-circle"
               iconSize={100}
               intent="success"
               className="iconStyle"
+            /> */}
+            <Icon
+              icon="ban-circle"
+              iconSize={100}
+              className="iconStyle"
+              intent="primary"
             />
             <p>Business Information</p>
           </div>
