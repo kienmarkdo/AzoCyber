@@ -167,7 +167,7 @@ html {
     color: #C5CBD3;
 }
 
-//* ======================  Contact components  ======================
+//* ======================  Contact page  ======================
 
 .formHeader {
     text-align: center;
@@ -176,4 +176,23 @@ html {
 
 .formInputContainer {
     margin: 10vh 20vw;
+}
+
+//* ======================  Get A Quote page  ======================
+
+$formRequestQuoteContainerGap: 1%;
+
+.formRequestQuoteContainer {
+    margin: 50px 20vw 10vh 20vw;
+    display: flex;
+    gap: $formRequestQuoteContainerGap;
+    flex-wrap: wrap;
+}
+
+.formRequestItemSplitHalf {
+    width: calc((100% - $formRequestQuoteContainerGap) / 2);
+}
+
+.formRequestItemSplitThird {
+    width: calc((100% - 2 * $formRequestQuoteContainerGap) / 3);
 }
