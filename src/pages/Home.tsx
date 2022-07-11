@@ -1,8 +1,10 @@
 import { Button, Card, Elevation, MenuDivider } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToAbout = () => {
     navigate("/AzoCyber/about");
@@ -33,7 +35,7 @@ export default function Home() {
       </section>
       <section className="sectionStyle">
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Partners
+          {t("ourPartners")}
         </h2>
         <hr className="shortHr" />
         <div className="galleryContainer">

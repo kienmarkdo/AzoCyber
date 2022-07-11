@@ -1,6 +1,7 @@
 //* import from packages
 import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; // browser router v6 package
-import { Alignment, Button, Navbar } from "@blueprintjs/core";
+import { Alignment, Button, ButtonGroup, Navbar } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 
 //* Import components and pages
 import Home from "./pages/Home";
@@ -14,6 +15,16 @@ import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const handleSelectEnglish = (): void => {
+    i18n.changeLanguage("en");
+  };
+
+  const handleSelectFrench = (): void => {
+    i18n.changeLanguage("fr");
+  };
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -36,7 +47,7 @@ function App() {
             <Navbar.Divider />
 
             <NavLink to="/AzoCyber/home">
-              <Button className="bp4-minimal" text="Home" />
+              <Button className="bp4-minimal" text={t("home")} />
             </NavLink>
             <NavLink to="/AzoCyber/about">
               <Button className="bp4-minimal" text="About" />
@@ -52,6 +63,23 @@ function App() {
             </NavLink> */}
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
+            <ButtonGroup>
+              <Button
+                key="english"
+                text="EN"
+                onClick={handleSelectEnglish}
+                active={i18n.language.startsWith("en")}
+              />
+              <Button
+                key="french"
+                text="FR"
+                onClick={handleSelectFrench}
+                active={i18n.language.startsWith("fr")}
+              />
+            </ButtonGroup>
+
+            <Navbar.Divider />
+
             <NavLink to="/AzoCyber/get_a_quote">
               <Button
                 className="bp4-button"
@@ -60,7 +88,7 @@ function App() {
               />
             </NavLink>
 
-            <Navbar.Divider />
+            <div style={{ width: "10px" }} />
 
             <NavLink to="/AzoCyber/contact">
               <Button
