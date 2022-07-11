@@ -5,5 +5,17 @@
     "navResources": "Resources",
     "navGetAQuote": "Get a Quote",
     "navContactUs": "Contact Us",
-    "ourPartners": "Our Partners"
+    "homeHeader": "One in five Canadian businesses experience a cyber attack annually",
+    "homeHeaderDescription": "Don't be another statistic",
+    "learnMore": "Learn More",
+    "ourSolutions": "Our Solutions",
+    "ourPartners": "Our Partners",
+    "preventionAndProtection": "Prevention & Protection",
+    "preventionAndProtectionDescription": "Strengthen your defences and never run into a cyber incident again with our Prevention & Protection package.",
+    "emergencyResponse": "Emergency Response",
+    "emergencyResponseDescription": "Ensure that threats are dealt with as they happen with the 24/7 Emergency Response package.",
+    "simulatedEnvironments": "Simulated Environments",
+    "simulatedEnvironmentsDescription": "Discover vulnerabilities with this program, which includes extensive penetration tests and an IT simulation training package.",
+    "consultation": "Consultation",
+    "consultationDescription": "Learn protect your online presence and receive invaluable consultation from our cybersecurity professionals."
 }

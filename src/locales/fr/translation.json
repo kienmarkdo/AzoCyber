@@ -5,5 +5,17 @@
     "navResources": "Ressources",
     "navGetAQuote": "Obtenir une soumission",
     "navContactUs": "Contactez-nous",
-    "ourPartners": "Nos Partenaires"
+    "homeHeader": "Une entreprise canadienne sur cinq subit une cyberattaque chaque année",
+    "homeHeaderDescription": "Ne soyez pas une autre victime",
+    "learnMore": "En savoir plus",
+    "ourSolutions": "Nos Solutions",
+    "ourPartners": "Nos Partenaires",
+    "preventionAndProtection": "Prévention & Protection",
+    "preventionAndProtectionDescription": "Renforcez vos défenses et ne subissez plus jamais de cyberincident avec notre pack Prévention & Protection.",
+    "emergencyResponse": "Intervention d'urgence",
+    "emergencyResponseDescription": "Assurez-vous que les menaces sont traitées au fur et à mesure qu'elles surviennent grâce au package d'Intervention d'urgence 24h/24 et 7j/7.",
+    "simulatedEnvironments": "Environnements simulés",
+    "simulatedEnvironmentsDescription": "Découvrez les vulnérabilités avec ce programme, qui comprend des tests de pénétration approfondis et un package de formation en simulation informatique.",
+    "consultation": "Consultation",
+    "consultationDescrption" : "Apprenez à protéger votre présence en ligne et recevez des conseils inestimables de la part de nos professionnels de la cybersécurité."
 }

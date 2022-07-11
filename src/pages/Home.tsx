@@ -24,13 +24,13 @@ export default function Home() {
         }}
       >
         <h1 className="bp4-heading headerMarginBottom" style={{ width: "50%" }}>
-          One in five Canadian businesses experience a cyber attack annually
+          {t("homeHeader")}
         </h1>
         <h2 className="bp4-heading headerMarginBottom thinnerText">
-          Don't be another statistic
+          {t("homeHeaderDescription")}
         </h2>
         <Button large={true} intent="success" onClick={routeToAbout}>
-          Learn more
+          {t("learnMore")}
         </Button>
       </section>
       <section className="sectionStyle">
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
       <section className="sectionStyle">
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Solutions
+          {t("ourSolutions")}
         </h2>
         <hr className="shortHr" />
         <div className="galleryContainer">
@@ -100,14 +100,11 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Prevention & Protection</Link>
+              <Link to={"/solutions"}>{t("preventionAndProtection")}</Link>
             </h3>
-            <p>
-              Strengthen your defences and never run into a cyber incident again
-              with our Prevention & Protection package.
-            </p>
+            <p>{t("preventionAndProtectionDescription")}</p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -115,14 +112,11 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Emergency Response</Link>
+              <Link to={"/solutions"}>{t("emergencyResponse")}</Link>
             </h3>
-            <p>
-              Ensure that threats are dealt with as they happen with the 24/7
-              Emergency Response package.
-            </p>
+            <p>{t("emergencyResponseDescription")}</p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -130,14 +124,11 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Simulated Environments</Link>
+              <Link to={"/solutions"}>{t("simulatedEnvironments")}</Link>
             </h3>
-            <p>
-              Discover vulnerabilities with this program, which includes
-              extensive penetration tests and an IT simulation training package.
-            </p>
+            <p>{t("simulatedEnvironmentsDescription")}</p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -145,14 +136,11 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Consultation</Link>
+              <Link to={"/solutions"}>{t("consultation")}</Link>
             </h3>
-            <p>
-              Learn protect your online presence and receive invaluable
-              consultation from our cybersecurity professionals.
-            </p>
+            <p>{t("consultationDescrption")}</p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
         </div>
       </section>
