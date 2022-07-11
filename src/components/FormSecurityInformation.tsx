@@ -15,7 +15,7 @@ import {
   Position,
   Dialog,
 } from "@blueprintjs/core";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 
 export default function FormSecurityInformation(this: any) {
@@ -29,6 +29,7 @@ export default function FormSecurityInformation(this: any) {
     navigate("/AzoCyber/home/");
   };
 
+  // options for Solutions Packages dropdown
   const SOLUTIONS_PACKAGES = [
     "No Package Selected",
     "Prevention & Protection",
@@ -41,14 +42,27 @@ export default function FormSecurityInformation(this: any) {
     "Other",
   ];
 
+  // useStates
   const [drawerState, setDrawerState] = useState(false);
   const [submittedState, setSubmittedState] = useState(false);
   const [formCompletedState, setFormCompletedState] = useState(false);
 
+  // Actions for when a form is sucessfully submitted
   const submitForm = () => {
     setSubmittedState(true);
     setFormCompletedState(true);
   };
+
+  // This useEffect prevents page scrolling when the drawer is open
+  useEffect(() => {
+    if (drawerState === true) {
+      document.body.style.overflow = "hidden"; // turns off page scrolling
+      document.body.scrollTop = 0; // Scroll to top of screen - For Safari
+      document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
+    } else {
+      document.body.style.overflow = "scroll"; // turns on page scrolling again
+    }
+  }, [drawerState]);
 
   return (
     <>
