@@ -1,4 +1,9 @@
 {
-    "home": "Accueil",
+    "navHome": "Accueil",
+    "navAbout": "À propos",
+    "navSolutions": "Solutions",
+    "navResources": "Ressources",
+    "navGetAQuote": "Obtenir une soumission",
+    "navContactUs": "Contactez-nous",
     "ourPartners": "Nos Partenaires"
 }

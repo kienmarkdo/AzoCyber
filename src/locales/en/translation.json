@@ -1,4 +1,9 @@
 {
-    "home": "Home",
+    "navHome": "Home",
+    "navAbout": "About",
+    "navSolutions": "Solutions",
+    "navResources": "Resources",
+    "navGetAQuote": "Get a Quote",
+    "navContactUs": "Contact Us",
     "ourPartners": "Our Partners"
 }

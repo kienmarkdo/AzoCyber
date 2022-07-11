@@ -47,16 +47,16 @@ function App() {
             <Navbar.Divider />
 
             <NavLink to="/AzoCyber/home">
-              <Button className="bp4-minimal" text={t("home")} />
+              <Button className="bp4-minimal" text={t("navHome")} />
             </NavLink>
             <NavLink to="/AzoCyber/about">
-              <Button className="bp4-minimal" text="About" />
+              <Button className="bp4-minimal" text={t("navAbout")} />
             </NavLink>
             <NavLink to="/AzoCyber/solutions">
-              <Button className="bp4-minimal" text="Solutions" />
+              <Button className="bp4-minimal" text={t("navSolutions")} />
             </NavLink>
             <NavLink to="/AzoCyber/resources">
-              <Button className="bp4-minimal" text="Resources" />
+              <Button className="bp4-minimal" text={t("navResources")} />
             </NavLink>
             {/* <NavLink to="/AzoCyber/careers">
               <Button className="bp4-minimal" text="Careers" />
@@ -84,7 +84,7 @@ function App() {
               <Button
                 className="bp4-button"
                 intent="primary"
-                text="Get a Quote"
+                text={t("navGetAQuote")}
               />
             </NavLink>
 
@@ -94,7 +94,7 @@ function App() {
               <Button
                 className="bp4-button"
                 intent="success"
-                text="Contact Us"
+                text={t("navContactUs")}
               />
             </NavLink>
           </Navbar.Group>
