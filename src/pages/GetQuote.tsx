@@ -16,7 +16,7 @@ export default function GetQuote(this: any) {
   const navigate = useNavigate();
 
   const routeToHome = () => {
-    navigate("/home");
+    navigate("/AzoCyber/home");
   };
 
   const [submittedState, setSubmittedState] = useState(false);

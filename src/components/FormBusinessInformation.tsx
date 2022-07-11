@@ -14,11 +14,11 @@ export default function FormBusinessInformation() {
   const navigate = useNavigate();
 
   const routeToPersonalInfo = () => {
-    navigate("/contact/personal_information");
+    navigate("/AzoCyber/contact/personal_information");
   };
 
   const routeToSecurityInfo = () => {
-    navigate("/contact/security_information");
+    navigate("/AzoCyber/contact/security_information");
   };
 
   const ORGANIZATION_TYPES = [

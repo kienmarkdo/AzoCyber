@@ -15,11 +15,11 @@ export default function Solutions() {
   const navigate = useNavigate();
 
   const routeToContact = () => {
-    navigate("/contact");
+    navigate("/AzoCyber/contact");
   };
 
   const routeToQuote = () => {
-    navigate("/get_a_quote");
+    navigate("/AzoCyber/get_a_quote");
   };
 
   return (

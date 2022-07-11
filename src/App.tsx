@@ -10,6 +10,7 @@ import Resources from "./pages/Resources";
 import Contact from "./pages/Contact";
 // import Careers from "./pages/Careers";
 import GetQuote from "./pages/GetQuote";
+import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         >
           <Navbar.Group align={Alignment.LEFT}>
             <Navbar.Heading>
-              <NavLink to="home">
+              <NavLink to="/AzoCyber">
                 <img
                   src="https://media.discordapp.net/attachments/983190148206428190/990770824090882148/Azocyber_upper.png"
                   alt="Logo cyber with text"
@@ -34,24 +35,24 @@ function App() {
 
             <Navbar.Divider />
 
-            <NavLink to="home">
+            <NavLink to="/AzoCyber/home">
               <Button className="bp4-minimal" text="Home" />
             </NavLink>
-            <NavLink to="about">
+            <NavLink to="/AzoCyber/about">
               <Button className="bp4-minimal" text="About" />
             </NavLink>
-            <NavLink to="solutions">
+            <NavLink to="/AzoCyber/solutions">
               <Button className="bp4-minimal" text="Solutions" />
             </NavLink>
-            <NavLink to="resources">
+            <NavLink to="/AzoCyber/resources">
               <Button className="bp4-minimal" text="Resources" />
             </NavLink>
-            {/* <NavLink to="careers">
+            {/* <NavLink to="/AzoCyber/careers">
               <Button className="bp4-minimal" text="Careers" />
             </NavLink> */}
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
-            <NavLink to="get_a_quote">
+            <NavLink to="/AzoCyber/get_a_quote">
               <Button
                 className="bp4-button"
                 intent="primary"
@@ -61,7 +62,7 @@ function App() {
 
             <Navbar.Divider />
 
-            <NavLink to="contact">
+            <NavLink to="/AzoCyber/contact">
               <Button
                 className="bp4-button"
                 intent="success"
@@ -75,15 +76,15 @@ function App() {
       <main className="bp4-dark">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/AzoCyber/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/resources" element={<Resources />} />
-          {/* <Route path="/careers" element={<Careers />} /> */}
-          <Route path="/contact/*" element={<Contact />} />
-          <Route path="/get_a_quote" element={<GetQuote />} />
-          <Route path="*" element={<Home />} />
+          <Route path="/AzoCyber" element={<Home />} />
+          <Route path="/AzoCyber/home" element={<Home />} />
+          <Route path="/AzoCyber/about" element={<About />} />
+          <Route path="/AzoCyber/solutions" element={<Solutions />} />
+          <Route path="/AzoCyber/resources" element={<Resources />} />
+          {/* <Route path="/AzoCyber//careers" element={<Careers />} /> */}
+          <Route path="/AzoCyber/contact/*" element={<Contact />} />
+          <Route path="/AzoCyber/get_a_quote" element={<GetQuote />} />
+          <Route path="/AzoCyber/*" element={<PageNotFound />} />
         </Routes>
       </main>
     </BrowserRouter>

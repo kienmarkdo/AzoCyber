@@ -5,11 +5,11 @@ export default function Home() {
   const navigate = useNavigate();
 
   const routeToAbout = () => {
-    navigate("/about");
+    navigate("/AzoCyber/about");
   };
 
   const routeToSolutions = () => {
-    navigate("/solutions");
+    navigate("/AzoCyber/solutions");
   };
 
   return (

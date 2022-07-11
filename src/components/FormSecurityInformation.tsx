@@ -22,11 +22,11 @@ export default function FormSecurityInformation(this: any) {
   const navigate = useNavigate();
 
   const routeToBusinessInfo = () => {
-    navigate("/contact/business_information");
+    navigate("/AzoCyber/contact/business_information");
   };
 
   const routeToHome = () => {
-    navigate("/home/");
+    navigate("/AzoCyber/home/");
   };
 
   const SOLUTIONS_PACKAGES = [

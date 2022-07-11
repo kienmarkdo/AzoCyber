@@ -6,7 +6,7 @@ export default function About() {
   const navigate = useNavigate();
 
   const routeToSolutions = () => {
-    navigate("/solutions");
+    navigate("/AzoCyber/solutions");
   };
 
   return (

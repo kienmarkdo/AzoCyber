@@ -19,7 +19,7 @@ export default function Resources() {
   const navigate = useNavigate();
 
   const routeToSolutions = () => {
-    navigate("/solutions");
+    navigate("/AzoCyber/solutions");
   };
 
   const ORGANIZATION_TYPE_OPTIONS = [

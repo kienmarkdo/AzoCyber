@@ -5,7 +5,7 @@ export default function FormPersonalInformation() {
   const navigate = useNavigate();
 
   const routeToBusinessInfo = () => {
-    navigate("/contact/business_information");
+    navigate("/AzoCyber/contact/business_information");
   };
 
   return (
