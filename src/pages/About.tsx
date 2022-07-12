@@ -1,9 +1,12 @@
 import { Menu, MenuItem, MenuDivider, Button } from "@blueprintjs/core";
+import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
 
 export default function About() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToSolutions = () => {
     navigate("/AzoCyber/solutions");
@@ -13,37 +16,34 @@ export default function About() {
     <>
       <section className="topSectionContainer">
         <div className="topSectionItemOne">
-          <h1 className="bp4-heading">About</h1>
+          <h1 className="bp4-heading">{t("navAbout")}</h1>
           <br />
           <h3
             className="bp4-heading bp4-blockquote thinnerText"
             style={{ /*width: "40%",*/ fontStyle: "oblique" }}
           >
-            Creation is difficult, but destruction is easy.
+            {t("aboutQuote")}
           </h3>
           <br />
           <h4 className="bp4-heading thinnerText" /*style={{ width: "40%" }}*/>
-            More and more criminals are going virtual since physical attacks are
-            becoming harder than cyber attacks due to insecure IT
-            infrastructures. At CyberAzo, we aim to secure and provide threat
-            protection to every Canadian business, one at a time.
+            {t("aboutDescription")}
           </h4>
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
             <HashLink smooth to="/about/#vision">
-              <MenuItem icon="selection" text="Vision" />
+              <MenuItem icon="selection" text={t("vision")} />
             </HashLink>
             <MenuDivider />
             <HashLink smooth to="/about/#team">
-              <MenuItem icon="selection" text="Team" />
+              <MenuItem icon="selection" text={t("team")} />
             </HashLink>
           </Menu>
           <br />
           <br />
           <br />
           <Button large={true} intent="success" onClick={routeToSolutions}>
-            Secure Your Business
+            {t("ourSolutions")}
           </Button>
         </div>
       </section>
@@ -52,12 +52,12 @@ export default function About() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Vision
+          {t("vision")}
         </h2>
         <hr className="shortHr" />
         <section className="splitScreenContainer">
           <div className="splitScreenItemOne">
-            <h3 className="bp4-heading">Our core values and beliefs</h3>
+            <h3 className="bp4-heading">{t("visionSectionHeading")}</h3>
             <br />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -92,15 +92,13 @@ export default function About() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Team
+          {t("ourTeam")}
         </h2>
         <hr className="shortHr" />
         <div className="galleryContainer">
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sergio Ramos</h3>
-            <h3 className="bp4-heading thinnerText">
-              Prevention & Protection Lead
-            </h3>
+            <h3 className="bp4-heading thinnerText">{t("sergioRamosDesc")}</h3>
             <br />
             <img
               src="https://t4.ftcdn.net/jpg/02/19/63/31/360_F_219633151_BW6TD8D1EA9OqZu4JgdmeJGg4JBaiAHj.jpg"
@@ -110,9 +108,7 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sarah Leclerc</h3>
-            <h3 className="bp4-heading thinnerText">
-              Emergency Response Specialist
-            </h3>
+            <h3 className="bp4-heading thinnerText">{t("sarahLeclercDesc")}</h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-happy-mixed-race-african-girl-wearing-glasses-picture-id1144287292?k=20&m=1144287292&s=612x612&w=0&h=gaoqkiL6LFzghQfAQ9q8SbLUqtMIpzJNaKCegS3Wjmw="
@@ -122,7 +118,7 @@ export default function About() {
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Geneviève Legault</h3>
             <h3 className="bp4-heading thinnerText">
-              Cybersecurity Consultant
+              {t("genevieveLegaultDesc")}
             </h3>
             <br />
             <img
@@ -132,7 +128,7 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Jide Olatunji</h3>
-            <h3 className="bp4-heading thinnerText">Penetration Tester</h3>
+            <h3 className="bp4-heading thinnerText">{t("jideOlatunjiDesc")}</h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-smiling-biracial-man-posing-picture-id1292475584?b=1&k=20&m=1292475584&s=170667a&w=0&h=jZ6etD3dfOV_NIgwR9hIQ5B9TBC5kpYxShIsaqjWbzc="
