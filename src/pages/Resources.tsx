@@ -74,10 +74,12 @@ export default function Resources() {
               <MenuItem icon="selection" text={t("azoCyberResources")} />
             </HashLink>
           </Menu>
-          <br />
-          <br />
-          <br />
-          <Button large={true} intent="success" onClick={routeToSolutions}>
+          <Button
+            className="topSectionRouteButton"
+            large={true}
+            intent="success"
+            onClick={routeToSolutions}
+          >
             {t("goToSolutions")}
           </Button>
         </div>

@@ -49,10 +49,12 @@ export default function Solutions() {
               <MenuItem icon="selection" text={t("ourPlans")} />
             </HashLink>
           </Menu>
-          <br />
-          <br />
-          <br />
-          <Button large={true} intent="success" onClick={routeToQuote}>
+          <Button
+            className="topSectionRouteButton"
+            large={true}
+            intent="success"
+            onClick={routeToQuote}
+          >
             {t("navGetAQuote")}
           </Button>
         </div>

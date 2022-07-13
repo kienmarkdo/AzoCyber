@@ -78,6 +78,10 @@ html {
     margin: 25px auto;
 }
 
+.topSectionRouteButton {
+    margin-top: 60px;
+}
+
 //* ======================  Home page  ======================
 
 .homeTopSection {
@@ -112,6 +116,7 @@ html {
 }
 
 //* ======================  About page  ======================
+
 .splitScreenContainer {
     padding: 0px 0px;
     display: flex;
@@ -215,7 +220,8 @@ $formRequestQuoteContainerGap: 1%;
     gap: 10px;
 }
 
-//* PackagesOptions (also in Home.tsx)
+//* ======================  PackagesOptions (also in Home.tsx)  ======================
+
 .packagesDescription {
     height: 72px; // equals lines of text for a <p/> tag
 }

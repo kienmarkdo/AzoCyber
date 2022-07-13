@@ -43,10 +43,12 @@ export default function About() {
               <MenuItem icon="selection" text={t("team")} />
             </HashLink>
           </Menu>
-          <br />
-          <br />
-          <br />
-          <Button large={true} intent="success" onClick={routeToSolutions}>
+          <Button
+            className="topSectionRouteButton"
+            large={true}
+            intent="success"
+            onClick={routeToSolutions}
+          >
             {t("goToSolutions")}
           </Button>
         </div>
