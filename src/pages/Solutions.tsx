@@ -8,11 +8,13 @@ import {
   IconSize,
   Icon,
 } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
 
 export default function Solutions() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToContact = () => {
     navigate("/AzoCyber/contact");
@@ -26,7 +28,7 @@ export default function Solutions() {
     <>
       <section className="topSectionContainer">
         <div className="topSectionItemOne">
-          <h1 className="bp4-heading">Solutions</h1>
+          <h1 className="bp4-heading">{t("navSolutions")}</h1>
           <br />
           <h3
             className="bp4-heading bp4-blockquote thinnerText"
@@ -47,19 +49,19 @@ export default function Solutions() {
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/solutions/#packages">
-              <MenuItem icon="selection" text="Our Packages" />
+            <HashLink smooth to="#packages">
+              <MenuItem icon="selection" text={t("ourPackages")} />
             </HashLink>
             <MenuDivider />
-            <HashLink smooth to="/solutions/#plans">
-              <MenuItem icon="selection" text="Discover Plans" />
+            <HashLink smooth to="#plans">
+              <MenuItem icon="selection" text={t("ourPlans")} />
             </HashLink>
           </Menu>
           <br />
           <br />
           <br />
           <Button large={true} intent="success" onClick={routeToQuote}>
-            Get a Quote
+            {t("navGetAQuote")}
           </Button>
         </div>
       </section>
@@ -68,11 +70,11 @@ export default function Solutions() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Packages
+          {t("ourPackages")}
         </h2>
         <br />
         <h3 className="bp4-heading thinnerText" style={{ textAlign: "center" }}>
-          Cybersecurity does not have to be complicated when we have your back.
+          {t("ourPackagesDescription")}
         </h3>
         <section className="sectionStyle">
           <div className="galleryContainer">
@@ -110,7 +112,7 @@ export default function Solutions() {
               </p>
               <br />
               <Button intent="success" onClick={routeToQuote}>
-                Get a Quote
+                {t("navGetAQuote")}
               </Button>
             </Card>
             <Card
@@ -143,7 +145,7 @@ export default function Solutions() {
               </p>
               <br />
               <Button intent="danger" onClick={routeToQuote}>
-                Get a Quote
+                {t("navGetAQuote")}
               </Button>
             </Card>
             <Card
@@ -181,7 +183,7 @@ export default function Solutions() {
               </p>
               <br />
               <Button intent="warning" onClick={routeToQuote}>
-                Get a Quote
+                {t("navGetAQuote")}
               </Button>
             </Card>
             <Card
@@ -218,7 +220,7 @@ export default function Solutions() {
               </p>
               <br />
               <Button intent="primary" onClick={routeToQuote}>
-                Get a Quote
+                {t("navGetAQuote")}
               </Button>
             </Card>
           </div>
