@@ -1,12 +1,16 @@
 import { Menu, MenuItem, MenuDivider, Button } from "@blueprintjs/core";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
+import i18n from "../i18n";
 
 export default function About() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+
+  const teamDescHeightState = i18n.language.startsWith("en")
+    ? ""
+    : "teamMemberDesc";
 
   const routeToSolutions = () => {
     navigate("/AzoCyber/solutions");
@@ -31,11 +35,11 @@ export default function About() {
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/about/#vision">
+            <HashLink smooth to="#vision">
               <MenuItem icon="selection" text={t("vision")} />
             </HashLink>
             <MenuDivider />
-            <HashLink smooth to="/about/#team">
+            <HashLink smooth to="#team">
               <MenuItem icon="selection" text={t("team")} />
             </HashLink>
           </Menu>
@@ -98,7 +102,9 @@ export default function About() {
         <div className="galleryContainer">
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sergio Ramos</h3>
-            <h3 className="bp4-heading thinnerText">{t("sergioRamosDesc")}</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("sergioRamosDesc")}
+            </h3>
             <br />
             <img
               src="https://t4.ftcdn.net/jpg/02/19/63/31/360_F_219633151_BW6TD8D1EA9OqZu4JgdmeJGg4JBaiAHj.jpg"
@@ -108,7 +114,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sarah Leclerc</h3>
-            <h3 className="bp4-heading thinnerText">{t("sarahLeclercDesc")}</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("sarahLeclercDesc")}
+            </h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-happy-mixed-race-african-girl-wearing-glasses-picture-id1144287292?k=20&m=1144287292&s=612x612&w=0&h=gaoqkiL6LFzghQfAQ9q8SbLUqtMIpzJNaKCegS3Wjmw="
@@ -117,7 +125,7 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Geneviève Legault</h3>
-            <h3 className="bp4-heading thinnerText">
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
               {t("genevieveLegaultDesc")}
             </h3>
             <br />
@@ -128,7 +136,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Jide Olatunji</h3>
-            <h3 className="bp4-heading thinnerText">{t("jideOlatunjiDesc")}</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("jideOlatunjiDesc")}
+            </h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-smiling-biracial-man-posing-picture-id1292475584?b=1&k=20&m=1292475584&s=170667a&w=0&h=jZ6etD3dfOV_NIgwR9hIQ5B9TBC5kpYxShIsaqjWbzc="
@@ -137,7 +147,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Alexandre DuBois</h3>
-            <h3 className="bp4-heading thinnerText">Senior Network Analyst</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("alexandreDuboisDesc")}
+            </h3>
             <br />
             <img
               src="https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -146,8 +158,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Tyron Woodley</h3>
-            <h3 className="bp4-heading thinnerText">
-              Vulnerability Researcher (VR)
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("tyronWoodleyDesc")}
             </h3>
             <br />
             <img
@@ -157,8 +169,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Elizabeth Vandervoort</h3>
-            <h3 className="bp4-heading thinnerText">
-              Software Reverse Engineer (SRE)
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("elizabethVandervoortDesc")}
             </h3>
             <br />
             <img
@@ -168,7 +180,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Ruby McAlpine</h3>
-            <h3 className="bp4-heading thinnerText">Data Security Engineer</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("rubyMcalpineDesc")}
+            </h3>
             <br />
             <img
               src="https://images.pexels.com/photos/3776932/pexels-photo-3776932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -177,8 +191,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Nathan McGregor</h3>
-            <h3 className="bp4-heading thinnerText">
-              Entreprise Security Architect
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("nathanMcgregorDesc")}
             </h3>
             <br />
             <img
@@ -188,8 +202,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Tuan Nguyen</h3>
-            <h3 className="bp4-heading thinnerText">
-              Digital Forensics Examiner
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("tuanNguyenDesc")}
             </h3>
             <br />
             <img
