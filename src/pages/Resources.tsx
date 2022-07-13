@@ -11,12 +11,14 @@ import {
   Tag,
 } from "@blueprintjs/core";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
 import resourceData from "../mockData/resourceData.json";
 
 export default function Resources() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToSolutions = () => {
     navigate("/AzoCyber/solutions");
@@ -47,14 +49,13 @@ export default function Resources() {
     <>
       <section className="topSectionContainer">
         <div className="topSectionItemOne">
-          <h1 className="bp4-heading">Resources</h1>
+          <h1 className="bp4-heading">{t("navResources")}</h1>
           <br />
           <h3
             className="bp4-heading bp4-blockquote thinnerText"
             style={{ /*width: "40%",*/ fontStyle: "oblique" }}
           >
-            From learning the basics to analyzing in-depth reports, AzoCyber has
-            it all.
+            {t("resourcesQuote")}
           </h3>
           <br />
           <h4 className="bp4-heading thinnerText" /*style={{ width: "40%" }}*/>
@@ -69,15 +70,15 @@ export default function Resources() {
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/resources/#azocyber_resources">
-              <MenuItem icon="selection" text="AzoCyber Resources" />
+            <HashLink smooth to="#azocyber_resources">
+              <MenuItem icon="selection" text={t("azoCyberResources")} />
             </HashLink>
           </Menu>
           <br />
           <br />
           <br />
           <Button large={true} intent="success" onClick={routeToSolutions}>
-            Secure Your Business
+            {t("goToSolutions")}
           </Button>
         </div>
       </section>
@@ -86,7 +87,7 @@ export default function Resources() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          AzoCyber Resources
+          {t("azoCyberResources")}
         </h2>
         <hr className="shortHr" />
         <div className="headerMarginBottom" />
