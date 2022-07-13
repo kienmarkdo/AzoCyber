@@ -138,7 +138,7 @@ export default function Home() {
             <h3>
               <Link to={"/solutions"}>{t("consultation")}</Link>
             </h3>
-            <p>{t("consultationDescrption")}</p>
+            <p>{t("consultationDescription")}</p>
             <br />
             <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>

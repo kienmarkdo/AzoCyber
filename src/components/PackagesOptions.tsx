@@ -20,12 +20,9 @@ export default function PackagesOptions() {
           className="bp4-heading headerMarginBottom"
           style={{ color: "#72CA9B" }}
         >
-          Prevention & Protection
+          {t("preventionAndProtection")}
         </h3>
-        <p>
-          Strengthen your defences and never run into a cyber incident again
-          with our Prevention & Protection package.
-        </p>
+        <p>{t("preventionAndProtectionDescription")}</p>
         <br />
         <p>
           <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
@@ -53,12 +50,9 @@ export default function PackagesOptions() {
           className="bp4-heading headerMarginBottom"
           style={{ color: "#E76A6E" }}
         >
-          Emergency Response
+          {t("emergencyResponse")}
         </h3>
-        <p>
-          Ensure that threats are dealt with as they happen with the 24/7
-          Emergency Response package.
-        </p>
+        <p>{t("emergencyResponseDescription")}</p>
         <br />
         <p>
           <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
@@ -86,12 +80,9 @@ export default function PackagesOptions() {
           className="bp4-heading headerMarginBottom"
           style={{ color: "#EC9A3C" }}
         >
-          Simulated Environments
+          {t("simulatedEnvironments")}
         </h3>
-        <p>
-          Discover vulnerabilities with this program, which includes extensive
-          penetration tests and an IT simulation training package.
-        </p>
+        <p>{t("simulatedEnvironmentsDescription")}</p>
         <br />
         <p>
           <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
@@ -119,12 +110,9 @@ export default function PackagesOptions() {
           className="bp4-heading headerMarginBottom"
           style={{ color: "#8ABBFF" }}
         >
-          Consultation
+          {t("consultation")}
         </h3>
-        <p>
-          Learn protect your online presence and receive invaluable consultation
-          from our cybersecurity professionals.
-        </p>
+        <p>{t("consultationDescription")}</p>
         <br />
         <p>
           <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello
