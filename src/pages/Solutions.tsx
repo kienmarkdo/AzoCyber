@@ -79,19 +79,18 @@ export default function Solutions() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Find the Right Plan for You
+          {t("ourPlansSectionHeading")}
         </h2>
         <hr className="shortHr" />
         <h3 className="bp4-heading thinnerText" style={{ textAlign: "center" }}>
-          Not sure which plan is for you? Curious about our pricing? Contact us
-          to get the answers to your questions.
+          {t("ourPlansSectionDescription")}
         </h3>
         <div
           className="centerContainer"
           style={{ margin: "20px 0px 200px 0px" }}
         >
           <Button intent="success" large={true} onClick={routeToContact}>
-            Contact us
+            {t("navContactUs")}
           </Button>
         </div>
       </section>
