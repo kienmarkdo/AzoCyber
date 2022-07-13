@@ -214,3 +214,8 @@ $formRequestQuoteContainerGap: 1%;
     display: flex;
     gap: 10px;
 }
+
+//* PackagesOptions (also in Home.tsx)
+.packagesDescription {
+    height: 72px; // equals lines of text for a <p/> tag
+}

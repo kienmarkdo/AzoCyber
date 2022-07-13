@@ -22,7 +22,9 @@ export default function PackagesOptions() {
         >
           {t("preventionAndProtection")}
         </h3>
-        <p>{t("preventionAndProtectionDescription")}</p>
+        <p className="packagesDescription">
+          {t("preventionAndProtectionDescription")}
+        </p>
         <br />
         <p>
           <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
@@ -52,7 +54,9 @@ export default function PackagesOptions() {
         >
           {t("emergencyResponse")}
         </h3>
-        <p>{t("emergencyResponseDescription")}</p>
+        <p className="packagesDescription">
+          {t("emergencyResponseDescription")}
+        </p>
         <br />
         <p>
           <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
@@ -82,7 +86,9 @@ export default function PackagesOptions() {
         >
           {t("simulatedEnvironments")}
         </h3>
-        <p>{t("simulatedEnvironmentsDescription")}</p>
+        <p className="packagesDescription">
+          {t("simulatedEnvironmentsDescription")}
+        </p>
         <br />
         <p>
           <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
@@ -112,7 +118,7 @@ export default function PackagesOptions() {
         >
           {t("consultation")}
         </h3>
-        <p>{t("consultationDescription")}</p>
+        <p className="packagesDescription">{t("consultationDescription")}</p>
         <br />
         <p>
           <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello

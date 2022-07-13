@@ -102,7 +102,9 @@ export default function Home() {
             <h3>
               <Link to={"/solutions"}>{t("preventionAndProtection")}</Link>
             </h3>
-            <p>{t("preventionAndProtectionDescription")}</p>
+            <p className="packagesDescription">
+              {t("preventionAndProtectionDescription")}
+            </p>
             <br />
             <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
@@ -114,7 +116,9 @@ export default function Home() {
             <h3>
               <Link to={"/solutions"}>{t("emergencyResponse")}</Link>
             </h3>
-            <p>{t("emergencyResponseDescription")}</p>
+            <p className="packagesDescription">
+              {t("emergencyResponseDescription")}
+            </p>
             <br />
             <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
@@ -126,7 +130,9 @@ export default function Home() {
             <h3>
               <Link to={"/solutions"}>{t("simulatedEnvironments")}</Link>
             </h3>
-            <p>{t("simulatedEnvironmentsDescription")}</p>
+            <p className="packagesDescription">
+              {t("simulatedEnvironmentsDescription")}
+            </p>
             <br />
             <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
@@ -138,7 +144,9 @@ export default function Home() {
             <h3>
               <Link to={"/solutions"}>{t("consultation")}</Link>
             </h3>
-            <p>{t("consultationDescription")}</p>
+            <p className="packagesDescription">
+              {t("consultationDescription")}
+            </p>
             <br />
             <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
