@@ -60,5 +60,15 @@
     "tutorial": "Formation",
     "searchResults": "Résultats de recherche",
     "organizationType": "Type d'organisme",
-    "resourceType": "Type de ressource"
+    "resourceType": "Type de ressource",
+    "selectOrganizationSize": "Sélectionnez la taille de votre organisation",
+    "selectAPackage": "Sélectionnez un forfait",
+    "selectAPackage1": "Prévention & Protection",
+    "selectAPackage2": "Réponse d'urgence",
+    "selectAPackage3": "Environnements simulés",
+    "selectAPackage4": "Consultation",
+    "selectAPackage5": "[NOUVEAU] Rapport sur la défense de l'infrastructure informatique",
+    "selectAPackage6": "[NOUVEAU] Post-incident - Analyse médico-légale",
+    "selectAPackage7": "[NOUVEAU] Post-incident - Réparation et récupération",
+    "selectAPackage8": "Autre"
 }

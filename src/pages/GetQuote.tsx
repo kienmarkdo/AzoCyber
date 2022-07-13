@@ -9,11 +9,13 @@ import {
   InputGroup,
 } from "@blueprintjs/core";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { CalendarDateTime } from "../components/CalendarDateTime";
 
 export default function GetQuote(this: any) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToHome = () => {
     navigate("/AzoCyber/home");
@@ -26,15 +28,15 @@ export default function GetQuote(this: any) {
   };
 
   const ORGANIZATION_TYPES = [
-    "Select Organization Type",
-    "Small Business",
-    "Large Organization",
-    "Government",
-    "Academia",
+    t("allOrganizationTypes"),
+    t("smallBusinesses"),
+    t("largeOrganizations"),
+    t("government"),
+    t("academia"),
   ];
 
   const ORGANIZATION_SIZES = [
-    "Select Your Organization Size",
+    t("selectOrganizationSize"),
     "0 - 200",
     "201 - 500",
     "501 - 2000",
@@ -42,15 +44,15 @@ export default function GetQuote(this: any) {
   ];
 
   const SOLUTIONS_PACKAGES = [
-    "Select a Package",
-    "Prevention & Protection",
-    "Emergency Response",
-    "Simulated Environments",
-    "Consultation",
-    "[NEW] IT Infrastructure Defence Report",
-    "[NEW] Post-incident - Forensics Analysis",
-    "[NEW] Post-incident - Repair & Recovery",
-    "Other",
+    t("selectAPackage"),
+    t("selectAPackage1"),
+    t("selectAPackage2"),
+    t("selectAPackage3"),
+    t("selectAPackage4"),
+    t("selectAPackage5"),
+    t("selectAPackage6"),
+    t("selectAPackage7"),
+    t("selectAPackage8"),
   ];
 
   const [onsiteState, setOnsiteState] = useState("no");

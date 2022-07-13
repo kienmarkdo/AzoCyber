@@ -60,5 +60,15 @@
     "tutorial": "Tutorial",
     "searchResults": "Search Results",
     "organizationType": "Organization Type",
-    "resourceType": "Resource Type"
+    "resourceType": "Resource Type",
+    "selectOrganizationSize": "Select Your Organization Size",
+    "selectAPackage": "Select a Package",
+    "selectAPackage1": "Prevention & Protection",
+    "selectAPackage2": "Emergency Response",
+    "selectAPackage3": "Simulated Environments",
+    "selectAPackage4": "Consultation",
+    "selectAPackage5": "[NEW] IT Infrastructure Defence Report",
+    "selectAPackage6": "[NEW] Post-incident - Forensics Analysis",
+    "selectAPackage7": "[NEW] Post-incident - Repair & Recovery",
+    "selectAPackage8": "Other"
 }
