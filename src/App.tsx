@@ -113,6 +113,7 @@ function App() {
           <Route path="/AzoCyber/contact/*" element={<Contact />} />
           <Route path="/AzoCyber/get_a_quote" element={<GetQuote />} />
           <Route path="/AzoCyber/*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
     </BrowserRouter>
