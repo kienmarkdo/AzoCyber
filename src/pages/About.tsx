@@ -47,7 +47,7 @@ export default function About() {
           <br />
           <br />
           <Button large={true} intent="success" onClick={routeToSolutions}>
-            {t("ourSolutions")}
+            {t("goToSolutions")}
           </Button>
         </div>
       </section>
