@@ -44,5 +44,21 @@
     "ourPlansSectionDescription": "Vous ne savez pas quel plan vous convient? Vous êtes curieux de connaître nos tarifs? Contactez-nous pour obtenir les réponses à vos questions.",
     "resourcesQuote": "De l'apprentissage des bases à l'analyse de rapports approfondis, AzoCyber a tout pour plaire.",
     "resourcesDescription": "",
-    "azoCyberResources": "Ressources AzoCyber"
+    "azoCyberResources": "Ressources AzoCyber",
+    "filterResults": "Filtrer les résultats",
+    "selectOrganizationType": "Choisir le type d'organisation",
+    "allOrganizationTypes": "Tous les types d'organisation",
+    "smallBusinesses": "Petites entreprises",
+    "largeOrganizations": "Grandes entreprises",
+    "government": "Gouvernement",
+    "academia": "Milieu universitaire",
+    "selectAudienceType": "Sélectionnez le type d'audience",
+    "selectResourceType": "Choisir le type de ressource",
+    "allResourceTypes": "Tous les types de ressources",
+    "journal": "Journal",
+    "article": "Article",
+    "tutorial": "Formation",
+    "searchResults": "Résultats de recherche",
+    "organizationType": "Type d'organisme",
+    "resourceType": "Type de ressource"
 }

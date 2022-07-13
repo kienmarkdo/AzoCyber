@@ -44,5 +44,21 @@
     "ourPlansSectionDescription": "Not sure which plan is for you? Curious about our pricing? Contact us to get the answers to your questions.",
     "resourcesQuote": "From learning the basics to analyzing in-depth reports, AzoCyber has it all.",
     "resourcesDescription": "",
-    "azoCyberResources": "AzoCyber Resources"
+    "azoCyberResources": "AzoCyber Resources",
+    "filterResults": "Filter Results",
+    "selectOrganizationType": "Select Organization Type",
+    "allOrganizationTypes": "All Organization Types",
+    "smallBusinesses": "Small Businesses",
+    "largeOrganizations": "Large Organizations",
+    "government": "Government",
+    "academia": "Academia",
+    "selectAudienceType": "Select audience type",
+    "selectResourceType": "Select Resource Type",
+    "allResourceTypes": "All Resource Types",
+    "journal": "Journal",
+    "article": "Article",
+    "tutorial": "Tutorial",
+    "searchResults": "Search Results",
+    "organizationType": "Organization Type",
+    "resourceType": "Resource Type"
 }
