@@ -64,6 +64,24 @@ function App() {
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
             <ButtonGroup>
+              <NavLink to="/AzoCyber/get_a_quote">
+                <Button
+                  className="bp4-button"
+                  intent="primary"
+                  text={t("navGetAQuote")}
+                />
+              </NavLink>
+
+              <div style={{ width: "10px" }} />
+
+              <NavLink to="/AzoCyber/contact">
+                <Button
+                  className="bp4-button"
+                  intent="success"
+                  text={t("navContactUs")}
+                />
+              </NavLink>
+              <Navbar.Divider />
               <Button
                 key="english"
                 text="EN"
@@ -77,26 +95,6 @@ function App() {
                 active={i18n.language.startsWith("fr")}
               />
             </ButtonGroup>
-
-            <Navbar.Divider />
-
-            <NavLink to="/AzoCyber/get_a_quote">
-              <Button
-                className="bp4-button"
-                intent="primary"
-                text={t("navGetAQuote")}
-              />
-            </NavLink>
-
-            <div style={{ width: "10px" }} />
-
-            <NavLink to="/AzoCyber/contact">
-              <Button
-                className="bp4-button"
-                intent="success"
-                text={t("navContactUs")}
-              />
-            </NavLink>
           </Navbar.Group>
         </Navbar>
         {/* ========================================================================= */}
