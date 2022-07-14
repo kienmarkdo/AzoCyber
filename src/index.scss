@@ -209,15 +209,29 @@ $formRequestQuoteContainerGap: 1%;
 
 .datepicker {
     width: 243px;
-    margin: 0px 20vw 50px 20vw;
+    // margin: 0px 20vw 50px 20vw;
     display: flex;
     gap: 10px;
 }
 
-.getQuoteMargins {
-    margin: 0px 20vw 10px 20vw;
+.getQuoteCalendar {
+    margin: 0px 20vw 20px 20vw;
+    // display: flex;
+    // gap: 10px;
+}
+
+.getQuoteCalendarContent {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    // column-gap: 100px;
+}
+
+.getQuoteCalendarItem1 {
+    flex: 1 5 auto;
+}
+
+.getQuoteCalendarItem2 {
+    flex: 1 1 auto;
 }
 
 //* ======================  PackagesOptions (also in Home.tsx)  ======================
