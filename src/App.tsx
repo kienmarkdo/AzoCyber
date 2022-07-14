@@ -81,7 +81,9 @@ function App() {
                   text={t("navContactUs")}
                 />
               </NavLink>
-              <Navbar.Divider />
+
+              <Navbar.Divider style={{ marginTop: "5px" }} />
+
               <Button
                 key="english"
                 text="EN"
