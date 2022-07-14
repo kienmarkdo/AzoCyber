@@ -13,11 +13,13 @@ import {
   Dialog,
 } from "@blueprintjs/core";
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import PackagesOptions from "./PackagesOptions";
 
 export default function FormSecurityInformation(this: any) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToBusinessInfo = () => {
     navigate("/AzoCyber/contact/business_information");
@@ -29,15 +31,15 @@ export default function FormSecurityInformation(this: any) {
 
   // options for Solutions Packages dropdown
   const SOLUTIONS_PACKAGES = [
-    "No Package Selected",
-    "Prevention & Protection",
-    "Emergency Response",
-    "Simulated Environments",
-    "Consultation",
-    "[NEW] IT Infrastructure Defence Report",
-    "[NEW] Post-incident - Forensics Analysis",
-    "[NEW] Post-incident - Repair & Recovery",
-    "Other",
+    t("selectAPackage"),
+    t("selectAPackage1"),
+    t("selectAPackage2"),
+    t("selectAPackage3"),
+    t("selectAPackage4"),
+    t("selectAPackage5"),
+    t("selectAPackage6"),
+    t("selectAPackage7"),
+    t("selectAPackage8"),
   ];
 
   // useStates
@@ -73,7 +75,7 @@ export default function FormSecurityInformation(this: any) {
               intent="success"
               className="iconStyle"
             />
-            <p>Personal Information</p>
+            <p>{t("personalInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -84,7 +86,7 @@ export default function FormSecurityInformation(this: any) {
               intent="success"
               className="iconStyle"
             />
-            <p>Business Information</p>
+            <p>{t("businessInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -105,32 +107,32 @@ export default function FormSecurityInformation(this: any) {
               />
             )}
 
-            <p>Security Information</p>
+            <p>{t("securityInformation")}</p>
           </div>
         </div>
       </section>
       <section className="formInputContainer">
         <FormGroup
           className=""
-          label="How may we help you?"
+          label={t("howMayWeHelp")}
           labelFor="help-details-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
           <TextArea
             id="help-details-input"
             fill={true}
             // growVertically={true}
-            placeholder="Enter Description"
+            placeholder={t("enterDescription")}
             style={{ minHeight: "10vh", resize: "none" }}
           />
         </FormGroup>
         <ControlGroup style={{ display: "flex", gap: "20px" }}>
           <FormGroup
             className=""
-            label="Solutions package"
+            label={t("solutionsPackage")}
             labelFor="solutions-package-input"
-            labelInfo="(optional)"
-            helperText="Select an option if you are interested in one of our Solutions packages"
+            labelInfo={t("optionalLabel")}
+            helperText={t("solutionsPackageOptionalHelper")}
           >
             <HTMLSelect
               id="solutions-package-input"
@@ -140,20 +142,22 @@ export default function FormSecurityInformation(this: any) {
           </FormGroup>
           <Button
             style={{ margin: "auto 0px 35px 0px" }}
+            intent="primary"
+            // minimal={true}
+            icon="help"
             onClick={() => setDrawerState(true)}
           >
-            <Icon icon="help" style={{ margin: "0px 5px 0px 0px" }} /> Learn
-            more
+            {t("learnMore")}
           </Button>
         </ControlGroup>
         <ButtonGroup
           style={{ display: "flex", gap: "10px", marginTop: "25px" }}
         >
           <Button intent="danger" large={true} onClick={routeToBusinessInfo}>
-            Back
+            {t("back")}
           </Button>
           <Button intent="success" large={true} onClick={submitForm}>
-            Submit
+            {t("submit")}
           </Button>
         </ButtonGroup>
 
@@ -181,7 +185,7 @@ export default function FormSecurityInformation(this: any) {
         </Drawer>
         {/* ==================================================== */}
         <Dialog
-          title="Submission Successful!"
+          title={t("submissionTitle")}
           icon="endorsed"
           isOpen={submittedState}
           usePortal={false}
@@ -190,12 +194,12 @@ export default function FormSecurityInformation(this: any) {
           }}
         >
           <div className={Classes.DIALOG_BODY}>
-            <p>Your Contact form has been sent to our team!</p>
-            <p>You will receive a response in 3-5 business days.</p>
+            <p>{t("contactConfirmation1")}</p>
+            <p>{t("contactConfirmation2")}</p>
           </div>
           <div className={Classes.DIALOG_FOOTER}>
             <Button intent="success" onClick={routeToHome}>
-              Return To Home Page
+              {t("returnToHomePage")}
             </Button>
           </div>
         </Dialog>

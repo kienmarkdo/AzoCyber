@@ -213,7 +213,7 @@ export default function GetQuote(this: any) {
       </ButtonGroup>
       {/* ==================================================== */}
       <Dialog
-        title="Submission Successful!"
+        title={t("submissionTitle")}
         icon="endorsed"
         isOpen={submittedState}
         usePortal={false}

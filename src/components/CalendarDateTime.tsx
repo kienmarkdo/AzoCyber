@@ -7,7 +7,7 @@ export const CalendarDateTime: React.FC = () => {
   const { t } = useTranslation();
   return (
     <section className="getQuoteCalendar">
-      <h2 className="bp4-heading">{t("selectDateTime")}</h2>
+      <h2 className="bp4-heading headerMarginBottom">{t("selectDateTime")}</h2>
       <div className="getQuoteCalendarContent">
         <div className="getQuoteCalendarItem1">
           <p>{t("selectDateTimeDescription")}</p>

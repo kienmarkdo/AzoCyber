@@ -1,8 +1,10 @@
 import { Button, FormGroup, Icon, InputGroup } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 
 export default function FormPersonalInformation() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToBusinessInfo = () => {
     navigate("/AzoCyber/contact/business_information");
@@ -25,7 +27,7 @@ export default function FormPersonalInformation() {
               className="iconStyle"
               intent="primary"
             />
-            <p>Personal Information</p>
+            <p>{t("personalInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -35,7 +37,7 @@ export default function FormPersonalInformation() {
               iconSize={100}
               className="iconStyle incomplete"
             />
-            <p>Business Information</p>
+            <p>{t("businessInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -45,41 +47,44 @@ export default function FormPersonalInformation() {
               iconSize={100}
               className="iconStyle incomplete"
             />
-            <p>Security Information</p>
+            <p>{t("securityInformation")}</p>
           </div>
         </div>
       </section>
       <section className="formInputContainer">
         <FormGroup
           className=""
-          label="Full Name"
+          label={t("fullname")}
           labelFor="name-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
-          <InputGroup id="name-input" placeholder="Enter Your Full Name" />
+          <InputGroup id="name-input" placeholder={t("fullnamePlaceholder")} />
         </FormGroup>
         <FormGroup
-          label="Email Address"
+          label={t("email")}
           labelFor="email-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
-          <InputGroup id="email-input" placeholder="Enter Your Email Address" />
+          <InputGroup id="email-input" placeholder={t("emailPlaceholder")} />
         </FormGroup>
         <FormGroup
-          label="Phone Number"
+          label={t("phonenumber")}
           labelFor="phone-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
-          <InputGroup id="phone-input" placeholder="Enter Your Phone Number" />
+          <InputGroup
+            id="phone-input"
+            placeholder={t("phonenumberPlaceholder")}
+          />
         </FormGroup>
         <FormGroup
-          label="Position"
+          label={t("position")}
           labelFor="position-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
           <InputGroup
             id="position-input"
-            placeholder="Enter Your Position (e.g.: Security Analyst, Manager, etc.)"
+            placeholder={t("positionPlaceholder")}
           />
         </FormGroup>
         <Button
@@ -88,7 +93,7 @@ export default function FormPersonalInformation() {
           large={true}
           onClick={routeToBusinessInfo}
         >
-          Next
+          {t("next")}
         </Button>
       </section>
     </>

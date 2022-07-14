@@ -105,5 +105,19 @@
     "organizationAddressHelper": "Entrez l'adresse de votre organisation (e.g.: 111, rue Wellington, Ottawa (Ontario) K1A 0A6)",
     "knowInAdvance": "Y a-t-il quelque chose que nous devrions savoir à l'avance?",
     "optionalLabel": "(facultatif)",
-    "enterDescription": "Entrer la description"
+    "enterDescription": "Entrer la description",
+    "enterContactInformation": "Saisir les informations de contact",
+    "personalInformation": "Renseignements personnels",
+    "businessInformation": "Informations sur l'organisation",
+    "securityInformation": "Informations de sécurité",
+    "position": "Poste",
+    "positionPlaceholder": "Entrez votre poste (par exemple: analyste de la sécurité, gestionnaire, etc.)",
+    "next": "Suivant",
+    "back": "Retour",
+    "howMayWeHelp": "Comment pouvons-nous vous aider?",
+    "solutionsPackageOptionalHelper": "Sélectionnez une option si vous êtes intéressé par l'un de nos forfaits",
+    "submissionTitle": "Soumission réussie!",
+    "contactConfirmation1": "Votre formulaire de contact a été envoyé à notre équipe!",
+    "contactConfirmation2": "Vous recevrez une réponse sous 3 à 5 jours ouvrables.",
+    "submit": "Soumettre"
 }
