@@ -10,8 +10,9 @@ export default function Home() {
     navigate("/AzoCyber/about");
   };
 
+  const solutionsPath = "/AzoCyber/solutions/#packages";
   const routeToSolutions = () => {
-    navigate("/AzoCyber/solutions");
+    navigate(solutionsPath);
   };
 
   return (
@@ -33,11 +34,12 @@ export default function Home() {
           {t("learnMore")}
         </Button>
       </section>
-      <section className="sectionStyle">
-        <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          {t("ourPartners")}
-        </h2>
-        <hr className="shortHr" />
+      <section className="sectionStyle" style={{ textAlign: "center" }}>
+        <h2 className="bp4-heading">{t("ourPartners")}</h2>
+        <hr className="shortHr" />{" "}
+        <h3 className="bp4-heading thinnerText">
+          {t("ourPartnersDescription")}
+        </h3>
         <div className="galleryContainer">
           <img
             src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png"
@@ -100,7 +102,7 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>{t("preventionAndProtection")}</Link>
+              <Link to={solutionsPath}>{t("preventionAndProtection")}</Link>
             </h3>
             <p className="packagesDescription">
               {t("preventionAndProtectionDescription")}
@@ -114,7 +116,7 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>{t("emergencyResponse")}</Link>
+              <Link to={solutionsPath}>{t("emergencyResponse")}</Link>
             </h3>
             <p className="packagesDescription">
               {t("emergencyResponseDescription")}
@@ -128,7 +130,7 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>{t("simulatedEnvironments")}</Link>
+              <Link to={solutionsPath}>{t("simulatedEnvironments")}</Link>
             </h3>
             <p className="packagesDescription">
               {t("simulatedEnvironmentsDescription")}
@@ -142,7 +144,7 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>{t("consultation")}</Link>
+              <Link to={solutionsPath}>{t("consultation")}</Link>
             </h3>
             <p className="packagesDescription">
               {t("consultationDescription")}
