@@ -13,6 +13,7 @@ Link to the website: https://kienmarkdo.github.io/AzoCyber
 - BlueprintJS (v4.5.1)
 - React Router (v6.3.0)
 - SASS (v1.53.0)
+- React i18next (v21.8.13)
 - Node (v8.9.0)
 
 ## How to run
