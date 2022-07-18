@@ -1,0 +1,68 @@
+[{
+    "id": 1,
+    "title": "Le hameçonnage expliqué",
+    "organization_type": "Tous les types",
+    "resource_type": "Formation"
+  }, {
+    "id": 2,
+    "title": "Sécurité des données gouvernementales",
+    "organization_type": "Gouvernement",
+    "resource_type": "Article"
+  }, {
+    "id": 3,
+    "title": "Protéger vos publications de recherche",
+    "organization_type": "Milieu universitaire",
+    "resource_type": "Article"
+  }, {
+    "id": 4,
+    "title": "Statistiques sur les cyberattaques au Canada (2022)",
+    "organization_type": "Tous les types",
+    "resource_type": "Journal"
+  }, {
+    "id": 5,
+    "title": "Protéger votre petite entreprise",
+    "organization_type": "Petites entreprises",
+    "resource_type": "Article"
+  }, {
+    "id": 6,
+    "title": "Protéger votre petite entreprise",
+    "organization_type": "Grandes entreprises",
+    "resource_type": "Article"
+  }, {
+    "id": 7,
+    "title": "Formation des employés à la cyber-sensibilisation",
+    "organization_type": "Tous les types",
+    "resource_type": "Formation"
+  }, {
+    "id": 8,
+    "title": "Introduction à la cybersécurité pour les informaticiens",
+    "organization_type": "Milieu universitaire",
+    "resource_type": "Formation"
+  }, {
+    "id": 9,
+    "title": "Résultats des tests de pénétration pour les grandes organisations (2021)",
+    "organization_type": "Grandes entreprises",
+    "resource_type": "Journal"
+  }, {
+    "id": 10,
+    "title": "Résultats des tests de pénétration pour les gouvernements (2022)",
+    "organization_type": "Gouvernement",
+    "resource_type": "Journal"
+  }, {
+    "id": 11,
+    "title": "Comment les cybercriminels exploitent les petites entreprises",
+    "organization_type": "Petites entreprises",
+    "resource_type": "Article"
+  }, {
+    "id": 12,
+    "title": "Formation à la cybersécurité pour le gouvernement (2022)",
+    "organization_type": "Gouvernement",
+    "resource_type": "Formation"
+  }
+  , {
+    "id": 13,
+    "title": "Guide de la cyber-sensibilisation pour les propriétaires de petites entreprises",
+    "organization_type": "Petites entreprises",
+    "resource_type": "Formation"
+  }
+]

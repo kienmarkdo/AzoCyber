@@ -78,6 +78,10 @@ html {
     margin: 25px auto;
 }
 
+.topSectionRouteButton {
+    margin-top: 60px;
+}
+
 //* ======================  Home page  ======================
 
 .homeTopSection {
@@ -85,7 +89,7 @@ html {
 }
 
 .galleryContainer {
-    padding: 50px 50px;
+    padding: 50px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -112,6 +116,7 @@ html {
 }
 
 //* ======================  About page  ======================
+
 .splitScreenContainer {
     padding: 0px 0px;
     display: flex;
@@ -140,6 +145,10 @@ html {
 .galleryImageTeamItem > img {
     height: 200px;
     width: 300px;
+}
+
+.teamMemberDesc {
+    height: 50px;
 }
 
 //* ======================  Progress bar components  ======================
@@ -200,13 +209,33 @@ $formRequestQuoteContainerGap: 1%;
 
 .datepicker {
     width: 243px;
-    margin: 0px 20vw 50px 20vw;
+    // margin: 0px 20vw 50px 20vw;
     display: flex;
     gap: 10px;
 }
 
-.getQuoteMargins {
-    margin: 0px 20vw 10px 20vw;
+.getQuoteCalendar {
+    margin: 0px 20vw 20px 20vw;
+    // display: flex;
+    // gap: 10px;
+}
+
+.getQuoteCalendarContent {
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    // column-gap: 100px;
+}
+
+.getQuoteCalendarItem1 {
+    flex: 1 5 auto;
+}
+
+.getQuoteCalendarItem2 {
+    flex: 1 1 auto;
+}
+
+//* ======================  PackagesOptions (also in Home.tsx)  ======================
+
+.packagesDescription {
+    height: 72px; // equals lines of text for a <p/> tag
 }

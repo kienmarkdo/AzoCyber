@@ -8,12 +8,14 @@ import {
   HTMLSelect,
   InputGroup,
 } from "@blueprintjs/core";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { CalendarDateTime } from "../components/CalendarDateTime";
 
 export default function GetQuote(this: any) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToHome = () => {
     navigate("/AzoCyber/home");
@@ -26,15 +28,15 @@ export default function GetQuote(this: any) {
   };
 
   const ORGANIZATION_TYPES = [
-    "Select Organization Type",
-    "Small Business",
-    "Large Organization",
-    "Government",
-    "Academia",
+    t("allOrganizationTypes"),
+    t("smallBusinesses"),
+    t("largeOrganizations"),
+    t("government"),
+    t("academia"),
   ];
 
   const ORGANIZATION_SIZES = [
-    "Select Your Organization Size",
+    t("selectOrganizationSize"),
     "0 - 200",
     "201 - 500",
     "501 - 2000",
@@ -42,79 +44,96 @@ export default function GetQuote(this: any) {
   ];
 
   const SOLUTIONS_PACKAGES = [
-    "Select a Package",
-    "Prevention & Protection",
-    "Emergency Response",
-    "Simulated Environments",
-    "Consultation",
-    "[NEW] IT Infrastructure Defence Report",
-    "[NEW] Post-incident - Forensics Analysis",
-    "[NEW] Post-incident - Repair & Recovery",
-    "Other",
+    t("selectAPackage"),
+    t("selectAPackage1"),
+    t("selectAPackage2"),
+    t("selectAPackage3"),
+    t("selectAPackage4"),
+    t("selectAPackage5"),
+    t("selectAPackage6"),
+    t("selectAPackage7"),
+    t("selectAPackage8"),
   ];
 
   const [onsiteState, setOnsiteState] = useState("no");
 
+  // This useEffect prevents page scrolling when the dialog is open
+  useEffect(() => {
+    if (submittedState === true) {
+      document.body.style.overflow = "hidden"; // turns off page scrolling
+      document.body.scrollTop = 0; // Scroll to top of screen - For Safari
+      document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
+    } else {
+      document.body.style.overflow = "scroll"; // turns on page scrolling again
+    }
+  }, [submittedState]);
+
   return (
     <>
       <h1 className="bp4-heading" style={{ margin: "75px 20vw 0px 20vw" }}>
-        Request A Quote
+        {t("getAQuoteHeader")}
       </h1>
 
       <section className="formRequestQuoteContainer">
         <FormGroup
           className="formRequestItemSplitHalf"
-          label="Full Name"
+          label={t("fullname")}
           labelFor="full-name-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("fullnameHelper")}
+          // subLabel={t("fullnameHelper")}
         >
           <InputGroup
             id="full-name-input"
-            placeholder="Enter Your First and Last Name (e.g.: Jane Doe)"
+            placeholder={t("fullnamePlaceholder")}
             large={true}
           />
         </FormGroup>
         <FormGroup
           className="formRequestItemSplitHalf"
-          label="Work Email"
+          label={t("email")}
           labelFor="work-email-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("emailHelper")}
         >
           <InputGroup
             id="work-email-input"
-            placeholder="Enter Your Work Email (e.g.: example@gmail.com)"
+            placeholder={t("emailHelper")}
             large={true}
           />
         </FormGroup>
         <FormGroup
           style={{ width: "100%" }}
-          label="Phone Number"
+          label={t("phonenumber")}
           labelFor="phone-number-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("phonenumberHelper")}
         >
           <InputGroup
             id="phone-number-input"
-            placeholder="Enter Your Phone Number (e.g.: 555-555-5555)"
+            placeholder={t("phonenumberPlaceholder")}
             large={true}
           />
         </FormGroup>
         <FormGroup
           className="formRequestItemSplitThird"
-          label="Organization Name"
+          label={t("organizationName")}
           labelFor="organization-name-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("organizationNameHelper")}
         >
           <InputGroup
             id="organization-name-input"
-            placeholder="Enter Your Organization Name"
+            placeholder={t("organizationNamePlaceholder")}
             large={true}
           />
         </FormGroup>
         <FormGroup
           className="formRequestItemSplitThird"
-          label="Organization Type"
+          label={t("organizationType")}
           labelFor="organization-type-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("organizationTypeHelper")}
         >
           <HTMLSelect
             id="organization-type-input"
@@ -125,9 +144,10 @@ export default function GetQuote(this: any) {
         </FormGroup>
         <FormGroup
           className="formRequestItemSplitThird"
-          label="Organization Size"
+          label={t("organizationSize")}
           labelFor="organization-size-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
+          helperText={t("organizationSizeHelper")}
         >
           <HTMLSelect
             id="organization-size-input"
@@ -139,10 +159,10 @@ export default function GetQuote(this: any) {
         <ControlGroup fill={true}>
           <FormGroup
             className=""
-            label="Solutions package"
+            label={t("solutionsPackage")}
             labelFor="solutions-package-input"
-            labelInfo="(required)"
-            helperText="Select a package for which you would like to receive a quote"
+            labelInfo={t("requiredLabel")}
+            helperText={t("solutionsPackageHelper")}
           >
             <HTMLSelect
               id="solutions-package-input"
@@ -154,10 +174,7 @@ export default function GetQuote(this: any) {
         </ControlGroup>
 
         <div className="getQuoteRadioButtonContainer">
-          <label className="bp4-label">
-            Would you like a AzoCyber to send a technician to your on-site
-            location?
-          </label>
+          <label className="bp4-label">{t("sendTechnicationText")}</label>
           <label className="bp4-control bp4-radio bp4-align-left">
             <input
               name="group"
@@ -165,7 +182,8 @@ export default function GetQuote(this: any) {
               value={onsiteState}
               onChange={() => setOnsiteState("no")}
             />
-            <span className="bp4-control-indicator"></span>No
+            <span className="bp4-control-indicator"></span>
+            {t("no")}
           </label>
           <label className="bp4-control bp4-radio bp4-align-left">
             <input
@@ -174,7 +192,8 @@ export default function GetQuote(this: any) {
               value={onsiteState}
               onChange={() => setOnsiteState("yes")}
             />
-            <span className="bp4-control-indicator"></span>Yes
+            <span className="bp4-control-indicator"></span>
+            {t("yes")}
           </label>
         </div>
       </section>
@@ -189,12 +208,12 @@ export default function GetQuote(this: any) {
         }}
       >
         <Button intent="success" large={true} onClick={submitForm}>
-          Submit Request
+          {t("submitRequest")}
         </Button>
       </ButtonGroup>
       {/* ==================================================== */}
       <Dialog
-        title="Submission Successful!"
+        title={t("submissionTitle")}
         icon="endorsed"
         isOpen={submittedState}
         usePortal={false}
@@ -203,17 +222,14 @@ export default function GetQuote(this: any) {
         }}
       >
         <div className={Classes.DIALOG_BODY}>
-          <p>Your Request A Quote form has been sent to our team!</p>
-          <p>We will contact you in 3-5 business days.</p>
+          <p>{t("getAQuoteDialog1")}</p>
+          <p>{t("getAQuoteDialog2")}</p>
           <br />
-          <p>
-            NOTE: We may need to send an AzoCyber technician on-site depending
-            on your type of request.
-          </p>
+          <p>{t("getAQuoteDialog3")}</p>
         </div>
         <div className={Classes.DIALOG_FOOTER}>
           <Button intent="success" onClick={routeToHome}>
-            Return To Home Page
+            {t("returnToHomePage")}
           </Button>
         </div>
       </Dialog>

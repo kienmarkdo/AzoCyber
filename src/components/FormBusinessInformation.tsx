@@ -6,12 +6,14 @@ import {
   Icon,
   InputGroup,
 } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 // import { Select2 } from "@blueprintjs/select";
 // import { useState } from "react";
 import { useNavigate } from "react-router";
 
 export default function FormBusinessInformation() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToPersonalInfo = () => {
     navigate("/AzoCyber/contact/personal_information");
@@ -22,15 +24,15 @@ export default function FormBusinessInformation() {
   };
 
   const ORGANIZATION_TYPES = [
-    "Select Organization Type",
-    "Small Business",
-    "Large Organization",
-    "Government",
-    "Academia",
+    t("allOrganizationTypes"),
+    t("smallBusinesses"),
+    t("largeOrganizations"),
+    t("government"),
+    t("academia"),
   ];
 
   const ORGANIZATION_SIZES = [
-    "Select Your Organization Size",
+    t("selectOrganizationSize"),
     "0 - 200",
     "201 - 500",
     "501 - 2000",
@@ -48,7 +50,7 @@ export default function FormBusinessInformation() {
               intent="success"
               className="iconStyle"
             />
-            <p>Personal Information</p>
+            <p>{t("personalInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -65,7 +67,7 @@ export default function FormBusinessInformation() {
               className="iconStyle"
               intent="primary"
             />
-            <p>Business Information</p>
+            <p>{t("businessInformation")}</p>
           </div>
 
           <Icon icon="arrow-right" iconSize={50} style={{ color: "#8F99A8" }} />
@@ -75,27 +77,27 @@ export default function FormBusinessInformation() {
               iconSize={100}
               className="iconStyle incomplete"
             />
-            <p>Security Information</p>
+            <p>{t("securityInformation")}</p>
           </div>
         </div>
       </section>
       <section className="formInputContainer">
         <FormGroup
           className=""
-          label="Organization Name"
+          label={t("organizationName")}
           labelFor="organization-name-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
           <InputGroup
             id="organization-name-input"
-            placeholder="Enter Your Organization Name"
+            placeholder={t("organizationNamePlaceholder")}
           />
         </FormGroup>
         <FormGroup
           className=""
-          label="Organization Type"
+          label={t("organizationType")}
           labelFor="organization-type-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
           <HTMLSelect
             id="organization-type-input"
@@ -105,9 +107,9 @@ export default function FormBusinessInformation() {
         </FormGroup>
         <FormGroup
           className=""
-          label="Organization Size"
+          label={t("organizationSize")}
           labelFor="organization-size-input"
-          labelInfo="(required)"
+          labelInfo={t("requiredLabel")}
         >
           <HTMLSelect
             id="organization-size-input"
@@ -128,10 +130,10 @@ export default function FormBusinessInformation() {
           style={{ display: "flex", gap: "10px", marginTop: "25px" }}
         >
           <Button intent="danger" large={true} onClick={routeToPersonalInfo}>
-            Back
+            {t("back")}
           </Button>
           <Button intent="success" large={true} onClick={routeToSecurityInfo}>
-            Next
+            {t("next")}
           </Button>
         </ButtonGroup>
       </section>

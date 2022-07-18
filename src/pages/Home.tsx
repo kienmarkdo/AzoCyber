@@ -1,15 +1,18 @@
 import { Button, Card, Elevation, MenuDivider } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const routeToAbout = () => {
     navigate("/AzoCyber/about");
   };
 
+  const solutionsPath = "/AzoCyber/solutions/#packages";
   const routeToSolutions = () => {
-    navigate("/AzoCyber/solutions");
+    navigate(solutionsPath);
   };
 
   return (
@@ -22,20 +25,21 @@ export default function Home() {
         }}
       >
         <h1 className="bp4-heading headerMarginBottom" style={{ width: "50%" }}>
-          One in five Canadian businesses experience a cyber attack annually
+          {t("homeHeader")}
         </h1>
         <h2 className="bp4-heading headerMarginBottom thinnerText">
-          Don't be another statistic
+          {t("homeHeaderDescription")}
         </h2>
         <Button large={true} intent="success" onClick={routeToAbout}>
-          Learn more
+          {t("learnMore")}
         </Button>
       </section>
-      <section className="sectionStyle">
-        <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Partners
-        </h2>
-        <hr className="shortHr" />
+      <section className="sectionStyle" style={{ textAlign: "center" }}>
+        <h2 className="bp4-heading">{t("ourPartners")}</h2>
+        <hr className="shortHr" />{" "}
+        <h3 className="bp4-heading thinnerText">
+          {t("ourPartnersDescription")}
+        </h3>
         <div className="galleryContainer">
           <img
             src="https://www.vyopta.com/wp-content/uploads/2019/08/Microsoft-Logo-White.png"
@@ -88,7 +92,7 @@ export default function Home() {
       </section>
       <section className="sectionStyle">
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Solutions
+          {t("ourSolutions")}
         </h2>
         <hr className="shortHr" />
         <div className="galleryContainer">
@@ -98,14 +102,13 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Prevention & Protection</Link>
+              <Link to={solutionsPath}>{t("preventionAndProtection")}</Link>
             </h3>
-            <p>
-              Strengthen your defences and never run into a cyber incident again
-              with our Prevention & Protection package.
+            <p className="packagesDescription">
+              {t("preventionAndProtectionDescription")}
             </p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -113,14 +116,13 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Emergency Response</Link>
+              <Link to={solutionsPath}>{t("emergencyResponse")}</Link>
             </h3>
-            <p>
-              Ensure that threats are dealt with as they happen with the 24/7
-              Emergency Response package.
+            <p className="packagesDescription">
+              {t("emergencyResponseDescription")}
             </p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -128,14 +130,13 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Simulated Environments</Link>
+              <Link to={solutionsPath}>{t("simulatedEnvironments")}</Link>
             </h3>
-            <p>
-              Discover vulnerabilities with this program, which includes
-              extensive penetration tests and an IT simulation training package.
+            <p className="packagesDescription">
+              {t("simulatedEnvironmentsDescription")}
             </p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
           <Card
             className="galleryItem"
@@ -143,14 +144,13 @@ export default function Home() {
             elevation={Elevation.FOUR}
           >
             <h3>
-              <Link to={"/solutions"}>Consultation</Link>
+              <Link to={solutionsPath}>{t("consultation")}</Link>
             </h3>
-            <p>
-              Learn protect your online presence and receive invaluable
-              consultation from our cybersecurity professionals.
+            <p className="packagesDescription">
+              {t("consultationDescription")}
             </p>
             <br />
-            <Button onClick={routeToSolutions}>Learn More</Button>
+            <Button onClick={routeToSolutions}>{t("learnMore")}</Button>
           </Card>
         </div>
       </section>

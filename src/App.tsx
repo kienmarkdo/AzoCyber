@@ -1,6 +1,7 @@
 //* import from packages
 import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; // browser router v6 package
-import { Alignment, Button, Navbar } from "@blueprintjs/core";
+import { Alignment, Button, ButtonGroup, Navbar } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 
 //* Import components and pages
 import Home from "./pages/Home";
@@ -14,6 +15,16 @@ import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const handleSelectEnglish = (): void => {
+    i18n.changeLanguage("en");
+  };
+
+  const handleSelectFrench = (): void => {
+    i18n.changeLanguage("fr");
+  };
+
   return (
     <BrowserRouter>
       <ScrollToTop />
@@ -36,39 +47,56 @@ function App() {
             <Navbar.Divider />
 
             <NavLink to="/AzoCyber/home">
-              <Button className="bp4-minimal" text="Home" />
+              <Button className="bp4-minimal" text={t("navHome")} />
             </NavLink>
             <NavLink to="/AzoCyber/about">
-              <Button className="bp4-minimal" text="About" />
+              <Button className="bp4-minimal" text={t("navAbout")} />
             </NavLink>
             <NavLink to="/AzoCyber/solutions">
-              <Button className="bp4-minimal" text="Solutions" />
+              <Button className="bp4-minimal" text={t("navSolutions")} />
             </NavLink>
             <NavLink to="/AzoCyber/resources">
-              <Button className="bp4-minimal" text="Resources" />
+              <Button className="bp4-minimal" text={t("navResources")} />
             </NavLink>
             {/* <NavLink to="/AzoCyber/careers">
               <Button className="bp4-minimal" text="Careers" />
             </NavLink> */}
           </Navbar.Group>
           <Navbar.Group align={Alignment.RIGHT}>
-            <NavLink to="/AzoCyber/get_a_quote">
-              <Button
-                className="bp4-button"
-                intent="primary"
-                text="Get a Quote"
-              />
-            </NavLink>
+            <ButtonGroup>
+              <NavLink to="/AzoCyber/get_a_quote">
+                <Button
+                  className="bp4-button"
+                  intent="primary"
+                  text={t("navGetAQuote")}
+                />
+              </NavLink>
 
-            <Navbar.Divider />
+              <div style={{ width: "10px" }} />
 
-            <NavLink to="/AzoCyber/contact">
+              <NavLink to="/AzoCyber/contact">
+                <Button
+                  className="bp4-button"
+                  intent="success"
+                  text={t("navContactUs")}
+                />
+              </NavLink>
+
+              <Navbar.Divider style={{ marginTop: "5px" }} />
+
               <Button
-                className="bp4-button"
-                intent="success"
-                text="Contact Us"
+                key="english"
+                text="EN"
+                onClick={handleSelectEnglish}
+                active={i18n.language.startsWith("en")}
               />
-            </NavLink>
+              <Button
+                key="french"
+                text="FR"
+                onClick={handleSelectFrench}
+                active={i18n.language.startsWith("fr")}
+              />
+            </ButtonGroup>
           </Navbar.Group>
         </Navbar>
         {/* ========================================================================= */}
@@ -85,6 +113,7 @@ function App() {
           <Route path="/AzoCyber/contact/*" element={<Contact />} />
           <Route path="/AzoCyber/get_a_quote" element={<GetQuote />} />
           <Route path="/AzoCyber/*" element={<PageNotFound />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
     </BrowserRouter>

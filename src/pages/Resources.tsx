@@ -11,30 +11,37 @@ import {
   Tag,
 } from "@blueprintjs/core";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
-import resourceData from "../mockData/resourceData.json";
+import i18n from "../i18n";
+import resourceDataEN from "../mockData/resourceData_en.json";
+import resourceDataFR from "../mockData/resourceData_fr.json";
 
 export default function Resources() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const resourceData = i18n.language.startsWith("en")
+    ? resourceDataEN
+    : resourceDataFR;
 
   const routeToSolutions = () => {
     navigate("/AzoCyber/solutions");
   };
 
   const ORGANIZATION_TYPE_OPTIONS = [
-    "All Organization Types",
-    "Small Businesses",
-    "Large Organizations",
-    "Government",
-    "Academia",
+    t("allOrganizationTypes"),
+    t("smallBusinesses"),
+    t("largeOrganizations"),
+    t("government"),
+    t("academia"),
   ];
 
   const RESOURCE_TYPE = [
-    "All Resource Types",
-    "Journal",
-    "Article",
-    "Tutorial",
+    t("allResourceTypes"),
+    t("journal"),
+    t("article"),
+    t("tutorial"),
   ];
 
   const [organizationType, setOrganizationType] = useState(
@@ -47,14 +54,13 @@ export default function Resources() {
     <>
       <section className="topSectionContainer">
         <div className="topSectionItemOne">
-          <h1 className="bp4-heading">Resources</h1>
+          <h1 className="bp4-heading">{t("navResources")}</h1>
           <br />
           <h3
             className="bp4-heading bp4-blockquote thinnerText"
             style={{ /*width: "40%",*/ fontStyle: "oblique" }}
           >
-            From learning the basics to analyzing in-depth reports, AzoCyber has
-            it all.
+            {t("resourcesQuote")}
           </h3>
           <br />
           <h4 className="bp4-heading thinnerText" /*style={{ width: "40%" }}*/>
@@ -69,15 +75,17 @@ export default function Resources() {
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/resources/#azocyber_resources">
-              <MenuItem icon="selection" text="AzoCyber Resources" />
+            <HashLink smooth to="#azocyber_resources">
+              <MenuItem icon="selection" text={t("azoCyberResources")} />
             </HashLink>
           </Menu>
-          <br />
-          <br />
-          <br />
-          <Button large={true} intent="success" onClick={routeToSolutions}>
-            Secure Your Business
+          <Button
+            className="topSectionRouteButton"
+            large={true}
+            intent="success"
+            onClick={routeToSolutions}
+          >
+            {t("goToSolutions")}
           </Button>
         </div>
       </section>
@@ -86,16 +94,18 @@ export default function Resources() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          AzoCyber Resources
+          {t("azoCyberResources")}
         </h2>
         <hr className="shortHr" />
         <div className="headerMarginBottom" />
         <Card className="filterResults">
-          <h3 className="bp4-heading headerMarginBottom">Filter Results</h3>
+          <h3 className="bp4-heading headerMarginBottom">
+            {t("filterResults")}
+          </h3>
           <h4 className="bp4-heading thinnerText">
-            Select Organization Type{" "}
+            {t("selectOrganizationType")}{" "}
             <Tooltip
-              content="Select Audience Type"
+              content={t("selectAudienceType")}
               position={Position.RIGHT}
               openOnTargetFocus={true}
             >
@@ -115,7 +125,9 @@ export default function Resources() {
             })}
           </ButtonGroup>
           <div className="headerMarginBottom" />
-          <h4 className="bp4-heading thinnerText">Select Resource Type </h4>
+          <h4 className="bp4-heading thinnerText">
+            {t("selectResourceType")}{" "}
+          </h4>
           <ButtonGroup large={true}>
             {RESOURCE_TYPE.map((resource) => {
               return (
@@ -137,11 +149,11 @@ export default function Resources() {
             gap: "10px 10px",
           }}
         >
-          <h2 className="bp4-heading">Search Result:</h2>
+          <h2 className="bp4-heading">{t("searchResults")}:</h2>
           {resourceData.map((res) => {
             if (
-              organizationType === "All Organization Types" &&
-              resourceType === "All Resource Types"
+              organizationType === t("allOrganizationTypes") &&
+              resourceType === t("allResourceTypes")
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
@@ -149,7 +161,7 @@ export default function Resources() {
                     {res.title}
                   </h3>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong>{" "}
+                    <strong>{t("organizationType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -160,7 +172,7 @@ export default function Resources() {
                     </Tag>
                   </h4>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong>{" "}
+                    <strong>{t("resourceType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -174,7 +186,7 @@ export default function Resources() {
               );
             } else if (
               organizationType === res.organization_type &&
-              resourceType === "All Resource Types"
+              resourceType === t("allResourceTypes")
             ) {
               return (
                 <Card style={{ height: "200px", flexBasis: "100%" }}>
@@ -182,7 +194,7 @@ export default function Resources() {
                     {res.title}
                   </h3>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong>{" "}
+                    <strong>{t("organizationType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -206,7 +218,7 @@ export default function Resources() {
                 </Card>
               );
             } else if (
-              organizationType === "All Organization Types" &&
+              organizationType === t("allOrganizationTypes") &&
               resourceType === res.resource_type
             ) {
               return (
@@ -215,7 +227,7 @@ export default function Resources() {
                     {res.title}
                   </h3>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong>{" "}
+                    <strong>{t("organizationType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -226,7 +238,7 @@ export default function Resources() {
                     </Tag>
                   </h4>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong>{" "}
+                    <strong>{t("resourceType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -248,7 +260,7 @@ export default function Resources() {
                     {res.title}
                   </h3>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Organization Type:</strong>{" "}
+                    <strong>{t("organizationType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}
@@ -259,7 +271,7 @@ export default function Resources() {
                     </Tag>
                   </h4>
                   <h4 className="bp4-heading thinnerText">
-                    <strong>Resource Type:</strong>{" "}
+                    <strong>{t("resourceType")}:</strong>{" "}
                     <Tag
                       minimal={true}
                       large={true}

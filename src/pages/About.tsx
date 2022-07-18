@@ -1,9 +1,16 @@
 import { Menu, MenuItem, MenuDivider, Button } from "@blueprintjs/core";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { HashLink } from "react-router-hash-link";
+import i18n from "../i18n";
 
 export default function About() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
+  const teamDescHeightState = i18n.language.startsWith("en")
+    ? ""
+    : "teamMemberDesc";
 
   const routeToSolutions = () => {
     navigate("/AzoCyber/solutions");
@@ -13,37 +20,36 @@ export default function About() {
     <>
       <section className="topSectionContainer">
         <div className="topSectionItemOne">
-          <h1 className="bp4-heading">About</h1>
+          <h1 className="bp4-heading">{t("navAbout")}</h1>
           <br />
           <h3
             className="bp4-heading bp4-blockquote thinnerText"
             style={{ /*width: "40%",*/ fontStyle: "oblique" }}
           >
-            Creation is difficult, but destruction is easy.
+            {t("aboutQuote")}
           </h3>
           <br />
           <h4 className="bp4-heading thinnerText" /*style={{ width: "40%" }}*/>
-            More and more criminals are going virtual since physical attacks are
-            becoming harder than cyber attacks due to insecure IT
-            infrastructures. At CyberAzo, we aim to secure and provide threat
-            protection to every Canadian business, one at a time.
+            {t("aboutDescription")}
           </h4>
         </div>
         <div className="topSectionItemTwo">
           <Menu large={true}>
-            <HashLink smooth to="/about/#vision">
-              <MenuItem icon="selection" text="Vision" />
+            <HashLink smooth to="#vision">
+              <MenuItem icon="selection" text={t("vision")} />
             </HashLink>
             <MenuDivider />
-            <HashLink smooth to="/about/#team">
-              <MenuItem icon="selection" text="Team" />
+            <HashLink smooth to="#team">
+              <MenuItem icon="selection" text={t("team")} />
             </HashLink>
           </Menu>
-          <br />
-          <br />
-          <br />
-          <Button large={true} intent="success" onClick={routeToSolutions}>
-            Secure Your Business
+          <Button
+            className="topSectionRouteButton"
+            large={true}
+            intent="success"
+            onClick={routeToSolutions}
+          >
+            {t("goToSolutions")}
           </Button>
         </div>
       </section>
@@ -52,12 +58,12 @@ export default function About() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Vision
+          {t("vision")}
         </h2>
         <hr className="shortHr" />
         <section className="splitScreenContainer">
           <div className="splitScreenItemOne">
-            <h3 className="bp4-heading">Our core values and beliefs</h3>
+            <h3 className="bp4-heading">{t("visionSectionHeading")}</h3>
             <br />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -92,14 +98,14 @@ export default function About() {
         <br />
         <br />
         <h2 className="bp4-heading" style={{ textAlign: "center" }}>
-          Our Team
+          {t("ourTeam")}
         </h2>
         <hr className="shortHr" />
         <div className="galleryContainer">
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sergio Ramos</h3>
-            <h3 className="bp4-heading thinnerText">
-              Prevention & Protection Lead
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("sergioRamosDesc")}
             </h3>
             <br />
             <img
@@ -110,8 +116,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Sarah Leclerc</h3>
-            <h3 className="bp4-heading thinnerText">
-              Emergency Response Specialist
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("sarahLeclercDesc")}
             </h3>
             <br />
             <img
@@ -121,8 +127,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Geneviève Legault</h3>
-            <h3 className="bp4-heading thinnerText">
-              Cybersecurity Consultant
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("genevieveLegaultDesc")}
             </h3>
             <br />
             <img
@@ -132,7 +138,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Jide Olatunji</h3>
-            <h3 className="bp4-heading thinnerText">Penetration Tester</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("jideOlatunjiDesc")}
+            </h3>
             <br />
             <img
               src="https://media.istockphoto.com/photos/headshot-portrait-of-smiling-biracial-man-posing-picture-id1292475584?b=1&k=20&m=1292475584&s=170667a&w=0&h=jZ6etD3dfOV_NIgwR9hIQ5B9TBC5kpYxShIsaqjWbzc="
@@ -141,7 +149,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Alexandre DuBois</h3>
-            <h3 className="bp4-heading thinnerText">Senior Network Analyst</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("alexandreDuboisDesc")}
+            </h3>
             <br />
             <img
               src="https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -150,8 +160,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Tyron Woodley</h3>
-            <h3 className="bp4-heading thinnerText">
-              Vulnerability Researcher (VR)
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("tyronWoodleyDesc")}
             </h3>
             <br />
             <img
@@ -161,8 +171,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Elizabeth Vandervoort</h3>
-            <h3 className="bp4-heading thinnerText">
-              Software Reverse Engineer (SRE)
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("elizabethVandervoortDesc")}
             </h3>
             <br />
             <img
@@ -172,7 +182,9 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Ruby McAlpine</h3>
-            <h3 className="bp4-heading thinnerText">Data Security Engineer</h3>
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("rubyMcalpineDesc")}
+            </h3>
             <br />
             <img
               src="https://images.pexels.com/photos/3776932/pexels-photo-3776932.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -181,8 +193,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Nathan McGregor</h3>
-            <h3 className="bp4-heading thinnerText">
-              Entreprise Security Architect
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("nathanMcgregorDesc")}
             </h3>
             <br />
             <img
@@ -192,8 +204,8 @@ export default function About() {
           </div>
           <div className="galleryImageTeamItem">
             <h3 className="bp4-heading">Tuan Nguyen</h3>
-            <h3 className="bp4-heading thinnerText">
-              Digital Forensics Examiner
+            <h3 className={`bp4-heading thinnerText ${teamDescHeightState}`}>
+              {t("tuanNguyenDesc")}
             </h3>
             <br />
             <img
