@@ -215,7 +215,7 @@ $formRequestQuoteContainerGap: 1%;
 }
 
 .getQuoteCalendar {
-    margin: 0px 20vw 20px 20vw;
+    margin: 30px 0px;
     // display: flex;
     // gap: 10px;
 }
@@ -232,6 +232,10 @@ $formRequestQuoteContainerGap: 1%;
 
 .getQuoteCalendarItem2 {
     flex: 1 1 auto;
+}
+
+.formErrorMessage {
+    color: #E76A6E;
 }
 
 //* ======================  PackagesOptions (also in Home.tsx)  ======================
