@@ -120,5 +120,8 @@
     "contactConfirmation1": "Votre formulaire de contact a été envoyé à notre équipe!",
     "contactConfirmation2": "Vous recevrez une réponse sous 3 à 5 jours ouvrables.",
     "submit": "Soumettre",
-    "ourPartnersDescription": "\"AzoCyber est notre fournisseur de cybersécurité préféré depuis plus de 5 ans\" - Rachel Gagnon, CTO de Lorem Ipsum Inc."
+    "ourPartnersDescription": "\"AzoCyber est notre fournisseur de cybersécurité préféré depuis plus de 5 ans\" - Rachel Gagnon, CTO de Lorem Ipsum Inc.",
+    "255charsOrLess": "(doit contenir 255 caractères ou moins)",
+    "38charsOrLess": "(doit contenir 38 caractères ou moins)",
+    "100charsOrLess": "(doit contenir 100 caractères ou moins)"
 }

@@ -111,23 +111,23 @@ export default function GetQuote() {
     },
     validationSchema: Yup.object({
       fullName: Yup.string()
-        .max(255, "Must be 255 characters or less")
-        .required("(required)"),
+        .max(255, t("255charsOrLess"))
+        .required(t("requiredLabel")),
       email: Yup.string()
         .email("(invalid email address)")
-        .required("(required)"),
+        .required(t("requiredLabel")),
       phoneNumber: Yup.string()
-        .max(38, "Must be 38 characters or less")
-        .required("(required)"),
+        .max(38, t("38charsOrLess"))
+        .required(t("requiredLabel")),
       organizationName: Yup.string()
-        .max(100, "Must be 100 characters or less")
-        .required("(required)"),
-      organizationType: Yup.string().required("(required)"),
-      organizationSize: Yup.string().required("(required)"),
-      solutionsPackage: Yup.string().required("(required)"),
-      // isTechnician: Yup.string().required("(required)"),
-      // appointment: Yup.string().required("(required)"),
-      // organizationAddress: Yup.string().required("(required)"),
+        .max(100, t("100charsOrLess"))
+        .required(t("requiredLabel")),
+      organizationType: Yup.string().required(t("requiredLabel")),
+      organizationSize: Yup.string().required(t("requiredLabel")),
+      solutionsPackage: Yup.string().required(t("requiredLabel")),
+      // isTechnician: Yup.string().required(t("requiredLabel")),
+      // appointment: Yup.string().required(t("requiredLabel")),
+      // organizationAddress: Yup.string().required(t("requiredLabel")),
       // appointmentDescription: Yup.string().optional(),
     }),
     onSubmit: (values) => {
