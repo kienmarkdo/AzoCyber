@@ -37,21 +37,32 @@ export default function GetQuote() {
   };
 
   const [submittedState, setSubmittedState] = useState(false);
+  const [isDisplayedDialog, setIsDisplayedDialog] = useState(false);
 
   const submitForm = () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-    !(
-      formik.errors.fullName ||
-      formik.errors.email ||
-      formik.errors.phoneNumber ||
-      formik.errors.organizationName ||
-      formik.errors.organizationSize ||
-      formik.errors.organizationType ||
-      formik.errors.organizationAddress ||
-      formik.errors.solutionsPackage
-    )
-      ? setSubmittedState(true)
-      : null;
+    if (
+      !(
+        formik.errors.fullName ||
+        formik.errors.email ||
+        formik.errors.phoneNumber ||
+        formik.errors.organizationName ||
+        formik.errors.organizationSize ||
+        formik.errors.organizationType ||
+        formik.errors.organizationAddress ||
+        formik.errors.solutionsPackage
+      ) &&
+      (formik.touched.fullName ||
+        formik.touched.email ||
+        formik.touched.phoneNumber ||
+        formik.touched.organizationName ||
+        formik.touched.organizationSize ||
+        formik.touched.organizationType ||
+        formik.touched.organizationAddress ||
+        formik.touched.solutionsPackage)
+    ) {
+      setSubmittedState(true);
+    }
   };
 
   const ORGANIZATION_TYPES = [
@@ -408,31 +419,21 @@ export default function GetQuote() {
         {onsiteState === "yes" ? (
           <>
             <CalendarDateTime />
-            <div style={{ marginTop: "35px" }}>
-              <Button
-                type="submit"
-                intent="success"
-                large={true}
-                onClick={submitForm}
-              >
-                {t("submitRequest")}
-              </Button>
-            </div>
           </>
         ) : (
-          <>
-            <div style={{ marginTop: "35px" }}>
-              <Button
-                type="submit"
-                intent="success"
-                large={true}
-                onClick={submitForm}
-              >
-                {t("submitRequest")}
-              </Button>
-            </div>
-          </>
+          <></>
         )}
+        <div style={{ marginTop: "35px" }}>
+          <Button
+            type="submit"
+            intent="success"
+            large={true}
+            onClick={submitForm}
+            disabled={isDisplayedDialog}
+          >
+            {t("submitRequest")}
+          </Button>
+        </div>
       </form>
 
       {/* ==================================================== */}
@@ -443,6 +444,7 @@ export default function GetQuote() {
         usePortal={false}
         onClose={() => {
           setSubmittedState(false);
+          setIsDisplayedDialog(true);
         }}
       >
         <div className={Classes.DIALOG_BODY}>
