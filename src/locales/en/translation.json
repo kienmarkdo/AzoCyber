@@ -104,6 +104,7 @@
     "organizationAddressPlaceholder": "Enter Your Organization's Address",
     "organizationAddressHelper": "Enter the address of your organization (e.g.: 111 Wellington St, Ottawa, ON K1A 0A6)",
     "knowInAdvance": "Is there anything we should know in advance?",
+    "knowInAdvanceHelper": "Let us know any details we might need to know (e.g.: parking, entrance)",
     "optionalLabel": "(optional)",
     "enterDescription": "Enter Description",
     "enterContactInformation": "Enter Contact Information",
@@ -120,5 +121,10 @@
     "contactConfirmation1": "Your Contact form has been sent to our team!",
     "contactConfirmation2": "You will receive a response in 3-5 business days.",
     "submit": "Submit",
-    "ourPartnersDescription": "\"AzoCyber has been our preferred cybersecurity provider for over 5 years\" - Rachel Gagnon, CTO of Lorem Ipsum Inc."
+    "ourPartnersDescription": "\"AzoCyber has been our preferred cybersecurity provider for over 5 years\" - Rachel Gagnon, CTO of Lorem Ipsum Inc.",
+    "255charsOrLess": "(must be 255 characters or less)",
+    "38charsOrLess": "(must be 38 characters or less)",
+    "100charsOrLess": "(must be 100 characters or less)",
+    "today": "Today",
+    "clear": "Clear"
 }
