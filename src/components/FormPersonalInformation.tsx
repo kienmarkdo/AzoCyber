@@ -1,6 +1,9 @@
 import { Button, FormGroup, Icon, InputGroup } from "@blueprintjs/core";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useState } from "react";
 
 export default function FormPersonalInformation() {
   const navigate = useNavigate();
@@ -8,6 +11,51 @@ export default function FormPersonalInformation() {
 
   const routeToBusinessInfo = () => {
     navigate("/AzoCyber/contact/business_information");
+  };
+
+  // formik form validation
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      phoneNumber: "",
+      position: "",
+    },
+    validationSchema: Yup.object({
+      fullName: Yup.string()
+        .max(255, t("255charsOrLess"))
+        .required(t("requiredLabel")),
+      email: Yup.string()
+        .email("(invalid email address)")
+        .required(t("requiredLabel")),
+      phoneNumber: Yup.string()
+        .max(38, t("38charsOrLess"))
+        .required(t("requiredLabel")),
+      position: Yup.string()
+        .max(255, t("255charsOrLess"))
+        .required(t("requiredLabel")),
+    }),
+    onSubmit: (values) => {},
+  });
+
+  const [submitState, setSubmittedState] = useState(false);
+
+  const submitNext = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    if (
+      !(
+        formik.errors.fullName ||
+        formik.errors.email ||
+        formik.errors.phoneNumber ||
+        formik.errors.position
+      ) &&
+      (formik.touched.fullName ||
+        formik.touched.email ||
+        formik.touched.phoneNumber ||
+        formik.touched.position)
+    ) {
+      routeToBusinessInfo();
+    }
   };
 
   return (
@@ -51,39 +99,91 @@ export default function FormPersonalInformation() {
           </div>
         </div>
       </section>
-      <section className="formInputContainer">
+      <form className="formInputContainer" onSubmit={formik.handleSubmit}>
         <FormGroup
           className=""
           label={t("fullname")}
-          labelFor="name-input"
-          labelInfo={t("requiredLabel")}
+          labelFor="fullName"
+          labelInfo={
+            formik.touched.fullName && formik.errors.fullName ? (
+              <span className="formErrorMessage">{formik.errors.fullName}</span>
+            ) : (
+              t("requiredLabel")
+            )
+          }
         >
-          <InputGroup id="name-input" placeholder={t("fullnamePlaceholder")} />
+          <InputGroup
+            id="fullName"
+            name="fullName"
+            type="text"
+            value={formik.values.fullName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder={t("fullnamePlaceholder")}
+          />
         </FormGroup>
         <FormGroup
           label={t("email")}
-          labelFor="email-input"
-          labelInfo={t("requiredLabel")}
+          labelFor="email"
+          labelInfo={
+            formik.touched.email && formik.errors.email ? (
+              <span className="formErrorMessage">{formik.errors.email}</span>
+            ) : (
+              t("requiredLabel")
+            )
+          }
         >
-          <InputGroup id="email-input" placeholder={t("emailPlaceholder")} />
+          <InputGroup
+            id="email"
+            name="email"
+            type="email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder={t("emailHelper")}
+          />
         </FormGroup>
         <FormGroup
           label={t("phonenumber")}
-          labelFor="phone-input"
-          labelInfo={t("requiredLabel")}
+          labelFor="phone-number-input"
+          labelInfo={
+            formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+              <span className="formErrorMessage">
+                {formik.errors.phoneNumber}
+              </span>
+            ) : (
+              t("requiredLabel")
+            )
+          }
         >
           <InputGroup
-            id="phone-input"
+            id="phoneNumber"
+            name="phoneNumber"
+            type="text"
+            value={formik.values.phoneNumber}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             placeholder={t("phonenumberPlaceholder")}
           />
         </FormGroup>
         <FormGroup
           label={t("position")}
-          labelFor="position-input"
-          labelInfo={t("requiredLabel")}
+          labelFor="position"
+          labelInfo={
+            formik.touched.position && formik.errors.position ? (
+              <span className="formErrorMessage">{formik.errors.position}</span>
+            ) : (
+              t("requiredLabel")
+            )
+          }
         >
           <InputGroup
-            id="position-input"
+            id="position"
+            name="position"
+            type="text"
+            value={formik.values.position}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             placeholder={t("positionPlaceholder")}
           />
         </FormGroup>
@@ -91,11 +191,12 @@ export default function FormPersonalInformation() {
           style={{ display: "flex", gap: "10px", marginTop: "25px" }}
           intent="success"
           large={true}
-          onClick={routeToBusinessInfo}
+          type="submit"
+          onClick={submitNext}
         >
           {t("next")}
         </Button>
-      </section>
+      </form>
     </>
   );
 }
