@@ -1,6 +1,5 @@
 import {
   Button,
-  ButtonGroup,
   Classes,
   ControlGroup,
   Dialog,
@@ -15,19 +14,19 @@ import { CalendarDateTime } from "../components/CalendarDateTime";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-interface initialValues {
-  fullName: string;
-  email: string;
-  phoneNumber: string;
-  organizationName: string;
-  organizationType: string;
-  organizationSize: string;
-  solutionsPackage: string;
-  isTechnician: boolean;
-  appointment: string;
-  organizationAddress: string;
-  appointmentDescription: string;
-}
+// interface initialValues {
+//   fullName: string;
+//   email: string;
+//   phoneNumber: string;
+//   organizationName: string;
+//   organizationType: string;
+//   organizationSize: string;
+//   solutionsPackage: string;
+//   isTechnician: boolean;
+//   appointment: string;
+//   organizationAddress: string;
+//   appointmentDescription: string;
+// }
 
 export default function GetQuote() {
   const navigate = useNavigate();
@@ -48,6 +47,7 @@ export default function GetQuote() {
       formik.errors.organizationName ||
       formik.errors.organizationSize ||
       formik.errors.organizationType ||
+      formik.errors.organizationAddress ||
       formik.errors.solutionsPackage
     )
       ? setSubmittedState(true)
@@ -127,7 +127,9 @@ export default function GetQuote() {
       solutionsPackage: Yup.string().required(t("requiredLabel")),
       // isTechnician: Yup.string().required(t("requiredLabel")),
       // appointment: Yup.string().required(t("requiredLabel")),
-      // organizationAddress: Yup.string().required(t("requiredLabel")),
+      organizationAddress: Yup.string()
+        .max(255, t("255charsOrLess"))
+        .required(t("requiredLabel")),
       // appointmentDescription: Yup.string().optional(),
     }),
     onSubmit: (values) => {
@@ -306,6 +308,33 @@ export default function GetQuote() {
             large={true}
           />
         </FormGroup>
+        <FormGroup
+          style={{ width: "100%" }}
+          label={t("organizationAddress")}
+          labelFor="organizationAddress"
+          labelInfo={
+            formik.touched.organizationAddress &&
+            formik.errors.organizationAddress ? (
+              <span className="formErrorMessage">
+                {formik.errors.organizationAddress}
+              </span>
+            ) : (
+              t("requiredLabel")
+            )
+          }
+          helperText={t("organizationAddressHelper")}
+        >
+          <InputGroup
+            id="organizationAddress"
+            name="organizationAddress"
+            type="text"
+            value={formik.values.organizationAddress}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            placeholder={t("organizationAddressPlaceholder")}
+            large={true}
+          />
+        </FormGroup>
         <ControlGroup fill={true}>
           <FormGroup
             className=""
@@ -376,18 +405,34 @@ export default function GetQuote() {
           </label>
         </div>
 
-        {onsiteState === "yes" ? <CalendarDateTime /> : <></>}
-
-        <div style={{ marginTop: "35px" }}>
-          <Button
-            type="submit"
-            intent="success"
-            large={true}
-            onClick={submitForm}
-          >
-            {t("submitRequest")}
-          </Button>
-        </div>
+        {onsiteState === "yes" ? (
+          <>
+            <CalendarDateTime />
+            <div style={{ marginTop: "35px" }}>
+              <Button
+                type="submit"
+                intent="success"
+                large={true}
+                onClick={submitForm}
+              >
+                {t("submitRequest")}
+              </Button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div style={{ marginTop: "35px" }}>
+              <Button
+                type="submit"
+                intent="success"
+                large={true}
+                onClick={submitForm}
+              >
+                {t("submitRequest")}
+              </Button>
+            </div>
+          </>
+        )}
       </form>
 
       {/* ==================================================== */}

@@ -104,6 +104,7 @@
     "organizationAddressPlaceholder": "Entrez l'adresse de votre organisation",
     "organizationAddressHelper": "Entrez l'adresse de votre organisation (e.g.: 111, rue Wellington, Ottawa (Ontario) K1A 0A6)",
     "knowInAdvance": "Y a-t-il quelque chose que nous devrions savoir à l'avance?",
+    "knowInAdvanceHelper": "Faites-nous part de tous les détails dont nous pourrions avoir besoin (ex.: stationnement, entrée)",
     "optionalLabel": "(facultatif)",
     "enterDescription": "Entrer la description",
     "enterContactInformation": "Saisir les informations de contact",
@@ -123,5 +124,7 @@
     "ourPartnersDescription": "\"AzoCyber est notre fournisseur de cybersécurité préféré depuis plus de 5 ans\" - Rachel Gagnon, CTO de Lorem Ipsum Inc.",
     "255charsOrLess": "(doit contenir 255 caractères ou moins)",
     "38charsOrLess": "(doit contenir 38 caractères ou moins)",
-    "100charsOrLess": "(doit contenir 100 caractères ou moins)"
+    "100charsOrLess": "(doit contenir 100 caractères ou moins)",
+    "today": "Aujourd'hui",
+    "clear": "Effacer"
 }

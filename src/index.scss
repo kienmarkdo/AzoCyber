@@ -210,8 +210,8 @@ $formRequestQuoteContainerGap: 1%;
 .datepicker {
     width: 243px;
     // margin: 0px 20vw 50px 20vw;
-    display: flex;
-    gap: 10px;
+    // display: flex;
+    // gap: 10px;
 }
 
 .getQuoteCalendar {
@@ -226,12 +226,19 @@ $formRequestQuoteContainerGap: 1%;
     // column-gap: 100px;
 }
 
+// $widthGetQuoteCalendarItem1: 40%;
+// $widthGetQuoteCalendarItem2: 40%;
+// $widthGetQuoteCalendarItemSeparator: calc(100% - $widthGetQuoteCalendarItem1 - $widthGetQuoteCalendarItem2);
+
 .getQuoteCalendarItem1 {
-    flex: 1 5 auto;
+    flex: 5 1 auto;
+    margin-right: 15vw;
+    // width: $widthGetQuoteCalendarItem1;
 }
 
 .getQuoteCalendarItem2 {
     flex: 1 1 auto;
+    // width: $widthGetQuoteCalendarItem2;
 }
 
 .formErrorMessage {
