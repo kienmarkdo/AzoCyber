@@ -26,17 +26,11 @@ export default function Solutions() {
             className="bp4-heading bp4-blockquote thinnerText"
             style={{ /*width: "40%",*/ fontStyle: "oblique" }}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            {t("solutionsQuote")}
           </h3>
           <br />
           <h4 className="bp4-heading thinnerText" /*style={{ width: "40%" }}*/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            {t("solutionsDescription")}
           </h4>
         </div>
         <div className="topSectionItemTwo">

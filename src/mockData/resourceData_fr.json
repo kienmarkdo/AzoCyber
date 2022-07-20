@@ -17,7 +17,7 @@
     "id": 4,
     "title": "Statistiques sur les cyberattaques au Canada (2022)",
     "organization_type": "Tous les types",
-    "resource_type": "Journal"
+    "resource_type": "Revue"
   }, {
     "id": 5,
     "title": "Protéger votre petite entreprise",
@@ -42,12 +42,12 @@
     "id": 9,
     "title": "Résultats des tests de pénétration pour les grandes organisations (2021)",
     "organization_type": "Grandes entreprises",
-    "resource_type": "Journal"
+    "resource_type": "Revue"
   }, {
     "id": 10,
     "title": "Résultats des tests de pénétration pour les gouvernements (2022)",
     "organization_type": "Gouvernement",
-    "resource_type": "Journal"
+    "resource_type": "Revue"
   }, {
     "id": 11,
     "title": "Comment les cybercriminels exploitent les petites entreprises",

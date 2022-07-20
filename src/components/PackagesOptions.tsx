@@ -27,16 +27,20 @@ export default function PackagesOptions() {
         </p>
         <br />
         <p>
-          <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+          {t("package_1_1")}
         </p>
         <p>
-          <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+          {t("package_1_2")}
         </p>
         <p>
-          <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+          {t("package_1_3")}
         </p>
         <p>
-          <Icon icon="tick" intent="success" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="success" size={IconSize.LARGE} />{" "}
+          {t("package_1_4")}
         </p>
         <br />
         <Button intent="success" onClick={routeToQuote}>
@@ -59,16 +63,20 @@ export default function PackagesOptions() {
         </p>
         <br />
         <p>
-          <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+          {t("package_2_1")}
         </p>
         <p>
-          <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+          {t("package_2_2")}
         </p>
         <p>
-          <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+          {t("package_2_3")}
         </p>
         <p>
-          <Icon icon="tick" intent="danger" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="danger" size={IconSize.LARGE} />{" "}
+          {t("package_2_4")}
         </p>
         <br />
         <Button intent="danger" onClick={routeToQuote}>
@@ -91,16 +99,20 @@ export default function PackagesOptions() {
         </p>
         <br />
         <p>
-          <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+          {t("package_3_1")}
         </p>
         <p>
-          <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+          {t("package_3_2")}
         </p>
         <p>
-          <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+          {t("package_3_3")}
         </p>
         <p>
-          <Icon icon="tick" intent="warning" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="warning" size={IconSize.LARGE} />{" "}
+          {t("package_3_4")}
         </p>
         <br />
         <Button intent="warning" onClick={routeToQuote}>
@@ -121,16 +133,20 @@ export default function PackagesOptions() {
         <p className="packagesDescription">{t("consultationDescription")}</p>
         <br />
         <p>
-          <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+          {t("package_4_1")}
         </p>
         <p>
-          <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+          {t("package_4_2")}
         </p>
         <p>
-          <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+          {t("package_4_3")}
         </p>
         <p>
-          <Icon icon="tick" intent="primary" size={IconSize.LARGE} /> Hello
+          <Icon icon="tick" intent="primary" size={IconSize.LARGE} />{" "}
+          {t("package_4_4")}
         </p>
         <br />
         <Button intent="primary" onClick={routeToQuote}>
