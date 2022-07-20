@@ -126,5 +126,6 @@
     "38charsOrLess": "(doit contenir 38 caractères ou moins)",
     "100charsOrLess": "(doit contenir 100 caractères ou moins)",
     "today": "Aujourd'hui",
-    "clear": "Effacer"
+    "clear": "Effacer",
+    "contactFormSubmitError": "Le formulaire n'a pas été rempli. Veuillez revenir en arrière et vérifier que vous avez tout rempli."
 }

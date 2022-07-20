@@ -126,5 +126,6 @@
     "38charsOrLess": "(must be 38 characters or less)",
     "100charsOrLess": "(must be 100 characters or less)",
     "today": "Today",
-    "clear": "Clear"
+    "clear": "Clear",
+    "contactFormSubmitError": "The form has not been completed. Please go back and check that you have filled in everything."
 }
