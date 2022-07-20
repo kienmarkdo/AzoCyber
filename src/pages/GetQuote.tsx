@@ -52,14 +52,14 @@ export default function GetQuote() {
         formik.errors.organizationAddress ||
         formik.errors.solutionsPackage
       ) &&
-      (formik.touched.fullName ||
-        formik.touched.email ||
-        formik.touched.phoneNumber ||
-        formik.touched.organizationName ||
-        formik.touched.organizationSize ||
-        formik.touched.organizationType ||
-        formik.touched.organizationAddress ||
-        formik.touched.solutionsPackage)
+      formik.touched.fullName &&
+      formik.touched.email &&
+      formik.touched.phoneNumber &&
+      formik.touched.organizationName &&
+      formik.touched.organizationSize &&
+      formik.touched.organizationType &&
+      formik.touched.organizationAddress &&
+      formik.touched.solutionsPackage
     ) {
       setSubmittedState(true);
     }
@@ -95,7 +95,7 @@ export default function GetQuote() {
 
   const [onsiteState, setOnsiteState] = useState("no");
 
-  // This useEffect prevents page scrolling when the dialog is open
+  // This useEffect prevents page scrolling/bottom overflow when the dialog is open
   useEffect(() => {
     if (submittedState === true) {
       document.body.style.overflow = "hidden"; // turns off page scrolling

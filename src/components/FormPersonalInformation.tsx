@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { useState } from "react";
+import contactFormState from "../global/contactFormState";
 
 export default function FormPersonalInformation() {
   const navigate = useNavigate();
@@ -16,10 +16,10 @@ export default function FormPersonalInformation() {
   // formik form validation
   const formik = useFormik({
     initialValues: {
-      fullName: "",
-      email: "",
-      phoneNumber: "",
-      position: "",
+      fullName: contactFormState.fullName,
+      email: contactFormState.email,
+      phoneNumber: contactFormState.phoneNumber,
+      position: contactFormState.position,
     },
     validationSchema: Yup.object({
       fullName: Yup.string()
@@ -38,22 +38,31 @@ export default function FormPersonalInformation() {
     onSubmit: (values) => {},
   });
 
-  const [submitState, setSubmittedState] = useState(false);
-
   const submitNext = () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     if (
-      !(
+      (!(
         formik.errors.fullName ||
         formik.errors.email ||
         formik.errors.phoneNumber ||
         formik.errors.position
       ) &&
-      (formik.touched.fullName ||
-        formik.touched.email ||
-        formik.touched.phoneNumber ||
-        formik.touched.position)
+        formik.touched.fullName &&
+        formik.touched.email &&
+        formik.touched.phoneNumber &&
+        formik.touched.position) ||
+      (contactFormState.fullName !== "" &&
+        contactFormState.email !== "" &&
+        contactFormState.phoneNumber !== "" &&
+        contactFormState.position !== "")
     ) {
+      // save form values to global variables in contactFormState
+      contactFormState.fullName = formik.values.fullName;
+      contactFormState.email = formik.values.email;
+      contactFormState.phoneNumber = formik.values.phoneNumber;
+      contactFormState.position = formik.values.position;
+
+      // next page
       routeToBusinessInfo();
     }
   };
@@ -116,8 +125,17 @@ export default function FormPersonalInformation() {
             id="fullName"
             name="fullName"
             type="text"
-            value={formik.values.fullName}
-            onChange={formik.handleChange}
+            value={
+              formik.values.fullName === "" && !formik.touched.fullName
+                ? contactFormState.fullName
+                : formik.values.fullName
+            }
+            onChange={(e) => {
+              formik.touched.fullName = true;
+              formik.handleChange(e);
+              formik.values.fullName = e.target.value;
+              contactFormState.fullName = e.target.value;
+            }}
             onBlur={formik.handleBlur}
             placeholder={t("fullnamePlaceholder")}
           />
@@ -137,8 +155,17 @@ export default function FormPersonalInformation() {
             id="email"
             name="email"
             type="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
+            value={
+              formik.values.email === "" && !formik.touched.email
+                ? contactFormState.email
+                : formik.values.email
+            }
+            onChange={(e) => {
+              formik.touched.email = true;
+              formik.handleChange(e);
+              formik.values.email = e.target.value;
+              contactFormState.email = e.target.value;
+            }}
             onBlur={formik.handleBlur}
             placeholder={t("emailHelper")}
           />
@@ -160,8 +187,17 @@ export default function FormPersonalInformation() {
             id="phoneNumber"
             name="phoneNumber"
             type="text"
-            value={formik.values.phoneNumber}
-            onChange={formik.handleChange}
+            value={
+              formik.values.phoneNumber === "" && !formik.touched.phoneNumber
+                ? contactFormState.phoneNumber
+                : formik.values.phoneNumber
+            }
+            onChange={(e) => {
+              formik.touched.phoneNumber = true;
+              formik.handleChange(e);
+              formik.values.phoneNumber = e.target.value;
+              contactFormState.phoneNumber = e.target.value;
+            }}
             onBlur={formik.handleBlur}
             placeholder={t("phonenumberPlaceholder")}
           />
@@ -181,8 +217,17 @@ export default function FormPersonalInformation() {
             id="position"
             name="position"
             type="text"
-            value={formik.values.position}
-            onChange={formik.handleChange}
+            value={
+              formik.values.position === "" && !formik.touched.position
+                ? contactFormState.position
+                : formik.values.position
+            }
+            onChange={(e) => {
+              formik.touched.position = true;
+              formik.handleChange(e);
+              formik.values.position = e.target.value;
+              contactFormState.position = e.target.value;
+            }}
             onBlur={formik.handleBlur}
             placeholder={t("positionPlaceholder")}
           />
