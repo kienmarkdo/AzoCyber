@@ -34,3 +34,5 @@ Link to the website: https://kienmarkdo.github.io/AzoCyber
 - Open the command-line interface in the root of the folder
   - `npm i` Installs all dependencies
   - `npm run start` Runs the program and automatically opens `localhost:3000` in your default browser
+- Update gh-pages deployed site
+  - `npm run deploy`
