@@ -59,10 +59,10 @@ export default function FormSecurityInformation(this: any) {
   const [submittedState, setSubmittedState] = useState(false);
   const [formCompletedState, setFormCompletedState] = useState(false);
 
-  //* This useEffect prevents page scrolling/bottom overflow when the drawer is open
+  // //* This useEffect prevents page scrolling/bottom overflow when the drawer is open
   useEffect(() => {
     if (drawerState === true) {
-      document.body.style.overflow = "hidden"; // turns off page scrolling
+      // document.body.style.overflow = "hidden"; // turns off page scrolling
       document.body.scrollTop = 0; // Scroll to top of screen - For Safari
       document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
     } else {
@@ -70,10 +70,10 @@ export default function FormSecurityInformation(this: any) {
     }
   }, [drawerState]);
 
-  //* This useEffect prevents page scrolling/bottom overflow when the dialog is open
+  // //* This useEffect prevents page scrolling/bottom overflow when the dialog is open
   useEffect(() => {
     if (submittedState === true) {
-      document.body.style.overflow = "hidden"; // turns off page scrolling
+      // document.body.style.overflow = "hidden"; // turns off page scrolling
       document.body.scrollTop = 0; // Scroll to top of screen - For Safari
       document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
     } else {
@@ -314,6 +314,7 @@ export default function FormSecurityInformation(this: any) {
 
         {/* ==================================================== */}
         <Drawer
+          className="bp4-dark"
           isOpen={drawerState}
           onClose={() => {
             setDrawerState(false);
@@ -326,7 +327,7 @@ export default function FormSecurityInformation(this: any) {
           hasBackdrop={true}
           canEscapeKeyClose={true}
           canOutsideClickClose={true}
-          usePortal={false}
+          usePortal={true}
         >
           <div className={Classes.DRAWER_BODY}>
             <div className={Classes.DIALOG_BODY}>
@@ -336,10 +337,11 @@ export default function FormSecurityInformation(this: any) {
         </Drawer>
         {/* ==================================================== */}
         <Dialog
+          className="bp4-dark"
           title={t("submissionTitle")}
           icon="endorsed"
           isOpen={submittedState}
-          usePortal={false}
+          usePortal={true}
           onClose={() => {
             setSubmittedState(false);
           }}

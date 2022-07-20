@@ -98,7 +98,7 @@ export default function GetQuote() {
   // This useEffect prevents page scrolling/bottom overflow when the dialog is open
   useEffect(() => {
     if (submittedState === true) {
-      document.body.style.overflow = "hidden"; // turns off page scrolling
+      // document.body.style.overflow = "hidden"; // turns off page scrolling
       document.body.scrollTop = 0; // Scroll to top of screen - For Safari
       document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
     } else {
@@ -438,10 +438,11 @@ export default function GetQuote() {
 
       {/* ==================================================== */}
       <Dialog
+        className="bp4-dark"
         title={t("submissionTitle")}
         icon="endorsed"
         isOpen={submittedState}
-        usePortal={false}
+        usePortal={true}
         onClose={() => {
           setSubmittedState(false);
           setIsDisplayedDialog(true);
