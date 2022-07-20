@@ -59,18 +59,18 @@ export default function FormSecurityInformation(this: any) {
   const [submittedState, setSubmittedState] = useState(false);
   const [formCompletedState, setFormCompletedState] = useState(false);
 
-  // //* This useEffect prevents page scrolling/bottom overflow when the drawer is open
-  useEffect(() => {
-    if (drawerState === true) {
-      // document.body.style.overflow = "hidden"; // turns off page scrolling
-      document.body.scrollTop = 0; // Scroll to top of screen - For Safari
-      document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
-    } else {
-      document.body.style.overflow = "scroll"; // turns on page scrolling again
-    }
-  }, [drawerState]);
+  //* This useEffect prevents page scrolling/bottom overflow when the drawer is open
+  // useEffect(() => {
+  //   if (drawerState === true) {
+  //     // document.body.style.overflow = "hidden"; // turns off page scrolling
+  //     document.body.scrollTop = 0; // Scroll to top of screen - For Safari
+  //     document.documentElement.scrollTop = 0; // Scroll to top of screen - For Chrome, Firefox, IE and Opera
+  //   } else {
+  //     document.body.style.overflow = "scroll"; // turns on page scrolling again
+  //   }
+  // }, [drawerState]);
 
-  // //* This useEffect prevents page scrolling/bottom overflow when the dialog is open
+  //* This useEffect prevents page scrolling/bottom overflow when the dialog is open
   useEffect(() => {
     if (submittedState === true) {
       // document.body.style.overflow = "hidden"; // turns off page scrolling
