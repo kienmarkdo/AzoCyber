@@ -14,7 +14,7 @@ import GetQuote from "./pages/GetQuote";
 import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
 import EmployeeChat from "./components/employeeChat/demo/src/index";
-// import ChatWindow from "./components/ChatWindow";
+import ChatWindow from "./components/ChatWindow";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -30,7 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      {/* <ChatWindow /> */}
+      <ChatWindow />
       <div className="App">
         <Navbar
           style={{ padding: "0px 100px 0px 100px" }}

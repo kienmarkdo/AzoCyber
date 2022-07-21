@@ -55,8 +55,8 @@ class Demo extends Component {
           },
         ],
       });
+      messageHistory.push({ author: "them", type: "text", data: { text } });
     }
-    messageHistory.push({ author: "them", type: "text", data: { text } });
   }
 
   _handleClick() {
