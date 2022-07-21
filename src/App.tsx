@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import GetQuote from "./pages/GetQuote";
 import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
+import EmployeeChat from "./components/employeeChat/demo/src/index";
+import ChatWindow from "./components/ChatWindow";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -28,6 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ChatWindow />
       <div className="App">
         <Navbar
           style={{ padding: "0px 100px 0px 100px" }}
@@ -84,6 +87,16 @@ function App() {
 
               <Navbar.Divider style={{ marginTop: "5px" }} />
 
+              <NavLink to="/AzoCyber/employee_chat">
+                <Button
+                  className="bp4-button"
+                  intent="danger"
+                  text={t("emergency")}
+                />
+              </NavLink>
+
+              <Navbar.Divider style={{ marginTop: "5px" }} />
+
               <Button
                 key="english"
                 text="EN"
@@ -112,6 +125,7 @@ function App() {
           {/* <Route path="/AzoCyber//careers" element={<Careers />} /> */}
           <Route path="/AzoCyber/contact/*" element={<Contact />} />
           <Route path="/AzoCyber/get_a_quote" element={<GetQuote />} />
+          <Route path="/AzoCyber/employee_chat" element={<EmployeeChat />} />
           <Route path="/AzoCyber/*" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
