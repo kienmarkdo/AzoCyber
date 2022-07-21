@@ -1,6 +1,7 @@
 import { Button, Card, Elevation, MenuDivider } from "@blueprintjs/core";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
+// import ChatWindow from "../components/ChatWindow";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <>
+      {/* <ChatWindow /> */}
       <section
         className="homeTopSection"
         style={{
