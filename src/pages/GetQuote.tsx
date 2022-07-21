@@ -7,7 +7,7 @@ import {
   HTMLSelect,
   InputGroup,
 } from "@blueprintjs/core";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 import { CalendarDateTime } from "../components/CalendarDateTime";
@@ -114,7 +114,7 @@ export default function GetQuote() {
         .max(255, t("255charsOrLess"))
         .required(t("requiredLabel")),
       email: Yup.string()
-        .email("(invalid email address)")
+        .email(t("invalidEmailLabel"))
         .required(t("requiredLabel")),
       phoneNumber: Yup.string()
         .max(38, t("38charsOrLess"))

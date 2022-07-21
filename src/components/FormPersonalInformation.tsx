@@ -26,7 +26,7 @@ export default function FormPersonalInformation() {
         .max(255, t("255charsOrLess"))
         .required(t("requiredLabel")),
       email: Yup.string()
-        .email("(invalid email address)")
+        .email(t("invalidEmailLabel"))
         .required(t("requiredLabel")),
       phoneNumber: Yup.string()
         .max(38, t("38charsOrLess"))

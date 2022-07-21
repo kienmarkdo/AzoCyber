@@ -72,7 +72,7 @@ class Demo extends Component {
         <TestArea onMessage={this._sendMessage.bind(this)} />
         <Launcher
           agentProfile={{
-            teamName: "AzoCyber Live Chat",
+            teamName: "AzoCyber Live Chat / Chat en direct",
             imageUrl: "",
           }}
           onMessageWasSent={this._onMessageWasSent.bind(this)}

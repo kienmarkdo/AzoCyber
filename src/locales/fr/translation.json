@@ -146,5 +146,9 @@
     "package_4_2": "Simulation de violation et d'attaque",
     "package_4_3": "Rapport et analyse des vulnérabilités",
     "package_4_4": "Simulations de formation collaboratives",
-    "emergency": "Urgence"
+    "emergency": "Urgence",
+    "azoCyberLiveChat": "Chat en direct AzoCyber",
+    "invalidEmailLabel": "(courriel invalide)",
+    "emergencyHeading": "Intervention d'urgence des clients en cas d'incident",
+    "chattingWithClient": "Vous discutez en direct avec un client"
 }

@@ -146,5 +146,9 @@
     "package_4_2": "Breach & Attack Simulation",
     "package_4_3": "Vulnerability Report & Analysis",
     "package_4_4": "Collaborative Training Simulations",
-    "emergency": "Emergency"
+    "emergency": "Emergency",
+    "azoCyberLiveChat": "AzoCyber Live Chat",
+    "invalidEmailLabel": "(invalid email address)",
+    "emergencyHeading": "Emergency Client Incident Response",
+    "chattingWithClient": "You are chatting live with a client"
 }

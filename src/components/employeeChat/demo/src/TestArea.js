@@ -10,10 +10,12 @@ class TestArea extends Component {
             style={{ marginTop: "100px" }}
             className="demo-test-area--title-main"
           >
-            Emergency Client Incident Response
+            Emergency Client Incident Response / Intervention d'urgence des
+            clients en cas d'incident
           </div>
           <div className="demo-test-area--title-sub">
-            You are chatting live with a client
+            You are chatting live with a client / Vous discutez en direct avec
+            un client
           </div>
         </div>
         <form
@@ -29,9 +31,9 @@ class TestArea extends Component {
               this.textArea = e;
             }}
             className="demo-test-area--text"
-            placeholder="Enter Message"
+            placeholder="Enter Message / Entrer un message"
           />
-          <button className="demo-test-area--button"> Send Message </button>
+          <button className="demo-test-area--button"> Send / Envoyer </button>
         </form>
       </div>
     );
