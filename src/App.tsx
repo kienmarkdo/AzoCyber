@@ -126,6 +126,7 @@ function App() {
           <Route path="/AzoCyber/contact/*" element={<Contact />} />
           <Route path="/AzoCyber/get_a_quote" element={<GetQuote />} />
           <Route path="/AzoCyber/employee_chat" element={<EmployeeChat />} />
+          <Route path="/AzoCyber/page_not_found" element={<PageNotFound />} />
           <Route path="/AzoCyber/*" element={<PageNotFound />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
