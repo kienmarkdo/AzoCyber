@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AzoCyber/static/css/main.e853c8e5.css",
-    "main.js": "/AzoCyber/static/js/main.bcefa0fd.js",
+    "main.js": "/AzoCyber/static/js/main.287e075d.js",
     "static/media/blueprint-icons-20.eot?": "/AzoCyber/static/media/blueprint-icons-20.12b358c6d8dbe8756615.eot",
     "static/media/blueprint-icons-20.ttf?": "/AzoCyber/static/media/blueprint-icons-20.3fd95ab7e829aa1d9ba0.ttf",
     "static/media/blueprint-icons-16.eot?": "/AzoCyber/static/media/blueprint-icons-16.c98f9776ee5bbd2aa668.eot",
@@ -16,10 +16,10 @@
     "index.html": "/AzoCyber/index.html",
     "static/media/getFetch.cjs": "/AzoCyber/static/media/getFetch.c780682470504fffbd04.cjs",
     "main.e853c8e5.css.map": "/AzoCyber/static/css/main.e853c8e5.css.map",
-    "main.bcefa0fd.js.map": "/AzoCyber/static/js/main.bcefa0fd.js.map"
+    "main.287e075d.js.map": "/AzoCyber/static/js/main.287e075d.js.map"
   },
   "entrypoints": [
     "static/css/main.e853c8e5.css",
-    "static/js/main.bcefa0fd.js"
+    "static/js/main.287e075d.js"
   ]
 }
