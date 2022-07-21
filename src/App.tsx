@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes, NavLink } from "react-router-dom"; // browser router v6 package
 import { Alignment, Button, ButtonGroup, Navbar } from "@blueprintjs/core";
 import { useTranslation } from "react-i18next";
+// import PopupChat from "./components/PopupChat";
 
 //* Import components and pages
 import Home from "./pages/Home";
@@ -13,6 +14,8 @@ import Contact from "./pages/Contact";
 import GetQuote from "./pages/GetQuote";
 import PageNotFound from "./pages/PageNotFound";
 import ScrollToTop from "./helpers/ScrollToTop";
+import ChatWindow from "./components/ChatWindow";
+import EmployeeChat from "./components/employeeChat/demo/src/index";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -84,6 +87,16 @@ function App() {
 
               <Navbar.Divider style={{ marginTop: "5px" }} />
 
+              {/* <NavLink to="/AzoCyber/emergencyChat">
+                <Button
+                  className="bp4-button"
+                  intent="danger"
+                  text="Emergency Chat"
+                />
+              </NavLink>
+
+              <Navbar.Divider style={{ marginTop: "5px" }} /> */}
+
               <Button
                 key="english"
                 text="EN"
@@ -105,6 +118,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/AzoCyber" element={<Home />} />
+          {/* <Route path="/AzoCyber/emergencyChat" element={<ChatWindow />} /> */}
+          <Route path="/AzoCyber/employeeChat" element={<EmployeeChat />} />
           <Route path="/AzoCyber/home" element={<Home />} />
           <Route path="/AzoCyber/about" element={<About />} />
           <Route path="/AzoCyber/solutions" element={<Solutions />} />
@@ -116,6 +131,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
+      <ChatWindow />
     </BrowserRouter>
   );
 }
