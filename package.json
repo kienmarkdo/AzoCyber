@@ -1,7 +1,6 @@
 {
   "name": "azo-cyber",
   "version": "0.1.0",
-  "homepage": "https://kienmarkdo.github.io/AzoCyber",
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^4.5.1",
@@ -29,11 +28,11 @@
     "sass": "^1.53.0",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-linkify": "^1.0.0-alpha",
+    "emoji-js": "^3.8.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -58,7 +57,6 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-hash-link": "^2.4.5",
-    "gh-pages": "^4.0.0"
+    "@types/react-router-hash-link": "^2.4.5"
   }
 }

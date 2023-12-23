@@ -36,3 +36,18 @@ Link to the website: https://kienmarkdo.github.io/AzoCyber
   - `npm run start` Runs the program and automatically opens `localhost:3000` in your default browser
 - Update gh-pages deployed site
   - `npm run deploy`
+
+## Run locally with Docker
+- Download Docker Desktop (if using Windows or MacOS)
+- Open Docker Desktop to start Docker Engine
+- Open terminal in the root of the project
+- Build the Docker image
+  - `docker build -t azocyber:1.0 .`
+- Start the container as a background process and bind it to port 3000
+  - `docker run -d -p 3000:3000 azocyber:1.0`
+- Verify that the container is running
+  - `docker ps -a  # check running containers by looking at Status column`
+  - `docker logs <CONTAINER_ID>  # print existing container logs`
+  - `docker logs -f <CONTAINER_ID>  # print and follow the container logs`
+- Open the website in your browser by navigating to `localhost:3000`
+
