@@ -50,4 +50,14 @@ Link to the website: https://kienmarkdo.github.io/AzoCyber
   - `docker logs <CONTAINER_ID>  # print existing container logs`
   - `docker logs -f <CONTAINER_ID>  # print and follow the container logs`
 - Open the website in your browser by navigating to `localhost:3000`
+- Stop and remove the container
+  - `docker stop <CONTAINER_ID>`
+  - `docker rm <CONTAINER_ID>`
+- Remove the image
+  - `docker images  # to view images`
+  - `docker rmi azocyber:1.0  # remove the image`
+- Complete cleanup (WARNING: This will wipe all unused images, volumes, containers, networks, etc.)
+  - `docker system prune -a`
 
+## Docker compose
+Coming soon...
